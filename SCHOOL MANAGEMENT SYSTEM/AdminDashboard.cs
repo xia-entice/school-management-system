@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace SCHOOL_MANAGEMENT_SYSTEM
 {
 
@@ -203,6 +204,20 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         private void ADaeprof_FormClosed(object sender, FormClosedEventArgs e)
         {
             ADaeprof = null;
+        }
+
+        private void aout_Click(object sender, EventArgs e)
+        {
+            // Show a message box to confirm logout
+            DialogResult result = MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            // If the user clicked Yes, logout and show the login form
+            if (result == DialogResult.Yes)
+            {
+                Form1 Obj = new Form1();
+                Obj.Show();
+                this.Close(); // close the current form
+            }
         }
     }
 }
