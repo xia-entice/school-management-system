@@ -29,28 +29,30 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.roleCB = new System.Windows.Forms.ComboBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Password_txt = new System.Windows.Forms.TextBox();
+            this.Username_txt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -61,6 +63,16 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(300, 647);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(-59, -22);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(925, 669);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -107,12 +119,12 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.roleCB);
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.Password_txt);
+            this.panel2.Controls.Add(this.Username_txt);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Location = new System.Drawing.Point(114, 203);
@@ -120,29 +132,31 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.panel2.Size = new System.Drawing.Size(680, 361);
             this.panel2.TabIndex = 5;
             // 
-            // comboBox1
+            // roleCB
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Open Sans", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Admin",
-            "Teacher",
-            "Student"});
-            this.comboBox1.Location = new System.Drawing.Point(56, 267);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(149, 40);
-            this.comboBox1.TabIndex = 6;
-            this.comboBox1.Text = "Role";
+            this.roleCB.Font = new System.Drawing.Font("Open Sans", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roleCB.FormattingEnabled = true;
+            this.roleCB.Items.AddRange(new object[] {
+            "admin",
+            "teacher",
+            "student"});
+            this.roleCB.Location = new System.Drawing.Point(56, 267);
+            this.roleCB.Name = "roleCB";
+            this.roleCB.Size = new System.Drawing.Size(149, 40);
+            this.roleCB.TabIndex = 6;
+            this.roleCB.Text = "Role";
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(572, 204);
+            this.pictureBox3.Location = new System.Drawing.Point(574, 206);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(40, 26);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox3.TabIndex = 9;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pictureBox3.MouseHover += new System.EventHandler(this.pictureBox3_MouseHover);
             // 
             // pictureBox2
             // 
@@ -153,6 +167,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
             // 
             // button1
             // 
@@ -166,22 +182,23 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.button1.TabIndex = 6;
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox2
+            // Password_txt
             // 
-            this.textBox2.Font = new System.Drawing.Font("Open Sans", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(56, 196);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(563, 39);
-            this.textBox2.TabIndex = 8;
+            this.Password_txt.Font = new System.Drawing.Font("Open Sans", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Password_txt.Location = new System.Drawing.Point(56, 196);
+            this.Password_txt.Name = "Password_txt";
+            this.Password_txt.Size = new System.Drawing.Size(563, 39);
+            this.Password_txt.TabIndex = 8;
             // 
-            // textBox1
+            // Username_txt
             // 
-            this.textBox1.Font = new System.Drawing.Font("Open Sans", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(56, 90);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(563, 39);
-            this.textBox1.TabIndex = 6;
+            this.Username_txt.Font = new System.Drawing.Font("Open Sans", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Username_txt.Location = new System.Drawing.Point(56, 90);
+            this.Username_txt.Name = "Username_txt";
+            this.Username_txt.Size = new System.Drawing.Size(563, 39);
+            this.Username_txt.TabIndex = 6;
             // 
             // label5
             // 
@@ -205,16 +222,6 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.label4.TabIndex = 6;
             this.label4.Text = "Username:";
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(-59, -22);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(925, 669);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -231,12 +238,12 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.Name = "Form1";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,14 +258,15 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Password_txt;
+        private System.Windows.Forms.TextBox Username_txt;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox roleCB;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
