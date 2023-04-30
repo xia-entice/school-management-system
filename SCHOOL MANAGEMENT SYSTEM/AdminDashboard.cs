@@ -204,5 +204,10 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         {
             ADaeprof = null;
         }
+
+        private void aout_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -107,6 +107,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.aout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.aout.TabIndex = 6;
             this.aout.TabStop = false;
+            this.aout.Click += new System.EventHandler(this.aout_Click);
             // 
             // panel2
             // 
