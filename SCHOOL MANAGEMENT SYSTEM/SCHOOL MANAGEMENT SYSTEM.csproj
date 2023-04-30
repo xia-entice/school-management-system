@@ -250,12 +250,6 @@
     <Compile Include="formADats.Designer.cs">
       <DependentUpon>formADats.cs</DependentUpon>
     </Compile>
-    <Compile Include="formADprofile.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formADprofile.Designer.cs">
-      <DependentUpon>formADprofile.cs</DependentUpon>
-    </Compile>
     <Compile Include="formADstudent.cs">
       <SubType>Form</SubType>
     </Compile>
