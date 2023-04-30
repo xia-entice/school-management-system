@@ -36,6 +36,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.ATview = new System.Windows.Forms.DataGridView();
             this.tsearch = new System.Windows.Forms.TextBox();
             this.Tpanel1 = new System.Windows.Forms.Panel();
+            this.labelt = new System.Windows.Forms.Label();
             this.pictureBoxt = new System.Windows.Forms.PictureBox();
             this.ATdelete = new System.Windows.Forms.Button();
             this.ATsave = new System.Windows.Forms.Button();
@@ -43,7 +44,6 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.ATun = new System.Windows.Forms.Label();
             this.tpass = new System.Windows.Forms.TextBox();
             this.tuname = new System.Windows.Forms.TextBox();
-            this.labelt = new System.Windows.Forms.Label();
             this.Tpanel3 = new System.Windows.Forms.Panel();
             this.Tpanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1t)).BeginInit();
@@ -84,9 +84,11 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.ATsearch.TabIndex = 8;
             this.ATsearch.Text = "Search";
             this.ATsearch.UseVisualStyleBackColor = false;
+            this.ATsearch.Click += new System.EventHandler(this.ATsearch_Click);
             // 
             // ATview
             // 
+            this.ATview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ATview.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(178)))), ((int)(((byte)(85)))));
             this.ATview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ATview.Location = new System.Drawing.Point(26, 90);
@@ -95,6 +97,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.ATview.RowTemplate.Height = 24;
             this.ATview.Size = new System.Drawing.Size(833, 484);
             this.ATview.TabIndex = 0;
+            this.ATview.DoubleClick += new System.EventHandler(this.ATview_DoubleClick);
             // 
             // tsearch
             // 
@@ -120,6 +123,16 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.Tpanel1.Size = new System.Drawing.Size(327, 610);
             this.Tpanel1.TabIndex = 10;
             // 
+            // labelt
+            // 
+            this.labelt.AutoSize = true;
+            this.labelt.Font = new System.Drawing.Font("Open Sans", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelt.Location = new System.Drawing.Point(81, 209);
+            this.labelt.Name = "labelt";
+            this.labelt.Size = new System.Drawing.Size(154, 76);
+            this.labelt.TabIndex = 11;
+            this.labelt.Text = " TEACHER\r\nACCOUNT";
+            // 
             // pictureBoxt
             // 
             this.pictureBoxt.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxt.Image")));
@@ -140,6 +153,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.ATdelete.TabIndex = 7;
             this.ATdelete.Text = "Delete";
             this.ATdelete.UseVisualStyleBackColor = false;
+            this.ATdelete.Click += new System.EventHandler(this.ATdelete_Click);
             // 
             // ATsave
             // 
@@ -151,6 +165,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.ATsave.TabIndex = 6;
             this.ATsave.Text = "Save";
             this.ATsave.UseVisualStyleBackColor = false;
+            this.ATsave.Click += new System.EventHandler(this.ATsave_Click);
             // 
             // ATpw
             // 
@@ -187,16 +202,6 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.tuname.Name = "tuname";
             this.tuname.Size = new System.Drawing.Size(286, 35);
             this.tuname.TabIndex = 3;
-            // 
-            // labelt
-            // 
-            this.labelt.AutoSize = true;
-            this.labelt.Font = new System.Drawing.Font("Open Sans", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelt.Location = new System.Drawing.Point(81, 209);
-            this.labelt.Name = "labelt";
-            this.labelt.Size = new System.Drawing.Size(154, 76);
-            this.labelt.TabIndex = 11;
-            this.labelt.Text = " TEACHER\r\nACCOUNT";
             // 
             // Tpanel3
             // 
