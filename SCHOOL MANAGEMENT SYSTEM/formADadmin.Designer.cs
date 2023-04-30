@@ -92,9 +92,11 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.AAsearch.TabIndex = 8;
             this.AAsearch.Text = "Search";
             this.AAsearch.UseVisualStyleBackColor = false;
+            this.AAsearch.Click += new System.EventHandler(this.AAsearch_Click);
             // 
             // AAview
             // 
+            this.AAview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.AAview.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(178)))), ((int)(((byte)(85)))));
             this.AAview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.AAview.Location = new System.Drawing.Point(26, 90);
@@ -103,6 +105,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.AAview.RowTemplate.Height = 24;
             this.AAview.Size = new System.Drawing.Size(833, 484);
             this.AAview.TabIndex = 0;
+            this.AAview.DoubleClick += new System.EventHandler(this.AAview_DoubleClick);
             // 
             // Asearch
             // 
@@ -158,6 +161,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.AAdelete.TabIndex = 7;
             this.AAdelete.Text = "Delete";
             this.AAdelete.UseVisualStyleBackColor = false;
+            this.AAdelete.Click += new System.EventHandler(this.AAdelete_Click);
             // 
             // AAsave
             // 
@@ -169,6 +173,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.AAsave.TabIndex = 6;
             this.AAsave.Text = "Save";
             this.AAsave.UseVisualStyleBackColor = false;
+            this.AAsave.Click += new System.EventHandler(this.AAsave_Click);
             // 
             // AApw
             // 
