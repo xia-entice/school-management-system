@@ -134,10 +134,10 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // labela
             // 
             this.labela.AutoSize = true;
-            this.labela.Font = new System.Drawing.Font("Open Sans", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labela.Location = new System.Drawing.Point(77, 209);
+            this.labela.Font = new System.Drawing.Font("Open Sans Light", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labela.Location = new System.Drawing.Point(83, 212);
             this.labela.Name = "labela";
-            this.labela.Size = new System.Drawing.Size(154, 76);
+            this.labela.Size = new System.Drawing.Size(144, 76);
             this.labela.TabIndex = 11;
             this.labela.Text = "   ADMIN\r\nACCOUNT";
             // 
@@ -178,20 +178,20 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // AApw
             // 
             this.AApw.AutoSize = true;
-            this.AApw.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AApw.Location = new System.Drawing.Point(14, 384);
+            this.AApw.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AApw.Location = new System.Drawing.Point(14, 383);
             this.AApw.Name = "AApw";
-            this.AApw.Size = new System.Drawing.Size(108, 27);
+            this.AApw.Size = new System.Drawing.Size(103, 26);
             this.AApw.TabIndex = 2;
             this.AApw.Text = "Password:";
             // 
             // AAun
             // 
             this.AAun.AutoSize = true;
-            this.AAun.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AAun.Location = new System.Drawing.Point(14, 298);
+            this.AAun.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AAun.Location = new System.Drawing.Point(14, 306);
             this.AAun.Name = "AAun";
-            this.AAun.Size = new System.Drawing.Size(114, 27);
+            this.AAun.Size = new System.Drawing.Size(111, 26);
             this.AAun.TabIndex = 1;
             this.AAun.Text = "Username:";
             // 

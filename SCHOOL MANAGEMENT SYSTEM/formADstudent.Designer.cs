@@ -131,17 +131,17 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // labels
             // 
             this.labels.AutoSize = true;
-            this.labels.Font = new System.Drawing.Font("Open Sans", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labels.Location = new System.Drawing.Point(85, 209);
+            this.labels.Font = new System.Drawing.Font("Open Sans Light", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labels.Location = new System.Drawing.Point(83, 212);
             this.labels.Name = "labels";
-            this.labels.Size = new System.Drawing.Size(154, 76);
+            this.labels.Size = new System.Drawing.Size(144, 76);
             this.labels.TabIndex = 11;
             this.labels.Text = " STUDENT\r\nACCOUNT";
             // 
             // pictureBoxs
             // 
             this.pictureBoxs.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxs.Image")));
-            this.pictureBoxs.Location = new System.Drawing.Point(69, 35);
+            this.pictureBoxs.Location = new System.Drawing.Point(69, 37);
             this.pictureBoxs.Name = "pictureBoxs";
             this.pictureBoxs.Size = new System.Drawing.Size(182, 172);
             this.pictureBoxs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -173,20 +173,20 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // ASpw
             // 
             this.ASpw.AutoSize = true;
-            this.ASpw.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ASpw.Location = new System.Drawing.Point(14, 384);
+            this.ASpw.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ASpw.Location = new System.Drawing.Point(14, 383);
             this.ASpw.Name = "ASpw";
-            this.ASpw.Size = new System.Drawing.Size(108, 27);
+            this.ASpw.Size = new System.Drawing.Size(103, 26);
             this.ASpw.TabIndex = 2;
             this.ASpw.Text = "Password:";
             // 
             // ASun
             // 
             this.ASun.AutoSize = true;
-            this.ASun.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ASun.Location = new System.Drawing.Point(14, 298);
+            this.ASun.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ASun.Location = new System.Drawing.Point(14, 306);
             this.ASun.Name = "ASun";
-            this.ASun.Size = new System.Drawing.Size(114, 27);
+            this.ASun.Size = new System.Drawing.Size(111, 26);
             this.ASun.TabIndex = 1;
             this.ASun.Text = "Username:";
             // 

@@ -31,7 +31,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashboard));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.adpanel = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Aats = new System.Windows.Forms.Button();
             this.aout = new System.Windows.Forms.PictureBox();
@@ -49,7 +49,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.pnSAcc = new System.Windows.Forms.Panel();
             this.btnADs = new System.Windows.Forms.Button();
             this.sidebarTransition = new System.Windows.Forms.Timer(this.components);
-            this.panel1.SuspendLayout();
+            this.adpanel.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.aout)).BeginInit();
             this.panel2.SuspendLayout();
@@ -61,36 +61,36 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.pnSAcc.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // adpanel
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.aout);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.aprof);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.btnMenu);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1199, 97);
-            this.panel1.TabIndex = 0;
+            this.adpanel.BackColor = System.Drawing.Color.White;
+            this.adpanel.Controls.Add(this.panel3);
+            this.adpanel.Controls.Add(this.aout);
+            this.adpanel.Controls.Add(this.panel2);
+            this.adpanel.Controls.Add(this.aprof);
+            this.adpanel.Controls.Add(this.label2);
+            this.adpanel.Controls.Add(this.label1);
+            this.adpanel.Controls.Add(this.btnMenu);
+            this.adpanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.adpanel.Location = new System.Drawing.Point(0, 0);
+            this.adpanel.Name = "adpanel";
+            this.adpanel.Size = new System.Drawing.Size(1199, 97);
+            this.adpanel.TabIndex = 0;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.Aats);
-            this.panel3.Location = new System.Drawing.Point(880, 29);
+            this.panel3.Location = new System.Drawing.Point(880, 27);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(107, 39);
+            this.panel3.Size = new System.Drawing.Size(107, 45);
             this.panel3.TabIndex = 4;
             // 
             // Aats
             // 
             this.Aats.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(178)))), ((int)(((byte)(85)))));
             this.Aats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Aats.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Aats.Location = new System.Drawing.Point(-48, -19);
+            this.Aats.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aats.Location = new System.Drawing.Point(-48, -15);
             this.Aats.Name = "Aats";
             this.Aats.Size = new System.Drawing.Size(202, 77);
             this.Aats.TabIndex = 4;
@@ -112,17 +112,17 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // panel2
             // 
             this.panel2.Controls.Add(this.AAnnouncement);
-            this.panel2.Location = new System.Drawing.Point(686, 29);
+            this.panel2.Location = new System.Drawing.Point(685, 26);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(157, 39);
+            this.panel2.Size = new System.Drawing.Size(158, 46);
             this.panel2.TabIndex = 3;
             // 
             // AAnnouncement
             // 
             this.AAnnouncement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(178)))), ((int)(((byte)(85)))));
             this.AAnnouncement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AAnnouncement.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AAnnouncement.Location = new System.Drawing.Point(-24, -20);
+            this.AAnnouncement.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AAnnouncement.Location = new System.Drawing.Point(-22, -16);
             this.AAnnouncement.Name = "AAnnouncement";
             this.AAnnouncement.Size = new System.Drawing.Size(202, 77);
             this.AAnnouncement.TabIndex = 3;
@@ -268,13 +268,13 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1199, 647);
             this.Controls.Add(this.sidebar);
-            this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Controls.Add(this.adpanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
             this.Name = "AdminDashboard";
             this.Text = "Form2";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.adpanel.ResumeLayout(false);
+            this.adpanel.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.aout)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -290,7 +290,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel adpanel;
         private System.Windows.Forms.PictureBox btnMenu;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
