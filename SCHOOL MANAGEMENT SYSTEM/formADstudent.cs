@@ -153,6 +153,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 ASview.DataSource = sdtbl;
                 ASview.Columns[1].Visible = false;
                 ASview.Columns[2].Visible = false;
+                //change
             }
         }
     }
