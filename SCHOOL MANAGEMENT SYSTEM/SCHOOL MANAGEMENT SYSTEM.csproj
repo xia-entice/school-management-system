@@ -268,6 +268,18 @@
     <Compile Include="formADteacher.Designer.cs">
       <DependentUpon>formADteacher.cs</DependentUpon>
     </Compile>
+    <Compile Include="formANN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formANN.Designer.cs">
+      <DependentUpon>formANN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formATS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formATS.Designer.cs">
+      <DependentUpon>formATS.cs</DependentUpon>
+    </Compile>
     <Compile Include="formSDseprof.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -321,6 +333,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formADteacher.resx">
       <DependentUpon>formADteacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formANN.resx">
+      <DependentUpon>formANN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formATS.resx">
+      <DependentUpon>formATS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formSDseprof.resx">
       <DependentUpon>formSDseprof.cs</DependentUpon>
