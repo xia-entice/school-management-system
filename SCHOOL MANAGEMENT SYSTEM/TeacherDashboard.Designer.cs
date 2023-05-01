@@ -177,7 +177,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // pnts
             // 
             this.pnts.Controls.Add(this.btnTDs);
-            this.pnts.Location = new System.Drawing.Point(813, 195);
+            this.pnts.Location = new System.Drawing.Point(246, 113);
             this.pnts.Name = "pnts";
             this.pnts.Size = new System.Drawing.Size(260, 63);
             this.pnts.TabIndex = 2;
@@ -200,7 +200,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // pntc
             // 
             this.pntc.Controls.Add(this.btnTDc);
-            this.pntc.Location = new System.Drawing.Point(813, 264);
+            this.pntc.Location = new System.Drawing.Point(246, 182);
             this.pntc.Name = "pntc";
             this.pntc.Size = new System.Drawing.Size(260, 63);
             this.pntc.TabIndex = 4;
