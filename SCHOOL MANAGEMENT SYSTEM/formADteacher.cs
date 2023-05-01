@@ -2,7 +2,6 @@
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Data;
-
 namespace SCHOOL_MANAGEMENT_SYSTEM
 {
     public partial class formADteacher : Form

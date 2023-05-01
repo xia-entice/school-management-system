@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms;
 
 namespace SCHOOL_MANAGEMENT_SYSTEM
 {
@@ -78,7 +79,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 ADadmin.Location = new Point(0, 0);
                 ADadmin.Size = new Size(1150, 570);
                 ADadmin.Show();
-            } 
+            }
             else
             {
                 ADadmin.Activate();

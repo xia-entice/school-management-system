@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Imaging;
-
 namespace SCHOOL_MANAGEMENT_SYSTEM
 {
     public partial class formADats : Form
