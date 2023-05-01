@@ -232,9 +232,9 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.logo);
             this.panel1.Controls.Add(this.gPanel);
-            this.panel1.Location = new System.Drawing.Point(20, 15);
+            this.panel1.Location = new System.Drawing.Point(18, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1221, 615);
+            this.panel1.Size = new System.Drawing.Size(1221, 618);
             this.panel1.TabIndex = 15;
             // 
             // richTextBox4
@@ -285,7 +285,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.label1.Font = new System.Drawing.Font("Open Sans", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(375, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(489, 52);
+            this.label1.Size = new System.Drawing.Size(472, 51);
             this.label1.TabIndex = 30;
             this.label1.Text = "VMG OF THE UNIVERSITY";
             // 
