@@ -92,6 +92,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.Tats.TabIndex = 4;
             this.Tats.Text = "About Us";
             this.Tats.UseVisualStyleBackColor = false;
+            this.Tats.Click += new System.EventHandler(this.Tats_Click);
             // 
             // tout
             // 
@@ -102,6 +103,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.tout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.tout.TabIndex = 6;
             this.tout.TabStop = false;
+            this.tout.Click += new System.EventHandler(this.tout_Click);
             // 
             // panel2
             // 
@@ -122,6 +124,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.TAnnouncement.TabIndex = 3;
             this.TAnnouncement.Text = "Announcement";
             this.TAnnouncement.UseVisualStyleBackColor = false;
+            this.TAnnouncement.Click += new System.EventHandler(this.TAnnouncement_Click);
             // 
             // tprof
             // 
@@ -132,6 +135,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.tprof.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.tprof.TabIndex = 5;
             this.tprof.TabStop = false;
+            this.tprof.Click += new System.EventHandler(this.tprof_Click);
             // 
             // label2
             // 
@@ -234,6 +238,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.Controls.Add(this.tsidebar);
             this.Controls.Add(this.tdpanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.IsMdiContainer = true;
             this.Name = "TeacherDashboard";
             this.Text = "TeacherDashboard";
             this.tdpanel.ResumeLayout(false);

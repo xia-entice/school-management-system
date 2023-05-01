@@ -31,107 +31,111 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentDashboard));
-            this.tdpanel = new System.Windows.Forms.Panel();
+            this.sdpanel = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.Tats = new System.Windows.Forms.Button();
-            this.tout = new System.Windows.Forms.PictureBox();
+            this.Sats = new System.Windows.Forms.Button();
+            this.sout = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.TAnnouncement = new System.Windows.Forms.Button();
-            this.tprof = new System.Windows.Forms.PictureBox();
+            this.SAnnouncement = new System.Windows.Forms.Button();
+            this.sprof = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btntMenu = new System.Windows.Forms.PictureBox();
+            this.btnsMenu = new System.Windows.Forms.PictureBox();
             this.ssidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.pnss = new System.Windows.Forms.Panel();
             this.btnSDs = new System.Windows.Forms.Button();
             this.pnsc = new System.Windows.Forms.Panel();
             this.btnSDc = new System.Windows.Forms.Button();
             this.ssidebarTransition = new System.Windows.Forms.Timer(this.components);
-            this.tdpanel.SuspendLayout();
+            this.sdpanel.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tout)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sout)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tprof)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btntMenu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sprof)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnsMenu)).BeginInit();
             this.pnss.SuspendLayout();
             this.pnsc.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tdpanel
+            // sdpanel
             // 
-            this.tdpanel.BackColor = System.Drawing.Color.White;
-            this.tdpanel.Controls.Add(this.panel3);
-            this.tdpanel.Controls.Add(this.tout);
-            this.tdpanel.Controls.Add(this.panel2);
-            this.tdpanel.Controls.Add(this.tprof);
-            this.tdpanel.Controls.Add(this.label2);
-            this.tdpanel.Controls.Add(this.label1);
-            this.tdpanel.Controls.Add(this.btntMenu);
-            this.tdpanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tdpanel.Location = new System.Drawing.Point(0, 0);
-            this.tdpanel.Name = "tdpanel";
-            this.tdpanel.Size = new System.Drawing.Size(1199, 97);
-            this.tdpanel.TabIndex = 2;
+            this.sdpanel.BackColor = System.Drawing.Color.White;
+            this.sdpanel.Controls.Add(this.panel3);
+            this.sdpanel.Controls.Add(this.sout);
+            this.sdpanel.Controls.Add(this.panel2);
+            this.sdpanel.Controls.Add(this.sprof);
+            this.sdpanel.Controls.Add(this.label2);
+            this.sdpanel.Controls.Add(this.label1);
+            this.sdpanel.Controls.Add(this.btnsMenu);
+            this.sdpanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.sdpanel.Location = new System.Drawing.Point(0, 0);
+            this.sdpanel.Name = "sdpanel";
+            this.sdpanel.Size = new System.Drawing.Size(1199, 97);
+            this.sdpanel.TabIndex = 2;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.Tats);
+            this.panel3.Controls.Add(this.Sats);
             this.panel3.Location = new System.Drawing.Point(880, 27);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(107, 45);
             this.panel3.TabIndex = 4;
             // 
-            // Tats
+            // Sats
             // 
-            this.Tats.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(178)))), ((int)(((byte)(85)))));
-            this.Tats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Tats.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tats.Location = new System.Drawing.Point(-48, -15);
-            this.Tats.Name = "Tats";
-            this.Tats.Size = new System.Drawing.Size(202, 77);
-            this.Tats.TabIndex = 4;
-            this.Tats.Text = "About Us";
-            this.Tats.UseVisualStyleBackColor = false;
+            this.Sats.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(178)))), ((int)(((byte)(85)))));
+            this.Sats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Sats.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sats.Location = new System.Drawing.Point(-48, -15);
+            this.Sats.Name = "Sats";
+            this.Sats.Size = new System.Drawing.Size(202, 77);
+            this.Sats.TabIndex = 4;
+            this.Sats.Text = "About Us";
+            this.Sats.UseVisualStyleBackColor = false;
+            this.Sats.Click += new System.EventHandler(this.Sats_Click);
             // 
-            // tout
+            // sout
             // 
-            this.tout.Image = ((System.Drawing.Image)(resources.GetObject("tout.Image")));
-            this.tout.Location = new System.Drawing.Point(1103, 22);
-            this.tout.Name = "tout";
-            this.tout.Size = new System.Drawing.Size(61, 52);
-            this.tout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.tout.TabIndex = 6;
-            this.tout.TabStop = false;
+            this.sout.Image = ((System.Drawing.Image)(resources.GetObject("sout.Image")));
+            this.sout.Location = new System.Drawing.Point(1103, 22);
+            this.sout.Name = "sout";
+            this.sout.Size = new System.Drawing.Size(61, 52);
+            this.sout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.sout.TabIndex = 6;
+            this.sout.TabStop = false;
+            this.sout.Click += new System.EventHandler(this.sout_Click);
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.TAnnouncement);
+            this.panel2.Controls.Add(this.SAnnouncement);
             this.panel2.Location = new System.Drawing.Point(685, 26);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(158, 46);
             this.panel2.TabIndex = 3;
             // 
-            // TAnnouncement
+            // SAnnouncement
             // 
-            this.TAnnouncement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(178)))), ((int)(((byte)(85)))));
-            this.TAnnouncement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TAnnouncement.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TAnnouncement.Location = new System.Drawing.Point(-22, -16);
-            this.TAnnouncement.Name = "TAnnouncement";
-            this.TAnnouncement.Size = new System.Drawing.Size(202, 77);
-            this.TAnnouncement.TabIndex = 3;
-            this.TAnnouncement.Text = "Announcement";
-            this.TAnnouncement.UseVisualStyleBackColor = false;
+            this.SAnnouncement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(178)))), ((int)(((byte)(85)))));
+            this.SAnnouncement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SAnnouncement.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SAnnouncement.Location = new System.Drawing.Point(-22, -16);
+            this.SAnnouncement.Name = "SAnnouncement";
+            this.SAnnouncement.Size = new System.Drawing.Size(202, 77);
+            this.SAnnouncement.TabIndex = 3;
+            this.SAnnouncement.Text = "Announcement";
+            this.SAnnouncement.UseVisualStyleBackColor = false;
+            this.SAnnouncement.Click += new System.EventHandler(this.SAnnouncement_Click);
             // 
-            // tprof
+            // sprof
             // 
-            this.tprof.Image = ((System.Drawing.Image)(resources.GetObject("tprof.Image")));
-            this.tprof.Location = new System.Drawing.Point(1041, 22);
-            this.tprof.Name = "tprof";
-            this.tprof.Size = new System.Drawing.Size(61, 52);
-            this.tprof.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.tprof.TabIndex = 5;
-            this.tprof.TabStop = false;
+            this.sprof.Image = ((System.Drawing.Image)(resources.GetObject("sprof.Image")));
+            this.sprof.Location = new System.Drawing.Point(1041, 22);
+            this.sprof.Name = "sprof";
+            this.sprof.Size = new System.Drawing.Size(61, 52);
+            this.sprof.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.sprof.TabIndex = 5;
+            this.sprof.TabStop = false;
+            this.sprof.Click += new System.EventHandler(this.sprof_Click);
             // 
             // label2
             // 
@@ -153,15 +157,15 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.label1.TabIndex = 1;
             this.label1.Text = "CEBU TECHNOLOGICAL UNIVERSITY";
             // 
-            // btntMenu
+            // btnsMenu
             // 
-            this.btntMenu.Image = ((System.Drawing.Image)(resources.GetObject("btntMenu.Image")));
-            this.btntMenu.Location = new System.Drawing.Point(12, 12);
-            this.btntMenu.Name = "btntMenu";
-            this.btntMenu.Size = new System.Drawing.Size(85, 72);
-            this.btntMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btntMenu.TabIndex = 1;
-            this.btntMenu.TabStop = false;
+            this.btnsMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnsMenu.Image")));
+            this.btnsMenu.Location = new System.Drawing.Point(12, 12);
+            this.btnsMenu.Name = "btnsMenu";
+            this.btnsMenu.Size = new System.Drawing.Size(85, 72);
+            this.btnsMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnsMenu.TabIndex = 1;
+            this.btnsMenu.TabStop = false;
             // 
             // ssidebar
             // 
@@ -232,17 +236,18 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.Controls.Add(this.pnss);
             this.Controls.Add(this.pnsc);
             this.Controls.Add(this.ssidebar);
-            this.Controls.Add(this.tdpanel);
+            this.Controls.Add(this.sdpanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.IsMdiContainer = true;
             this.Name = "StudentDashboard";
             this.Text = "StudentDashboard";
-            this.tdpanel.ResumeLayout(false);
-            this.tdpanel.PerformLayout();
+            this.sdpanel.ResumeLayout(false);
+            this.sdpanel.PerformLayout();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tout)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sout)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tprof)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btntMenu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sprof)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnsMenu)).EndInit();
             this.pnss.ResumeLayout(false);
             this.pnsc.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -251,16 +256,16 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
 
         #endregion
 
-        private System.Windows.Forms.Panel tdpanel;
+        private System.Windows.Forms.Panel sdpanel;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button Tats;
-        private System.Windows.Forms.PictureBox tout;
+        private System.Windows.Forms.Button Sats;
+        private System.Windows.Forms.PictureBox sout;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button TAnnouncement;
-        private System.Windows.Forms.PictureBox tprof;
+        private System.Windows.Forms.Button SAnnouncement;
+        private System.Windows.Forms.PictureBox sprof;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox btntMenu;
+        private System.Windows.Forms.PictureBox btnsMenu;
         private System.Windows.Forms.FlowLayoutPanel ssidebar;
         private System.Windows.Forms.Panel pnss;
         private System.Windows.Forms.Button btnSDs;
