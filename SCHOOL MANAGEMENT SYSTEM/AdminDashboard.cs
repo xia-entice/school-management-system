@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms;
 
 namespace SCHOOL_MANAGEMENT_SYSTEM
 {
@@ -26,12 +25,15 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             mdiProp();
         }
 
+        // for mdi
         private void mdiProp()
         {
             this.SetBevel(false);
             Controls.OfType<MdiClient>().FirstOrDefault().BackColor = Color.FromArgb(232, 234, 237);
         }
         bool sidebarExpand = true;
+
+        // sidebar
         private void sidebarTransition_Tick(object sender, EventArgs e)
         {
             if (sidebarExpand)
@@ -67,6 +69,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             sidebarTransition.Start();
         }
 
+        // buttons 
         private void btnADa_Click(object sender, EventArgs e)
         {
 
@@ -206,6 +209,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             ADaeprof = null;
         }
 
+        // sign out
         private void aout_Click(object sender, EventArgs e)
         {
             // Show a message box to confirm logout
