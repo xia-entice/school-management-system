@@ -57,7 +57,30 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 msda.Fill(dt);
                 if (dt.Rows[0][0].ToString() == "1")
                 {
-                    AdminDashboard Obj = new AdminDashboard();
+                    TeacherDashboard Obj = new TeacherDashboard();
+                    Obj.Show();
+                    this.Hide();
+                    con.Close();
+
+                }
+                else
+                {
+                    MessageBox.Show("Wrong Username and Password");
+                    Username_txt.Text = "";
+                    Password_txt.Text = "";
+
+                }
+                con.Close();
+            }
+            else if (roleCB.Text == "Student")
+            {
+                con.Open();
+                MySqlDataAdapter msda = new MySqlDataAdapter("select count(*) from studentacc where studuname= '" + Username_txt.Text + "' and studpass= '" + Password_txt.Text + "'", con);
+                DataTable dt = new DataTable();
+                msda.Fill(dt);
+                if (dt.Rows[0][0].ToString() == "1")
+                {
+                    StudentDashboard Obj = new StudentDashboard();
                     Obj.Show();
                     this.Hide();
                     con.Close();
