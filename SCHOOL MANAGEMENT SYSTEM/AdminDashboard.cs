@@ -31,9 +31,9 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.SetBevel(false);
             Controls.OfType<MdiClient>().FirstOrDefault().BackColor = Color.FromArgb(232, 234, 237);
         }
-        bool sidebarExpand = true;
 
         // sidebar
+        bool sidebarExpand = true;
         private void sidebarTransition_Tick(object sender, EventArgs e)
         {
             if (sidebarExpand)
