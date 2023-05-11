@@ -53,6 +53,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tprof)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btntMenu)).BeginInit();
+            this.tsidebar.SuspendLayout();
             this.pnts.SuspendLayout();
             this.pntc.SuspendLayout();
             this.SuspendLayout();
@@ -166,10 +167,13 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.btntMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.btntMenu.TabIndex = 1;
             this.btntMenu.TabStop = false;
+            this.btntMenu.Click += new System.EventHandler(this.btntMenu_Click);
             // 
             // tsidebar
             // 
             this.tsidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(178)))), ((int)(((byte)(85)))));
+            this.tsidebar.Controls.Add(this.pnts);
+            this.tsidebar.Controls.Add(this.pntc);
             this.tsidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.tsidebar.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.tsidebar.Location = new System.Drawing.Point(0, 97);
@@ -181,7 +185,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // pnts
             // 
             this.pnts.Controls.Add(this.btnTDs);
-            this.pnts.Location = new System.Drawing.Point(246, 113);
+            this.pnts.Location = new System.Drawing.Point(3, 23);
             this.pnts.Name = "pnts";
             this.pnts.Size = new System.Drawing.Size(260, 63);
             this.pnts.TabIndex = 2;
@@ -200,11 +204,12 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.btnTDs.Text = "             Schedule";
             this.btnTDs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTDs.UseVisualStyleBackColor = false;
+            this.btnTDs.Click += new System.EventHandler(this.btnTDs_Click);
             // 
             // pntc
             // 
             this.pntc.Controls.Add(this.btnTDc);
-            this.pntc.Location = new System.Drawing.Point(246, 182);
+            this.pntc.Location = new System.Drawing.Point(3, 92);
             this.pntc.Name = "pntc";
             this.pntc.Size = new System.Drawing.Size(260, 63);
             this.pntc.TabIndex = 4;
@@ -223,18 +228,17 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.btnTDc.Text = "             Classes\r\n";
             this.btnTDc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTDc.UseVisualStyleBackColor = false;
+            this.btnTDc.Click += new System.EventHandler(this.btnTDc_Click);
             // 
             // tsidebarTransition
             // 
             this.tsidebarTransition.Interval = 10;
+            this.tsidebarTransition.Tick += new System.EventHandler(this.tsidebarTransition_Tick);
             // 
             // TeacherDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1199, 647);
-            this.Controls.Add(this.pnts);
-            this.Controls.Add(this.pntc);
             this.Controls.Add(this.tsidebar);
             this.Controls.Add(this.tdpanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -248,6 +252,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tprof)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btntMenu)).EndInit();
+            this.tsidebar.ResumeLayout(false);
             this.pnts.ResumeLayout(false);
             this.pntc.ResumeLayout(false);
             this.ResumeLayout(false);

@@ -15,6 +15,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         formANN TDann;
         formATS TDats;
         formTDteprof TDteprof;
+        formTDsched TDsched;
+        formTDclass TDclass;
 
         public TeacherDashboard()
         {
@@ -30,6 +32,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         }
         bool sidebarExpand = true;
 
+        // button clicks
         private void TAnnouncement_Click(object sender, EventArgs e)
         {
             if (TDann == null)
@@ -111,6 +114,57 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 Form1 Obj = new Form1();
                 Obj.Show();
                 this.Close(); // close the current form
+            }
+        }
+
+        // sidebar
+        bool tsidebarExpand = true;
+        private void tsidebarTransition_Tick(object sender, EventArgs e)
+        {
+            if (tsidebarExpand)
+            {
+                tsidebar.Width -= 15;
+                if(tsidebar.Width <= 78)
+                {
+                    tsidebarExpand = false;
+                    tsidebarTransition.Stop();
+
+                    pnts.Width = tsidebar.Width;
+                    pntc.Width = tsidebar.Width;
+                }
+            }
+            else
+            {
+                tsidebar.Width += 15;
+                if(tsidebar.Width >= 230)
+                {
+                    tsidebarExpand = true;
+                    tsidebarTransition.Stop();
+
+                    pnts.Width = tsidebar.Width;
+                    pntc.Width = tsidebar.Width;
+                }
+            }
+        }
+        private void btntMenu_Click(object sender, EventArgs e)
+        {
+            tsidebarTransition.Start();
+        }
+
+        // buttons pt. 2
+        private void btnTDs_Click(object sender, EventArgs e)
+        {
+            if(TDsched == null)
+            {
+                TDsched = new formTDsched();
+                
+            }
+        }
+        private void btnTDc_Click(object sender, EventArgs e)
+        {
+            if(TDclass == null)
+            {
+                TDclass = new formTDclass();
             }
         }
     }

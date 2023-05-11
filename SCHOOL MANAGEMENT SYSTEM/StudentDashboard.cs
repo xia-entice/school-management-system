@@ -15,6 +15,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         formANN SDann;
         formATS SDats;
         formSDseprof SDseprof;
+        formSDsched SDsched;
+        formSDclass SDclass;
 
         public StudentDashboard()
         {
@@ -112,6 +114,57 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 Form1 Obj = new Form1();
                 Obj.Show();
                 this.Close(); // close the current form
+            }
+        }
+
+        // sidebar
+        bool ssidebarExpand = true;
+        private void ssidebarTransition_Tick(object sender, EventArgs e)
+        {
+            if (ssidebarExpand)
+            {
+                ssidebar.Width -= 15;
+                if(ssidebar.Width <= 78)
+                {
+                    ssidebarExpand = false;
+                    ssidebarTransition.Stop();
+
+                    pnss.Width = ssidebar.Width;
+                    pnsc.Width = ssidebar.Width;
+                }
+            }
+            else
+            {
+                ssidebar.Width += 15;
+                if(ssidebar.Width >= 230)
+                {
+                    ssidebarExpand = true;
+                    ssidebarTransition.Stop();
+
+                    pnss.Width = ssidebar.Width;
+                    pnsc.Width = ssidebar.Width;
+                }
+            }
+        }
+        private void btnsMenu_Click(object sender, EventArgs e)
+        {
+            ssidebarTransition.Start();
+        }
+
+        // buttons pt. 2 
+        private void btnSDs_Click(object sender, EventArgs e)
+        {
+            if (SDsched == null)
+            {
+                SDsched = new formSDsched();
+            }
+        }
+
+        private void btnSDc_Click(object sender, EventArgs e)
+        {
+            if(SDclass == null)
+            {
+                SDclass = new formSDclass();
             }
         }
     }
