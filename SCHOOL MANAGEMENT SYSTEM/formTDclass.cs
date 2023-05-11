@@ -7,14 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 namespace SCHOOL_MANAGEMENT_SYSTEM
 {
-    public partial class formSDseprof : Form
+    public partial class formTDclass : UserControl
     {
-        public formSDseprof()
+        public formTDclass()
         {
             InitializeComponent();
         }
-
     }
 }

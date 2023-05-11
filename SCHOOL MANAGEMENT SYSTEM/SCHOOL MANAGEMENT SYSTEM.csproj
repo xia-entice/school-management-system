@@ -280,11 +280,35 @@
     <Compile Include="formATS.Designer.cs">
       <DependentUpon>formATS.cs</DependentUpon>
     </Compile>
+    <Compile Include="formSDclass.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="formSDclass.Designer.cs">
+      <DependentUpon>formSDclass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formSDsched.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="formSDsched.Designer.cs">
+      <DependentUpon>formSDsched.cs</DependentUpon>
+    </Compile>
     <Compile Include="formSDseprof.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formSDseprof.Designer.cs">
       <DependentUpon>formSDseprof.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formTDclass.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="formTDclass.Designer.cs">
+      <DependentUpon>formTDclass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formTDsched.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="formTDsched.Designer.cs">
+      <DependentUpon>formTDsched.cs</DependentUpon>
     </Compile>
     <Compile Include="formTDteprof.cs">
       <SubType>Form</SubType>
@@ -340,8 +364,20 @@
     <EmbeddedResource Include="formATS.resx">
       <DependentUpon>formATS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formSDclass.resx">
+      <DependentUpon>formSDclass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formSDsched.resx">
+      <DependentUpon>formSDsched.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formSDseprof.resx">
       <DependentUpon>formSDseprof.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formTDclass.resx">
+      <DependentUpon>formTDclass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formTDsched.resx">
+      <DependentUpon>formTDsched.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formTDteprof.resx">
       <DependentUpon>formTDteprof.cs</DependentUpon>
