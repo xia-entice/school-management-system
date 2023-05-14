@@ -32,8 +32,9 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 string address = "";
                 string email = "";
                 DateTime birthdate = new DateTime();
+                byte[] image = null;
 
-                MySqlCommand selectCmd = new MySqlCommand("SELECT name, adage, adgender, adcnumber, adaddress, ademail, adbirthdate FROM adminacc WHERE AdminAc = @AdminAc", amysqlCon);
+                MySqlCommand selectCmd = new MySqlCommand("SELECT name, adage, adgender, adcnumber, adaddress, ademail, adbirthdate, aimage FROM adminacc WHERE AdminAc = @AdminAc", amysqlCon);
                 selectCmd.Parameters.AddWithValue("@AdminAc", AdminAc);
                 using (MySqlDataReader reader = selectCmd.ExecuteReader())
                 {
@@ -46,6 +47,10 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                         address = reader.IsDBNull(4) ? "" : reader.GetString(4);
                         email = reader.IsDBNull(5) ? "" : reader.GetString(5);
                         birthdate = reader.IsDBNull(6) ? new DateTime() : reader.GetDateTime(6);
+                        if (!reader.IsDBNull(7))
+                        {
+                            image = (byte[])reader.GetValue(7);
+                        }
                         reader.Close();
                     }
                 }
@@ -62,13 +67,20 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 amysqlCmd.Parameters.AddWithValue("_adaddress", address);
                 amysqlCmd.Parameters.AddWithValue("_ademail", email);
                 amysqlCmd.Parameters.AddWithValue("_adcnumber", cnumber);
+                if (image != null && image.Length > 0)
+                {
+                    amysqlCmd.Parameters.AddWithValue("_aimage", image);
+                }
+                else
+                {
+                    amysqlCmd.Parameters.AddWithValue("_aimage", DBNull.Value);
+                }
                 amysqlCmd.ExecuteNonQuery();
                 MessageBox.Show("Saved Successfully");
                 AGridFill();
                 AClear();
 
             }
-
         }
         void AGridFill()
         {
@@ -92,6 +104,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 AAview.Columns[7].Visible = false;
                 AAview.Columns[8].HeaderText = "Admin Email";
                 AAview.Columns[9].HeaderText = "Admin Contact Number";
+                AAview.Columns[10].Visible = false;
+                
             }
 
         }

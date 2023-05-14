@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SCHOOL_MANAGEMENT_SYSTEM
@@ -13,16 +8,19 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
 
     public partial class AdminDashboard : Form
     {
+
         formADadmin ADadmin;
         formADteacher ADteacher;
         formADstudent ADstudent;
         formADann ADann;
         formADats ADats;
         formADaeprof ADaeprof;
+        public string loggedInUser;
         public AdminDashboard()
         {
             InitializeComponent();
             mdiProp();
+
         }
 
         // for mdi
@@ -39,7 +37,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             if (sidebarExpand)
             {
                 sidebar.Width -= 15;
-                if(sidebar.Width <= 78)
+                if (sidebar.Width <= 78)
                 {
                     sidebarExpand = false;
                     sidebarTransition.Stop();
@@ -52,7 +50,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             else
             {
                 sidebar.Width += 15;
-                if(sidebar.Width >= 230)
+                if (sidebar.Width >= 230)
                 {
                     sidebarExpand = true;
                     sidebarTransition.Stop();
@@ -96,7 +94,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
 
         private void btnADt_Click(object sender, EventArgs e)
         {
-            if(ADteacher == null)
+            if (ADteacher == null)
             {
                 ADteacher = new formADteacher();
                 ADteacher.FormClosed += ADteacher_FormClosed;
@@ -119,7 +117,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
 
         private void btnADs_Click(object sender, EventArgs e)
         {
-            if(ADstudent == null)
+            if (ADstudent == null)
             {
                 ADstudent = new formADstudent();
                 ADstudent.FormClosed += ADstudent_FormClosed;
@@ -188,9 +186,12 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
 
         private void aprof_Click(object sender, EventArgs e)
         {
+          
             if (ADaeprof == null)
             {
                 ADaeprof = new formADaeprof();
+                ADaeprof.GetID(loggedInUser);
+                ADaeprof.loggedInUser = loggedInUser;
                 ADaeprof.FormClosed += ADaeprof_FormClosed;
                 ADaeprof.MdiParent = this;
                 ADaeprof.StartPosition = FormStartPosition.Manual;
@@ -200,6 +201,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             }
             else
             {
+                ADaeprof.GetID(loggedInUser);
+                ADaeprof.loggedInUser = loggedInUser;
                 ADaeprof.Activate();
             }
         }

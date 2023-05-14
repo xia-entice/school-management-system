@@ -83,7 +83,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 while (reader.Read())
                 {
                     // Add each announcement to the list
-                    string announcement = reader.GetString("Announcement");
+                    int anId = reader.GetInt32(0);
+                    string announcement = reader.GetString(1);
                     announcementsList.Add(announcement);
 
                     // Create a new label for each announcement and add it to the panel

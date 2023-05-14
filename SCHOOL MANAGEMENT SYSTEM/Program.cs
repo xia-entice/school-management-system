@@ -16,7 +16,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TeacherDashboard());
+            Application.Run(new Form1());
         }
     }
 }
