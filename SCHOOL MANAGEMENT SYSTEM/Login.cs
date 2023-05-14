@@ -12,7 +12,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
 {
     public partial class Form1 : Form
     {
-        MySqlConnection con = new MySqlConnection(@"Server=localhost;Database=studmanagment;Uid=root;Pwd = karmakun_2002");
+        MySqlConnection con = new MySqlConnection(@"Server=localhost;Database=studmanagment;Uid=root;Pwd=karmakun_2002");
+
         public Form1()
         {
             InitializeComponent();
@@ -22,37 +23,38 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         {
             if (Username_txt.Text == "" || Password_txt.Text == "" || roleCB.Text == "Role")
             {
-                MessageBox.Show(" LogIn Failed, Input Correct Information!");
+                MessageBox.Show("LogIn Failed, Input Correct Information!");
             }
             else if (roleCB.Text == "Admin")
-
             {
                 con.Open();
-                MySqlDataAdapter msda = new MySqlDataAdapter("select count(*) from adminacc where uname= '" + Username_txt.Text + "' and pass= '" + Password_txt.Text + "'", con);
+                MySqlDataAdapter msda = new MySqlDataAdapter("SELECT COUNT(*) FROM adminacc WHERE uname = '" + Username_txt.Text + "' AND pass = '" + Password_txt.Text + "'", con);
                 DataTable dt = new DataTable();
                 msda.Fill(dt);
                 if (dt.Rows[0][0].ToString() == "1")
                 {
+
+                    string loggedInUser = Username_txt.Text;
+                    formADaeprof form2 = new formADaeprof();
+                    form2.loggedInUser = Username_txt.Text;
+                    form2.GetID(loggedInUser);
                     AdminDashboard Obj = new AdminDashboard();
+                    Obj.loggedInUser = Username_txt.Text;
                     Obj.Show();
                     this.Hide();
-                    con.Close();
-
                 }
                 else
                 {
                     MessageBox.Show("Wrong Username and Password");
                     Username_txt.Text = "";
                     Password_txt.Text = "";
-
-
                 }
                 con.Close();
             }
             else if (roleCB.Text == "Teacher")
             {
                 con.Open();
-                MySqlDataAdapter msda = new MySqlDataAdapter("select count(*) from teacheracc where teachername= '" + Username_txt.Text + "' and teacherpassword= '" + Password_txt.Text + "'", con);
+                MySqlDataAdapter msda = new MySqlDataAdapter("SELECT COUNT(*) FROM teacheracc WHERE teachername = '" + Username_txt.Text + "' AND teacherpassword = '" + Password_txt.Text + "'", con);
                 DataTable dt = new DataTable();
                 msda.Fill(dt);
                 if (dt.Rows[0][0].ToString() == "1")
@@ -60,22 +62,19 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                     TeacherDashboard Obj = new TeacherDashboard();
                     Obj.Show();
                     this.Hide();
-                    con.Close();
-
                 }
                 else
                 {
                     MessageBox.Show("Wrong Username and Password");
                     Username_txt.Text = "";
                     Password_txt.Text = "";
-
                 }
                 con.Close();
             }
             else if (roleCB.Text == "Student")
             {
                 con.Open();
-                MySqlDataAdapter msda = new MySqlDataAdapter("select count(*) from studentacc where studuname= '" + Username_txt.Text + "' and studpass= '" + Password_txt.Text + "'", con);
+                MySqlDataAdapter msda = new MySqlDataAdapter("SELECT COUNT(*) FROM studentacc WHERE studuname = '" + Username_txt.Text + "' AND studpass = '" + Password_txt.Text + "'", con);
                 DataTable dt = new DataTable();
                 msda.Fill(dt);
                 if (dt.Rows[0][0].ToString() == "1")
@@ -83,19 +82,15 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                     StudentDashboard Obj = new StudentDashboard();
                     Obj.Show();
                     this.Hide();
-                    con.Close();
-
                 }
                 else
                 {
                     MessageBox.Show("Wrong Username and Password");
                     Username_txt.Text = "";
                     Password_txt.Text = "";
-
                 }
                 con.Close();
             }
-
         }
 
         private void pictureBox3_MouseHover(object sender, EventArgs e)
@@ -120,6 +115,20 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             Password_txt.UseSystemPasswordChar = true;
             pictureBox2.Show();
             pictureBox3.Hide();
+        }
+
+        private int GetLoggedInAdminAc()
+        {
+            int adminAc = 0;
+            MySqlDataAdapter msda = new MySqlDataAdapter("SELECT adminac FROM adminacc WHERE uname = '" + Username_txt.Text + "' AND pass = '" + Password_txt.Text + "'", con);
+            DataTable dt = new DataTable();
+            msda.Fill(dt);
+            if (dt.Rows.Count > 0)
+            {
+                adminAc = Convert.ToInt32(dt.Rows[0]["adminac"]);
+            }
+            con.Close();
+            return adminAc;
         }
     }
 }
