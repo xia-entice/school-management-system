@@ -16,10 +16,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
     {
         MySqlConnection con = new MySqlConnection(@"Server=localhost;Database=studmanagment;Uid=root;Pwd = karmakun_2002");
         string AconnectionString = @"Server=localhost;Database=studmanagment;Uid=root;Pwd = karmakun_2002";
-        MySqlConnection adminconnect = new MySqlConnection("datasource=localhost;port=3306;username=root;password=karmakun_2002");
-        MySqlCommand command;
-        MySqlDataReader mdr;
         public string loggedInUser;
+        private Image adminImage;
 
 
         public formADaeprof()
@@ -36,28 +34,68 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
 
         private void ASave_Click(object sender, EventArgs e)
         {
-            try
+            // Validate the birth date
+            if (!DateTime.TryParse(abirth.Text.Trim(), out DateTime birthDate))
             {
-                using (MySqlConnection amysqlCon = new MySqlConnection(AconnectionString))
+                MessageBox.Show("Please enter a valid birth date in the format yyyy-MM-dd");
+                return;
+            }
+
+            // Validate required fields
+            if (string.IsNullOrWhiteSpace(auname.Text.Trim()))
+            {
+                MessageBox.Show("Please enter a username.");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(apass.Text.Trim()))
+            {
+                MessageBox.Show("Please enter a password.");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(aname.Text.Trim()))
+            {
+                MessageBox.Show("Please enter a name.");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(agender.Text.Trim()))
+            {
+                MessageBox.Show("Please enter a gender.");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(aaddress.Text.Trim()))
+            {
+                MessageBox.Show("Please enter an address.");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(aemail.Text.Trim()))
+            {
+                MessageBox.Show("Please enter an email address.");
+                return;
+            }
+
+            byte[] imageBytes = null;
+            if (adminpic.Image != null)
+            {
+                try
                 {
-                    amysqlCon.Open();
-
-                    // Validate the birth date
-                    DateTime birthDate;
-                    if (!DateTime.TryParse(abirth.Text.Trim(), out birthDate))
+                    using (MemoryStream ms = new MemoryStream())
                     {
-                        MessageBox.Show("Please enter a valid birth date in the format yyyy-MM-dd");
-                        return;
-                    }
-
-                    // Convert the image to a byte array
-                    byte[] imageBytes = null;
-                    if (adminpic.Image != null)
-                    {
-                        MemoryStream ms = new MemoryStream();
                         adminpic.Image.Save(ms, adminpic.Image.RawFormat);
                         imageBytes = ms.ToArray();
                     }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred while processing the image: " + ex.Message);
+                    return;
+                }
+            }
+
+            using (MySqlConnection amysqlCon = new MySqlConnection(AconnectionString))
+            {
+                try
+                {
+                    amysqlCon.Open();
 
                     MySqlCommand amysqlCmd = new MySqlCommand("adminAddorUp", amysqlCon);
                     amysqlCmd.CommandType = CommandType.StoredProcedure;
@@ -72,19 +110,31 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                     amysqlCmd.Parameters.AddWithValue("_ademail", aemail.Text.Trim());
                     amysqlCmd.Parameters.AddWithValue("_adcnumber", 123);
 
+                   if (imageBytes != null)
+            {
+                if (adminImage != null)
+                {
+                    adminImage.Dispose();
+                }
+                adminImage = adminpic.Image; // Assign the new image to the adminImage variable
+            }
+
                     // Add the image to the parameters
-                    amysqlCmd.Parameters.AddWithValue("_aimage", imageBytes);
+                    amysqlCmd.Parameters.AddWithValue("_aimage", imageBytes ?? (object)DBNull.Value);
+
 
                     amysqlCmd.ExecuteNonQuery();
                     MessageBox.Show("Saved Successfully");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred while saving the data: " + ex.Message);
+                }
+                finally
+                {
                     LoadData();
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            LoadData();
         }
 
         private void LoadData()
@@ -115,16 +165,21 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                             auname.Text = mdr.GetString("uname");
 
                             // Load image into picture box
-                            byte[] imageData = (byte[])mdr["aimage"];
-                            if (imageData != null)
+                            object imageData = mdr["aimage"];
+                            if (imageData != DBNull.Value)
                             {
-                                using (MemoryStream ms = new MemoryStream(imageData))
+                                byte[] imageBytes = (byte[])imageData;
+                                using (MemoryStream ms = new MemoryStream(imageBytes))
                                 {
                                     adminpic.Image = Image.FromStream(ms);
                                     adminpic.SizeMode = PictureBoxSizeMode.Zoom;
                                     Image img = Image.FromStream(ms);
                                     adminpic.Image = img;
                                 }
+                            }
+                            else
+                            {
+                                adminpic.Image = null; // Set the picture box image to null if no image is present
                             }
 
                             aname.Enabled = false;
@@ -136,6 +191,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                             apass.Enabled = false;
                             auname.Enabled = false;
                             ASave.Enabled = false;
+                            Asearch.Enabled = false;
                         }
                     }
                     else
@@ -146,7 +202,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+              
             }
         }
 
@@ -174,6 +230,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             apass.Enabled = true;
             auname.Enabled = true;
             ASave.Enabled = true;
+            Asearch.Enabled = true;
 
         }
 

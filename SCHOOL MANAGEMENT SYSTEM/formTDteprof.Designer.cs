@@ -33,22 +33,21 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.teprofPanel = new System.Windows.Forms.Panel();
             this.tpanel6 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.TeacherID = new System.Windows.Forms.Label();
+            this.tdept = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.temail = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.tSave = new System.Windows.Forms.Button();
+            this.tedit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tpanel7 = new System.Windows.Forms.Panel();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.taddress = new System.Windows.Forms.TextBox();
+            this.tgender = new System.Windows.Forms.TextBox();
+            this.tage = new System.Windows.Forms.TextBox();
+            this.tname = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -58,21 +57,21 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.labels = new System.Windows.Forms.Label();
             this.tpanel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tpass = new System.Windows.Forms.TextBox();
+            this.tuname = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.Tsearch = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timage = new System.Windows.Forms.PictureBox();
+            this.tbirth = new System.Windows.Forms.DateTimePicker();
             this.tpanel6.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tpanel7.SuspendLayout();
             this.teprofPanel2.SuspendLayout();
             this.tpanel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timage)).BeginInit();
             this.SuspendLayout();
             // 
             // teprofPanel
@@ -89,8 +88,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.tpanel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tpanel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tpanel6.Controls.Add(this.panel1);
-            this.tpanel6.Controls.Add(this.button3);
-            this.tpanel6.Controls.Add(this.button4);
+            this.tpanel6.Controls.Add(this.tSave);
+            this.tpanel6.Controls.Add(this.tedit);
             this.tpanel6.Controls.Add(this.label1);
             this.tpanel6.Controls.Add(this.tpanel7);
             this.tpanel6.Location = new System.Drawing.Point(377, 68);
@@ -101,11 +100,11 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.TeacherID);
+            this.panel1.Controls.Add(this.tdept);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.temail);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(36, 73);
@@ -113,32 +112,32 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.panel1.Size = new System.Drawing.Size(693, 96);
             this.panel1.TabIndex = 33;
             // 
-            // label14
+            // TeacherID
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(122, 16);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(80, 23);
-            this.label14.TabIndex = 34;
-            this.label14.Text = "0000000";
+            this.TeacherID.AutoSize = true;
+            this.TeacherID.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TeacherID.Location = new System.Drawing.Point(122, 16);
+            this.TeacherID.Name = "TeacherID";
+            this.TeacherID.Size = new System.Drawing.Size(80, 23);
+            this.TeacherID.TabIndex = 34;
+            this.TeacherID.Text = "0000000";
             // 
-            // comboBox1
+            // tdept
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.tdept.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tdept.FormattingEnabled = true;
+            this.tdept.Items.AddRange(new object[] {
             "(CAS) College of Arts and Sciences ",
             "(CCICT) College Of Computer, Information and Communications Technology ",
             "(COEd) College Of Education",
             "(COE) College of Engineering ",
             "(CME) College of Management and Entrepreneurship ",
             "(COT) College of Technology "});
-            this.comboBox1.Location = new System.Drawing.Point(12, 51);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(665, 32);
-            this.comboBox1.TabIndex = 33;
-            this.comboBox1.Text = "Choose your Department:";
+            this.tdept.Location = new System.Drawing.Point(12, 51);
+            this.tdept.Name = "tdept";
+            this.tdept.Size = new System.Drawing.Size(665, 32);
+            this.tdept.TabIndex = 33;
+            this.tdept.Text = "Choose your Department:";
             // 
             // label13
             // 
@@ -158,13 +157,13 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.label5.Size = new System.Drawing.Size(0, 23);
             this.label5.TabIndex = 32;
             // 
-            // textBox1
+            // temail
             // 
-            this.textBox1.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(401, 8);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(276, 35);
-            this.textBox1.TabIndex = 31;
+            this.temail.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.temail.Location = new System.Drawing.Point(401, 8);
+            this.temail.Name = "temail";
+            this.temail.Size = new System.Drawing.Size(276, 35);
+            this.temail.TabIndex = 31;
             // 
             // label4
             // 
@@ -186,27 +185,29 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.label3.TabIndex = 17;
             this.label3.Text = "ID Number:";
             // 
-            // button3
+            // tSave
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(629, 471);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 36);
-            this.button3.TabIndex = 26;
-            this.button3.Text = "Save";
-            this.button3.UseVisualStyleBackColor = false;
+            this.tSave.BackColor = System.Drawing.Color.White;
+            this.tSave.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tSave.Location = new System.Drawing.Point(629, 471);
+            this.tSave.Name = "tSave";
+            this.tSave.Size = new System.Drawing.Size(100, 36);
+            this.tSave.TabIndex = 26;
+            this.tSave.Text = "Save";
+            this.tSave.UseVisualStyleBackColor = false;
+            this.tSave.Click += new System.EventHandler(this.tSave_Click);
             // 
-            // button4
+            // tedit
             // 
-            this.button4.BackColor = System.Drawing.Color.White;
-            this.button4.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(521, 471);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 36);
-            this.button4.TabIndex = 25;
-            this.button4.Text = "Edit";
-            this.button4.UseVisualStyleBackColor = false;
+            this.tedit.BackColor = System.Drawing.Color.White;
+            this.tedit.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tedit.Location = new System.Drawing.Point(521, 471);
+            this.tedit.Name = "tedit";
+            this.tedit.Size = new System.Drawing.Size(100, 36);
+            this.tedit.TabIndex = 25;
+            this.tedit.Text = "Edit";
+            this.tedit.UseVisualStyleBackColor = false;
+            this.tedit.Click += new System.EventHandler(this.tedit_Click);
             // 
             // label1
             // 
@@ -221,11 +222,11 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // tpanel7
             // 
             this.tpanel7.BackColor = System.Drawing.Color.White;
-            this.tpanel7.Controls.Add(this.textBox8);
-            this.tpanel7.Controls.Add(this.textBox9);
-            this.tpanel7.Controls.Add(this.textBox10);
-            this.tpanel7.Controls.Add(this.textBox11);
-            this.tpanel7.Controls.Add(this.textBox12);
+            this.tpanel7.Controls.Add(this.tbirth);
+            this.tpanel7.Controls.Add(this.taddress);
+            this.tpanel7.Controls.Add(this.tgender);
+            this.tpanel7.Controls.Add(this.tage);
+            this.tpanel7.Controls.Add(this.tname);
             this.tpanel7.Controls.Add(this.label7);
             this.tpanel7.Controls.Add(this.label9);
             this.tpanel7.Controls.Add(this.label10);
@@ -236,45 +237,37 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.tpanel7.Size = new System.Drawing.Size(693, 287);
             this.tpanel7.TabIndex = 22;
             // 
-            // textBox8
+            // taddress
             // 
-            this.textBox8.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(137, 224);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(527, 35);
-            this.textBox8.TabIndex = 28;
+            this.taddress.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.taddress.Location = new System.Drawing.Point(137, 224);
+            this.taddress.Name = "taddress";
+            this.taddress.Size = new System.Drawing.Size(527, 35);
+            this.taddress.TabIndex = 28;
             // 
-            // textBox9
+            // tgender
             // 
-            this.textBox9.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(137, 169);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(527, 35);
-            this.textBox9.TabIndex = 27;
+            this.tgender.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tgender.Location = new System.Drawing.Point(137, 116);
+            this.tgender.Name = "tgender";
+            this.tgender.Size = new System.Drawing.Size(527, 35);
+            this.tgender.TabIndex = 26;
             // 
-            // textBox10
+            // tage
             // 
-            this.textBox10.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(137, 116);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(527, 35);
-            this.textBox10.TabIndex = 26;
+            this.tage.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tage.Location = new System.Drawing.Point(137, 69);
+            this.tage.Name = "tage";
+            this.tage.Size = new System.Drawing.Size(527, 35);
+            this.tage.TabIndex = 25;
             // 
-            // textBox11
+            // tname
             // 
-            this.textBox11.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(137, 69);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(527, 35);
-            this.textBox11.TabIndex = 25;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(137, 21);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(527, 35);
-            this.textBox12.TabIndex = 24;
+            this.tname.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tname.Location = new System.Drawing.Point(137, 21);
+            this.tname.Name = "tname";
+            this.tname.Size = new System.Drawing.Size(527, 35);
+            this.tname.TabIndex = 24;
             // 
             // label7
             // 
@@ -352,10 +345,9 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.tpanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(178)))), ((int)(((byte)(85)))));
             this.tpanel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tpanel3.Controls.Add(this.label2);
-            this.tpanel3.Controls.Add(this.button1);
             this.tpanel3.Controls.Add(this.panel2);
             this.tpanel3.Controls.Add(this.Tsearch);
-            this.tpanel3.Controls.Add(this.pictureBox1);
+            this.tpanel3.Controls.Add(this.timage);
             this.tpanel3.Location = new System.Drawing.Point(22, 68);
             this.tpanel3.Name = "tpanel3";
             this.tpanel3.Size = new System.Drawing.Size(355, 521);
@@ -371,22 +363,11 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.label2.TabIndex = 31;
             this.label2.Text = "Login Information";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(227, 466);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 36);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.textBox7);
-            this.panel2.Controls.Add(this.textBox6);
+            this.panel2.Controls.Add(this.tpass);
+            this.panel2.Controls.Add(this.tuname);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Location = new System.Drawing.Point(22, 286);
@@ -394,21 +375,21 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.panel2.Size = new System.Drawing.Size(305, 176);
             this.panel2.TabIndex = 23;
             // 
-            // textBox7
+            // tpass
             // 
-            this.textBox7.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(20, 119);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(260, 35);
-            this.textBox7.TabIndex = 30;
+            this.tpass.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tpass.Location = new System.Drawing.Point(20, 119);
+            this.tpass.Name = "tpass";
+            this.tpass.Size = new System.Drawing.Size(260, 35);
+            this.tpass.TabIndex = 30;
             // 
-            // textBox6
+            // tuname
             // 
-            this.textBox6.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(20, 44);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(260, 35);
-            this.textBox6.TabIndex = 29;
+            this.tuname.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tuname.Location = new System.Drawing.Point(20, 44);
+            this.tuname.Name = "tuname";
+            this.tuname.Size = new System.Drawing.Size(260, 35);
+            this.tuname.TabIndex = 29;
             // 
             // label6
             // 
@@ -440,17 +421,26 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.Tsearch.TabIndex = 24;
             this.Tsearch.Text = "Upload Picture";
             this.Tsearch.UseVisualStyleBackColor = false;
+            this.Tsearch.Click += new System.EventHandler(this.Tsearch_Click);
             // 
-            // pictureBox1
+            // timage
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(76, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(195, 171);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
+            this.timage.BackColor = System.Drawing.Color.White;
+            this.timage.Image = ((System.Drawing.Image)(resources.GetObject("timage.Image")));
+            this.timage.Location = new System.Drawing.Point(76, 15);
+            this.timage.Name = "timage";
+            this.timage.Size = new System.Drawing.Size(195, 171);
+            this.timage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.timage.TabIndex = 16;
+            this.timage.TabStop = false;
+            // 
+            // tbirth
+            // 
+            this.tbirth.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbirth.Location = new System.Drawing.Point(137, 172);
+            this.tbirth.Name = "tbirth";
+            this.tbirth.Size = new System.Drawing.Size(525, 22);
+            this.tbirth.TabIndex = 29;
             // 
             // formTDteprof
             // 
@@ -462,6 +452,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formTDteprof";
             this.Text = "formteprof";
+            this.Load += new System.EventHandler(this.formTDteprof_Load);
             this.tpanel6.ResumeLayout(false);
             this.tpanel6.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -474,7 +465,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.tpanel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timage)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -484,14 +475,13 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         private System.Windows.Forms.Panel teprofPanel;
         private System.Windows.Forms.Panel tpanel6;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button tSave;
+        private System.Windows.Forms.Button tedit;
         private System.Windows.Forms.Panel tpanel7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox taddress;
+        private System.Windows.Forms.TextBox tgender;
+        private System.Windows.Forms.TextBox tage;
+        private System.Windows.Forms.TextBox tname;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
@@ -501,21 +491,21 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         private System.Windows.Forms.Label labels;
         private System.Windows.Forms.Panel tpanel3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tpass;
+        private System.Windows.Forms.TextBox tuname;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button Tsearch;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox timage;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label TeacherID;
+        private System.Windows.Forms.ComboBox tdept;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox temail;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker tbirth;
     }
 }

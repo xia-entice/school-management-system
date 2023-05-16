@@ -55,6 +55,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                     }
                 }
 
+              
+
                 MySqlCommand amysqlCmd = new MySqlCommand("adminAddOrUp", amysqlCon);
                 amysqlCmd.CommandType = CommandType.StoredProcedure;
                 amysqlCmd.Parameters.AddWithValue("_AdminAc", AdminAc);

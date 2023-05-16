@@ -59,7 +59,13 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 msda.Fill(dt);
                 if (dt.Rows[0][0].ToString() == "1")
                 {
+
+                    string loggedInUser = Username_txt.Text;
+                    formTDteprof form2 = new formTDteprof();
+                    form2.loggedInUser = Username_txt.Text;
+                    form2.GetID(loggedInUser);
                     TeacherDashboard Obj = new TeacherDashboard();
+                    Obj.loggedInUser = Username_txt.Text;
                     Obj.Show();
                     this.Hide();
                 }
@@ -79,7 +85,12 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 msda.Fill(dt);
                 if (dt.Rows[0][0].ToString() == "1")
                 {
+                    string loggedInUser = Username_txt.Text;
+                    formSDseprof form2 = new formSDseprof();
+                    form2.loggedInUser = Username_txt.Text;
+                    form2.GetID(loggedInUser);
                     StudentDashboard Obj = new StudentDashboard();
+                    Obj.loggedInUser = Username_txt.Text;
                     Obj.Show();
                     this.Hide();
                 }
