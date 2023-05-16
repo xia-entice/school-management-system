@@ -41,21 +41,31 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 string address = "";
                 string email = "";
                 DateTime birthdate = new DateTime();
+                byte[] image = null;
+                string dept = "";
 
-                MySqlCommand selectCmd = new MySqlCommand("SELECT studname, sage, sgender, scnumber, saddress, semail, sbirthdate FROM studentacc WHERE StudentAc = @StudentAc", smysqlCon);
+                MySqlCommand selectCmd = new MySqlCommand("SELECT studname, sage, sgender, scnumber, saddress, semail, sbirthdate, simage,sdept FROM studentacc WHERE StudentAc = @StudentAc", smysqlCon);
                 selectCmd.Parameters.AddWithValue("@StudentAc", StudentAc);
                 using (MySqlDataReader reader = selectCmd.ExecuteReader())
                 {
                     if (reader.Read())
                     {
-                        name = reader.IsDBNull(0) ? "" : reader.GetString(0);
-                        age = reader.IsDBNull(1) ? 0 : reader.GetInt32(1);
-                        gender = reader.IsDBNull(2) ? "" : reader.GetString(2);
-                        cnumber = reader.IsDBNull(3) ? 0 : reader.GetInt32(3);
-                        address = reader.IsDBNull(4) ? "" : reader.GetString(4);
-                        email = reader.IsDBNull(5) ? "" : reader.GetString(5);
-                        birthdate = reader.IsDBNull(6) ? new DateTime() : reader.GetDateTime(6);
-                        reader.Close();
+                        if (reader.Read())
+                        {
+                            name = reader.IsDBNull(0) ? "" : reader.GetString(0);
+                            age = reader.IsDBNull(1) ? 0 : reader.GetInt32(1);
+                            gender = reader.IsDBNull(2) ? "" : reader.GetString(2);
+                            cnumber = reader.IsDBNull(3) ? 0 : reader.GetInt32(3);
+                            address = reader.IsDBNull(4) ? "" : reader.GetString(4);
+                            email = reader.IsDBNull(5) ? "" : reader.GetString(5);
+                            birthdate = reader.IsDBNull(6) ? new DateTime() : reader.GetDateTime(6);
+                            if (!reader.IsDBNull(7))
+                            {
+                                image = (byte[])reader.GetValue(7);
+                            }
+                            dept = reader.IsDBNull(8) ? "" : reader.GetString(5);
+                            reader.Close();
+                        }
                     }
                 }
 
@@ -72,6 +82,16 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 smysqlCmd.Parameters.AddWithValue("_saddress", address);
                 smysqlCmd.Parameters.AddWithValue("_semail", email);
                 smysqlCmd.Parameters.AddWithValue("_scnumber", cnumber);
+                if (image != null && image.Length > 0)
+                {
+                    smysqlCmd.Parameters.AddWithValue("_simage", image);
+                }
+                else
+                {
+                    smysqlCmd.Parameters.AddWithValue("_simage", DBNull.Value);
+                }
+                smysqlCmd.Parameters.AddWithValue("_sdept", dept);
+
                 smysqlCmd.ExecuteNonQuery();
                 MessageBox.Show("Saved Successfully");
                 SGridFill();
@@ -101,6 +121,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 ASview.Columns[7].Visible = false;
                 ASview.Columns[8].HeaderText = "Student Email";
                 ASview.Columns[9].HeaderText = "Student Contact Number";
+                ASview.Columns[10].Visible = false;
+                ASview.Columns[11].HeaderText = "Department and Course";
             }
 
         }

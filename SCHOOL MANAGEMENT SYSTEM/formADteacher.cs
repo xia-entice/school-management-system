@@ -32,8 +32,10 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 string address = "";
                 string email = "";
                 DateTime birthdate = new DateTime();
+                byte[] image = null;
+                string dept = "";
 
-                MySqlCommand selectCmd = new MySqlCommand("SELECT tname, tage, tgender, tcnumber, taddress, temail, tbirthdate FROM teacheracc WHERE TeacherAc = @TeacherAc", tmysqlCon);
+                MySqlCommand selectCmd = new MySqlCommand("SELECT tname, tage, tgender, tcnumber, taddress, temail, tbirthdate, timage,tdept FROM teacheracc WHERE TeacherAc = @TeacherAc", tmysqlCon);
                 selectCmd.Parameters.AddWithValue("@TeacherAc", TeacherAc);
                 using (MySqlDataReader reader = selectCmd.ExecuteReader())
                 {
@@ -46,6 +48,11 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                         address = reader.IsDBNull(4) ? "" : reader.GetString(4);
                         email = reader.IsDBNull(5) ? "" : reader.GetString(5);
                         birthdate = reader.IsDBNull(6) ? new DateTime() : reader.GetDateTime(6);
+                        if (!reader.IsDBNull(7))
+                        {
+                            image = (byte[])reader.GetValue(7);
+                        }
+                        dept = reader.IsDBNull(8) ? "" : reader.GetString(5);
                         reader.Close();
                     }
                 }
@@ -63,6 +70,15 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 tmysqlCmd.Parameters.AddWithValue("_taddress", address);
                 tmysqlCmd.Parameters.AddWithValue("_temail", email);
                 tmysqlCmd.Parameters.AddWithValue("_tcnumber", cnumber);
+                if (image != null && image.Length > 0)
+                {
+                    tmysqlCmd.Parameters.AddWithValue("_timage", image);
+                }
+                else
+                {
+                    tmysqlCmd.Parameters.AddWithValue("_timage", DBNull.Value);
+                }
+                tmysqlCmd.Parameters.AddWithValue("_tdept", dept);
                 tmysqlCmd.ExecuteNonQuery();
                 MessageBox.Show("Saved Successfully");
                 TGridFill();
@@ -90,8 +106,10 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 ATview.Columns[5].Visible = false;
                 ATview.Columns[6].Visible = false;
                 ATview.Columns[7].Visible = false;
-                ATview.Columns[8].HeaderText = "Admin Email";
-                ATview.Columns[9].HeaderText = "Admin Contact Number";
+                ATview.Columns[8].HeaderText = "Teacher Email";
+                ATview.Columns[9].HeaderText = "Teacher Contact Number";
+                ATview.Columns[10].Visible = false;
+                ATview.Columns[11].HeaderText = "Department";
             }
 
         }

@@ -43,7 +43,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 anmysqlCmd.CommandType = CommandType.StoredProcedure;
                 anmysqlCmd.Parameters.AddWithValue("_AnID", AnID);
                 anmysqlCmd.Parameters.AddWithValue("_announcement", Postrtb.Text.Trim());
-                anmysqlCmd.ExecuteNonQuery();
+                AnID = Convert.ToInt32(anmysqlCmd.ExecuteScalar()); // Update the AnID variable with the newly inserted/updated announcement ID
                 MessageBox.Show("Posted Successfully");
 
                 AnClear();
@@ -56,11 +56,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         void AnClear()
         {
             Postrtb.Text = "";
-            AnID = 0;
             SelectedAnnouncementId = 0;
         }
-
-        private List<int> announcementIds = new List<int>();
 
         private void LoadAnnouncements()
         {
@@ -89,7 +86,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
 
                     // Create a new label for each announcement and add it to the panel
                     Label lbl = new Label();
-                    lbl.Name = $"lbl{announcementsList.Count}";
+                    lbl.Name = $"lbl{anId}";
                     lbl.Top = top;
                     lbl.Left = left;
                     lbl.Width = Annpanel1.Width - 20;
@@ -98,20 +95,20 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                     lbl.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, ((Byte)(0)));
                     lbl.Text = announcement;
                     lbl.Margin = new Padding(0, 10, 0, 0); // Add margin to separate the labels
-                    lbl.AutoSize = false; // Disable auto-sizing to enable paragraph formatting
+                    lbl.AutoSize = true; // Enable auto-sizing to adjust label height
+                    lbl.MaximumSize = new Size(lbl.Width, 0); // Set maximum width to label width
                     lbl.TextAlign = ContentAlignment.TopLeft; // Set the text alignment to top-left
-                    lbl.Height = TextRenderer.MeasureText(lbl.Text, lbl.Font, new Size(lbl.Width, 0), TextFormatFlags.WordBreak | TextFormatFlags.TextBoxControl).Height; // Set the label height based on the text content
                     lbl.TabIndex = tabIndex++; // Set the tab index to make the label selectable
                     lbl.Click += Label_Click; // Attach the Click event handler to make the label focused
                     Annpanel1.Controls.Add(lbl);
 
                     // Increase the top position for the next label
-                    top += lbl.Height + 20;
+                    top = lbl.Bottom + 10;
                 }
 
                 // Resize the panel and update the scrollable area
-                Annpanel1.AutoSize = true;
-                Annpanel1.AutoScrollMinSize = new Size(left, top);
+                Annpanel1.AutoScroll = true;
+                Annpanel1.AutoScrollMinSize = new Size(0, top);
             }
         }
         private int SelectedAnnouncementId { get; set; }
@@ -127,9 +124,12 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
 
             // Get the ID of the selected announcement and store it in the SelectedAnnouncementId property
             int selectedIndex = Annpanel1.Controls.IndexOf(clickedLabel);
-            SelectedAnnouncementId = selectedIndex >= 0 ? announcementsList.IndexOf(clickedLabel.Text) + 1 : 0;
-        }
+            SelectedAnnouncementId = selectedIndex >= 0 ? selectedIndex + 1 : 0;
 
+            // Update the AnID variable
+            AnID = SelectedAnnouncementId;
+
+        }
 
         private void annDelete_Click(object sender, EventArgs e)
         {
@@ -156,7 +156,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                     anmysqlCon.Open();
                     MySqlCommand anmysqlCmd = new MySqlCommand("AnDelete", anmysqlCon);
                     anmysqlCmd.CommandType = CommandType.StoredProcedure;
-                    anmysqlCmd.Parameters.AddWithValue("_AnId", AnID);
+                    anmysqlCmd.Parameters.AddWithValue("_AnId", SelectedAnnouncementId); // Use the selected announcement ID
                     anmysqlCmd.ExecuteNonQuery();
                 }
 
@@ -170,12 +170,11 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                     SelectedAnnouncementId = 0;
                 }
 
-                
-
+                LoadAnnouncements();
 
             }
         }
 
-       
+
     }
 }

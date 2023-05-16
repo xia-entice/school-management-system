@@ -17,6 +17,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         formTDteprof TDteprof;
         formTDsched TDsched;
         formTDclass TDclass;
+        public string loggedInUser;
 
         public TeacherDashboard()
         {
@@ -84,6 +85,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             if (TDteprof == null)
             {
                 TDteprof = new formTDteprof();
+                TDteprof.GetID(loggedInUser);
+                TDteprof.loggedInUser = loggedInUser;
                 TDteprof.FormClosed += TDteprof_FormClosed;
                 TDteprof.MdiParent = this;
                 TDteprof.StartPosition = FormStartPosition.Manual;
@@ -93,6 +96,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             }
             else
             {
+                TDteprof.GetID(loggedInUser);
+                TDteprof.loggedInUser = loggedInUser;
                 TDteprof.Activate();
             }
         }
@@ -154,11 +159,16 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         // buttons pt. 2
         private void btnTDs_Click(object sender, EventArgs e)
         {
-            if(TDsched == null)
+            if (TDsched == null)
             {
                 TDsched = new formTDsched();
-                
             }
+
+        }
+
+        private void btnTDs_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            TDsched = null;
         }
         private void btnTDc_Click(object sender, EventArgs e)
         {
