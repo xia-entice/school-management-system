@@ -35,9 +35,9 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.ann1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.annDelete = new System.Windows.Forms.Button();
             this.annPost = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.annDelete = new System.Windows.Forms.Button();
+            this.Postrtb = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -76,7 +76,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.panel1.Controls.Add(this.Annpanel1);
             this.panel1.Controls.Add(this.annDelete);
             this.panel1.Controls.Add(this.ann1);
-            this.panel1.Controls.Add(this.richTextBox1);
+            this.panel1.Controls.Add(this.Postrtb);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1233, 629);
@@ -92,17 +92,6 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
             // 
-            // annDelete
-            // 
-            this.annDelete.BackColor = System.Drawing.Color.White;
-            this.annDelete.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.annDelete.Location = new System.Drawing.Point(346, 564);
-            this.annDelete.Name = "annDelete";
-            this.annDelete.Size = new System.Drawing.Size(102, 36);
-            this.annDelete.TabIndex = 19;
-            this.annDelete.Text = "Delete";
-            this.annDelete.UseVisualStyleBackColor = false;
-            // 
             // annPost
             // 
             this.annPost.BackColor = System.Drawing.Color.White;
@@ -113,17 +102,30 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.annPost.TabIndex = 18;
             this.annPost.Text = "Post";
             this.annPost.UseVisualStyleBackColor = false;
+            this.annPost.Click += new System.EventHandler(this.annPost_Click);
             // 
-            // richTextBox1
+            // annDelete
             // 
-            this.richTextBox1.BackColor = System.Drawing.SystemColors.Menu;
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(21, 21);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(427, 528);
-            this.richTextBox1.TabIndex = 16;
-            this.richTextBox1.Text = "";
+            this.annDelete.BackColor = System.Drawing.Color.White;
+            this.annDelete.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.annDelete.Location = new System.Drawing.Point(346, 564);
+            this.annDelete.Name = "annDelete";
+            this.annDelete.Size = new System.Drawing.Size(102, 36);
+            this.annDelete.TabIndex = 19;
+            this.annDelete.Text = "Delete";
+            this.annDelete.UseVisualStyleBackColor = false;
+            this.annDelete.Click += new System.EventHandler(this.annDelete_Click);
+            // 
+            // Postrtb
+            // 
+            this.Postrtb.BackColor = System.Drawing.SystemColors.Menu;
+            this.Postrtb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Postrtb.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Postrtb.Location = new System.Drawing.Point(21, 21);
+            this.Postrtb.Name = "Postrtb";
+            this.Postrtb.Size = new System.Drawing.Size(427, 528);
+            this.Postrtb.TabIndex = 16;
+            this.Postrtb.Text = "";
             // 
             // formADann
             // 
@@ -152,6 +154,6 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button annPost;
         private System.Windows.Forms.Button annDelete;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox Postrtb;
     }
 }

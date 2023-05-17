@@ -17,6 +17,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         formSDseprof SDseprof;
         formSDsched SDsched;
         formSDclass SDclass;
+        public string loggedInUser;
 
         public StudentDashboard()
         {
@@ -84,6 +85,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             if (SDseprof == null)
             {
                 SDseprof = new formSDseprof();
+                SDseprof.GetID(loggedInUser);
+                SDseprof.loggedInUser = loggedInUser;
                 SDseprof.FormClosed += SDseprof_FormClosed; 
                 SDseprof.MdiParent = this;
                 SDseprof.StartPosition = FormStartPosition.Manual;
@@ -93,6 +96,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             }
             else
             {
+                SDseprof.GetID(loggedInUser);
+                SDseprof.loggedInUser = loggedInUser;
                 SDseprof.Activate();
             }
         }
