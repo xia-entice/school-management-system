@@ -21,6 +21,21 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             InitializeComponent();
             mdiProp();
 
+            if (ADann == null)
+            {
+                ADann = new formADann();
+                ADann.FormClosed += ADann_FormClosed;
+                ADann.MdiParent = this;
+                ADann.StartPosition = FormStartPosition.Manual;
+                ADann.Location = new Point(0, 0);
+                ADann.Size = new Size(1150, 570);
+                ADann.Show();
+            }
+            else
+            {
+                ADann.Activate();
+            }
+
         }
 
         // for mdi
