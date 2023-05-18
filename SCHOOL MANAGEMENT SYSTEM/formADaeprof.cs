@@ -132,6 +132,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 }
                 finally
                 {
+                  
                     LoadData();
                 }
             }
@@ -175,6 +176,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                                     adminpic.SizeMode = PictureBoxSizeMode.Zoom;
                                     Image img = Image.FromStream(ms);
                                     adminpic.Image = img;
+                              
                                 }
                             }
                             else
@@ -192,6 +194,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                             auname.Enabled = false;
                             ASave.Enabled = false;
                             Asearch.Enabled = false;
+
+
                         }
                     }
                     else
@@ -241,6 +245,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             if (opf.ShowDialog() == DialogResult.OK)
             {
                 adminpic.Image = Image.FromFile(opf.FileName);
+               
             }
         }
     }
