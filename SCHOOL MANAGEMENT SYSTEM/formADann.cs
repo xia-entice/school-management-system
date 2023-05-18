@@ -57,6 +57,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         {
             Postrtb.Text = "";
             SelectedAnnouncementId = 0;
+            annPost.Text = "Post";
         }
 
         private void LoadAnnouncements()
@@ -128,7 +129,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
 
             // Update the AnID variable
             AnID = SelectedAnnouncementId;
-
+            Postrtb.Text = clickedLabel.Text;
+            annPost.Text = "Update";
         }
 
         private void annDelete_Click(object sender, EventArgs e)
@@ -171,7 +173,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 }
 
                 LoadAnnouncements();
-
+                Postrtb.Text = "";
             }
         }
 
