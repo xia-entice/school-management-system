@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.IO;
+using System.Drawing.Imaging;
 
 namespace SCHOOL_MANAGEMENT_SYSTEM
 {
@@ -72,6 +73,21 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 MessageBox.Show("Please enter an email address.");
                 return;
             }
+            if (!IsNumeric(aage.Text.Trim()))
+            {
+                MessageBox.Show("Please enter a valid age (numeric value).");
+                return;
+            }
+            //if (!IsNumeric(acnumber.Text.Trim()))
+           // {
+             //   MessageBox.Show("Please enter a valid contact number (numeric value).");
+            //    return;
+            //}
+            //if (acnumber.Text.Trim().Length != 11)
+           // {
+             //   MessageBox.Show("Please enter a valid contact number with 11 digits.");
+             //   return;
+           // }
 
             byte[] imageBytes = null;
             if (adminpic.Image != null)
@@ -108,10 +124,14 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                     amysqlCmd.Parameters.AddWithValue("_adbirthdate", birthDate);
                     amysqlCmd.Parameters.AddWithValue("_adaddress", aaddress.Text.Trim());
                     amysqlCmd.Parameters.AddWithValue("_ademail", aemail.Text.Trim());
-                    amysqlCmd.Parameters.AddWithValue("_adcnumber", 123);
+                   amysqlCmd.Parameters.AddWithValue("_adcnumber", "09000000000");
 
                     if (imageBytes != null)
                     {
+
+                        // Dispose the previous adminImage if it exists
+
+
                         if (adminImage != null)
                         {
                             adminImage.Dispose();
@@ -121,7 +141,6 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
 
                     // Add the image to the parameters
                     amysqlCmd.Parameters.AddWithValue("_aimage", imageBytes ?? (object)DBNull.Value);
-
 
                     amysqlCmd.ExecuteNonQuery();
                     MessageBox.Show("Saved Successfully");
@@ -136,6 +155,11 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                     LoadData();
                 }
             }
+        }
+
+        private bool IsNumeric(string value)
+        {
+            return int.TryParse(value, out _);
         }
 
         private void LoadData()
@@ -164,6 +188,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                             aemail.Text = mdr.GetString("ademail");
                             apass.Text = mdr.GetString("pass");
                             auname.Text = mdr.GetString("uname");
+                          //  acnumber.Text = mdr.GetString("adcnumber");
 
                             // Load image into picture box
                             object imageData = mdr["aimage"];
@@ -172,10 +197,20 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                                 byte[] imageBytes = (byte[])imageData;
                                 using (MemoryStream ms = new MemoryStream(imageBytes))
                                 {
-                                    adminpic.Image = Image.FromStream(ms);
+                                    // Convert JPEG image to PNG
+                                    using (Image image = Image.FromStream(ms))
+                                    {
+                                        using (MemoryStream pngMs = new MemoryStream())
+                                        {
+                                            image.Save(pngMs, ImageFormat.Png);
+                                            adminpic.Image = Image.FromStream(pngMs);
+                                        }
+                                    }
                                     adminpic.SizeMode = PictureBoxSizeMode.Zoom;
+
                                     Image img = Image.FromStream(ms);
                                     adminpic.Image = img;
+
 
                                 }
                             }
@@ -192,10 +227,9 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                             aemail.Enabled = false;
                             apass.Enabled = false;
                             auname.Enabled = false;
+                           // acnumber.Enabled = false;
                             ASave.Enabled = false;
                             Asearch.Enabled = false;
-
-
                         }
                     }
                     else
@@ -206,6 +240,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             }
             catch (Exception ex)
             {
+
+                MessageBox.Show("Error: " + ex.Message);
 
             }
         }
@@ -219,7 +255,6 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             int i = Convert.ToInt32(cmd.ExecuteScalar());
             con.Close();
             AdminID.Text = i.ToString();
-
         }
 
         private void edit_Click(object sender, EventArgs e)
@@ -233,15 +268,15 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             aemail.Enabled = true;
             apass.Enabled = true;
             auname.Enabled = true;
+            //acnumber.Enabled = true;
             ASave.Enabled = true;
             Asearch.Enabled = true;
-
         }
 
         private void Asearch_Click(object sender, EventArgs e)
         {
             OpenFileDialog opf = new OpenFileDialog();
-            opf.Filter = "Choose Image(*.jpg; *.png; *.gif)|*.jpg; *.png; *.gif";
+            opf.Filter = "Choose Image(*.jpg; *.png)|*.jpg; *.png";
             if (opf.ShowDialog() == DialogResult.OK)
             {
                 adminpic.Image = Image.FromFile(opf.FileName);
