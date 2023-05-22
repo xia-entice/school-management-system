@@ -161,8 +161,22 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             if (SDsched == null)
             {
                 SDsched = new formSDsched();
-                SDsched.Mdi
+                SDsched.FormClosed += SDsched_FormClosed; 
+                SDsched.MdiParent = this;
+                SDsched.StartPosition = FormStartPosition.Manual;
+                SDsched.Location = new Point(0, 0);
+                SDsched.Size = new Size(1150, 570);
+                SDsched.Show();
             }
+            else
+            {
+                SDsched.Activate();
+            }
+        }
+
+        private void SDsched_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            SDsched = null;
         }
 
         private void btnSDc_Click(object sender, EventArgs e)
@@ -170,7 +184,22 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             if (SDclass == null)
             {
                 SDclass = new formSDclass();
+                SDclass.FormClosed += SDclass_FormClosed; 
+                SDclass.MdiParent = this;
+                SDclass.StartPosition = FormStartPosition.Manual;
+                SDclass.Location = new Point(0, 0);
+                SDclass.Size = new Size(1150, 570);
+                SDclass.Show();
             }
+            else
+            {
+                SDclass.Activate();
+            }
+        }
+
+        private void SDclass_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            SDclass = null;
         }
     }
 }

@@ -7,22 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 namespace SCHOOL_MANAGEMENT_SYSTEM
 {
-    public partial class formTDsched : UserControl
+    public partial class formTDsched : Form
     {
-        internal Action<object, FormClosedEventArgs> FormClosed;
-        internal TeacherDashboard MdiParent;
-        internal FormStartPosition StartPosition;
-
         public formTDsched()
         {
             InitializeComponent();
-        }
-
-        internal object Activate()
-        {
-            throw new NotImplementedException();
         }
     }
 }
