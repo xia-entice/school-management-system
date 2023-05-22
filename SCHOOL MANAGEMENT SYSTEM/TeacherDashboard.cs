@@ -161,6 +161,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             if (TDsched == null)
             {
                 TDsched = new formTDsched();
+                TDsched.FormClosed += TDsched_FormClosed;
                 TDsched.MdiParent = this;
                 TDsched.StartPosition = FormStartPosition.Manual;
                 TDsched.Location = new Point(0, 0);
@@ -174,17 +175,32 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
 
         }
 
-        private void btnTDs_FormClosed(object sender, FormClosedEventArgs e)
+        private void TDsched_FormClosed(object sender, FormClosedEventArgs e)
         {
             TDsched = null;
         }
+
         private void btnTDc_Click(object sender, EventArgs e)
         {
             if (TDclass == null)
             {
                 TDclass = new formTDclass();
-           
+                TDclass.FormClosed += TDclass_FormClosed;
+                TDclass.MdiParent = this;
+                TDclass.StartPosition = FormStartPosition.Manual;
+                TDclass.Location = new Point(0, 0);
+                TDclass.Size = new Size(1150, 570);
+                TDclass.Show();
             }
+            else
+            {
+                TDclass.Activate();
+            }
+        }
+
+        private void TDclass_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            TDclass = null;
         }
     }
 }

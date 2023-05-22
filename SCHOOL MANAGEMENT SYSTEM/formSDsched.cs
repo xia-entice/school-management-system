@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace SCHOOL_MANAGEMENT_SYSTEM
 {
-    public partial class formSDsched : UserControl
+    public partial class formSDsched : Form
     {
         public formSDsched()
         {
             InitializeComponent();
-        }
-
-        private void formSDsched_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
