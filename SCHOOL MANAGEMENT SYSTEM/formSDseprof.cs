@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.IO;
+using System.Drawing.Imaging;
 
 
 namespace SCHOOL_MANAGEMENT_SYSTEM
@@ -98,6 +99,22 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 return;
             }
 
+            if (!IsNumeric(sage.Text.Trim()))
+            {
+                MessageBox.Show("Please enter a valid age (numeric value).");
+                return;
+            }
+            //if (!IsNumeric(acnumber.Text.Trim()))
+            // {
+            //   MessageBox.Show("Please enter a valid contact number (numeric value).");
+            //    return;
+            //}
+            //if (acnumber.Text.Trim().Length != 11)
+            // {
+            //   MessageBox.Show("Please enter a valid contact number with 11 digits.");
+            //   return;
+            // }
+
             byte[] imageBytes = null;
             if (simage.Image != null)
             {
@@ -163,6 +180,11 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             }
         }
 
+        private bool IsNumeric(string value)
+        {
+            return int.TryParse(value, out _);
+        }
+
         private void LoadData()
         {
             try
@@ -198,10 +220,16 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                                 byte[] imageBytes = (byte[])imageData;
                                 using (MemoryStream ms = new MemoryStream(imageBytes))
                                 {
-                                    simage.Image = Image.FromStream(ms);
-                                    simage.SizeMode = PictureBoxSizeMode.Zoom;
-                                    Image img = Image.FromStream(ms);
-                                    simage.Image = img;
+                                    // Convert JPEG image to PNG
+                                    using (Image image = Image.FromStream(ms))
+                                    {
+                                        using (MemoryStream pngMs = new MemoryStream())
+                                        {
+                                            image.Save(pngMs, ImageFormat.Png);
+                                            simage.Image = Image.FromStream(pngMs);
+                                        }
+                                    }
+                                   simage.SizeMode = PictureBoxSizeMode.Zoom;
                                 }
                             }
                             else

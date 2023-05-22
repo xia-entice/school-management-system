@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.IO;
+using System.Drawing.Imaging;
 
 namespace SCHOOL_MANAGEMENT_SYSTEM
 {
@@ -76,6 +77,22 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 return;
             }
 
+            if (!IsNumeric(tage.Text.Trim()))
+            {
+                MessageBox.Show("Please enter a valid age (numeric value).");
+                return;
+            }
+            //if (!IsNumeric(acnumber.Text.Trim()))
+            // {
+            //   MessageBox.Show("Please enter a valid contact number (numeric value).");
+            //    return;
+            //}
+            //if (acnumber.Text.Trim().Length != 11)
+            // {
+            //   MessageBox.Show("Please enter a valid contact number with 11 digits.");
+            //   return;
+            // }
+
             byte[] imageBytes = null;
             if (timage.Image != null)
             {
@@ -111,7 +128,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                     tmysqlCmd.Parameters.AddWithValue("_tbirthdate", birthDate);
                     tmysqlCmd.Parameters.AddWithValue("_taddress", taddress.Text.Trim());
                     tmysqlCmd.Parameters.AddWithValue("_temail", temail.Text.Trim());
-                    tmysqlCmd.Parameters.AddWithValue("_tcnumber", 123);
+                    tmysqlCmd.Parameters.AddWithValue("_tcnumber", 09000000000);
                     tmysqlCmd.Parameters.AddWithValue("_tdept", tdept.Text.Trim());
 
                     if (imageBytes != null)
@@ -156,6 +173,10 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             tdept.Enabled = true;
 
         }
+        private bool IsNumeric(string value)
+        {
+            return int.TryParse(value, out _);
+        }
 
         private void LoadData()
         {
@@ -192,10 +213,16 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                                 byte[] imageBytes = (byte[])imageData;
                                 using (MemoryStream ms = new MemoryStream(imageBytes))
                                 {
-                                    timage.Image = Image.FromStream(ms);
+                                    // Convert JPEG image to PNG
+                                    using (Image image = Image.FromStream(ms))
+                                    {
+                                        using (MemoryStream pngMs = new MemoryStream())
+                                        {
+                                            image.Save(pngMs, ImageFormat.Png);
+                                            timage.Image = Image.FromStream(pngMs);
+                                        }
+                                    }
                                     timage.SizeMode = PictureBoxSizeMode.Zoom;
-                                    Image img = Image.FromStream(ms);
-                                    timage.Image = img;
                                 }
                             }
                             else
