@@ -161,6 +161,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             if (SDsched == null)
             {
                 SDsched = new formSDsched();
+                SDsched.Mdi
             }
         }
 

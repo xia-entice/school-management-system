@@ -16,5 +16,10 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         {
             InitializeComponent();
         }
+
+        private void formSDsched_Load(object sender, EventArgs e)
+        {
+            this.ControlBox = false;
+        }
     }
 }

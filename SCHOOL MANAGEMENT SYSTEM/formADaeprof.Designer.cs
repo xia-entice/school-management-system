@@ -30,9 +30,21 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formADaeprof));
-            this.aeprofPanel = new System.Windows.Forms.Panel();
             this.teprofPanel2 = new System.Windows.Forms.Panel();
             this.tpanel6 = new System.Windows.Forms.Panel();
+            this.apanel7 = new System.Windows.Forms.Panel();
+            this.agender = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.acnum = new System.Windows.Forms.TextBox();
+            this.abirth = new System.Windows.Forms.DateTimePicker();
+            this.aaddress = new System.Windows.Forms.TextBox();
+            this.aage = new System.Windows.Forms.TextBox();
+            this.aname = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.AdminID = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -43,17 +55,6 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.ASave = new System.Windows.Forms.Button();
             this.edit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.tpanel7 = new System.Windows.Forms.Panel();
-            this.abirth = new System.Windows.Forms.DateTimePicker();
-            this.aaddress = new System.Windows.Forms.TextBox();
-            this.agender = new System.Windows.Forms.TextBox();
-            this.aage = new System.Windows.Forms.TextBox();
-            this.aname = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.labels = new System.Windows.Forms.Label();
             this.tpanel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -64,23 +65,15 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.label8 = new System.Windows.Forms.Label();
             this.Asearch = new System.Windows.Forms.Button();
             this.adminpic = new System.Windows.Forms.PictureBox();
+            this.aeprofPanel = new System.Windows.Forms.Panel();
             this.teprofPanel2.SuspendLayout();
             this.tpanel6.SuspendLayout();
+            this.apanel7.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.tpanel7.SuspendLayout();
             this.tpanel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.adminpic)).BeginInit();
             this.SuspendLayout();
-            // 
-            // aeprofPanel
-            // 
-            this.aeprofPanel.BackColor = System.Drawing.Color.White;
-            this.aeprofPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.aeprofPanel.Location = new System.Drawing.Point(1265, 12);
-            this.aeprofPanel.Name = "aeprofPanel";
-            this.aeprofPanel.Size = new System.Drawing.Size(200, 618);
-            this.aeprofPanel.TabIndex = 15;
             // 
             // teprofPanel2
             // 
@@ -90,22 +83,155 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.teprofPanel2.Controls.Add(this.tpanel3);
             this.teprofPanel2.Location = new System.Drawing.Point(28, 12);
             this.teprofPanel2.Name = "teprofPanel2";
-            this.teprofPanel2.Size = new System.Drawing.Size(1181, 618);
-            this.teprofPanel2.TabIndex = 18;
+            this.teprofPanel2.Size = new System.Drawing.Size(1199, 618);
+            this.teprofPanel2.TabIndex = 22;
             // 
             // tpanel6
             // 
             this.tpanel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tpanel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tpanel6.Controls.Add(this.apanel7);
             this.tpanel6.Controls.Add(this.panel1);
             this.tpanel6.Controls.Add(this.ASave);
             this.tpanel6.Controls.Add(this.edit);
             this.tpanel6.Controls.Add(this.label1);
-            this.tpanel6.Controls.Add(this.tpanel7);
             this.tpanel6.Location = new System.Drawing.Point(377, 68);
             this.tpanel6.Name = "tpanel6";
             this.tpanel6.Size = new System.Drawing.Size(776, 521);
             this.tpanel6.TabIndex = 18;
+            // 
+            // apanel7
+            // 
+            this.apanel7.BackColor = System.Drawing.Color.White;
+            this.apanel7.Controls.Add(this.agender);
+            this.apanel7.Controls.Add(this.label14);
+            this.apanel7.Controls.Add(this.acnum);
+            this.apanel7.Controls.Add(this.abirth);
+            this.apanel7.Controls.Add(this.aaddress);
+            this.apanel7.Controls.Add(this.aage);
+            this.apanel7.Controls.Add(this.aname);
+            this.apanel7.Controls.Add(this.label7);
+            this.apanel7.Controls.Add(this.label9);
+            this.apanel7.Controls.Add(this.label10);
+            this.apanel7.Controls.Add(this.label11);
+            this.apanel7.Controls.Add(this.label12);
+            this.apanel7.Location = new System.Drawing.Point(36, 150);
+            this.apanel7.Name = "apanel7";
+            this.apanel7.Size = new System.Drawing.Size(693, 290);
+            this.apanel7.TabIndex = 35;
+            // 
+            // agender
+            // 
+            this.agender.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.agender.FormattingEnabled = true;
+            this.agender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.agender.Location = new System.Drawing.Point(137, 105);
+            this.agender.Name = "agender";
+            this.agender.Size = new System.Drawing.Size(527, 32);
+            this.agender.TabIndex = 32;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(28, 240);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(166, 26);
+            this.label14.TabIndex = 31;
+            this.label14.Text = "Contact Number:";
+            // 
+            // acnum
+            // 
+            this.acnum.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.acnum.Location = new System.Drawing.Point(201, 236);
+            this.acnum.Name = "acnum";
+            this.acnum.Size = new System.Drawing.Size(463, 35);
+            this.acnum.TabIndex = 30;
+            // 
+            // abirth
+            // 
+            this.abirth.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.abirth.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.abirth.Location = new System.Drawing.Point(137, 149);
+            this.abirth.Name = "abirth";
+            this.abirth.Size = new System.Drawing.Size(527, 32);
+            this.abirth.TabIndex = 29;
+            // 
+            // aaddress
+            // 
+            this.aaddress.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aaddress.Location = new System.Drawing.Point(137, 192);
+            this.aaddress.Name = "aaddress";
+            this.aaddress.Size = new System.Drawing.Size(527, 35);
+            this.aaddress.TabIndex = 28;
+            // 
+            // aage
+            // 
+            this.aage.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aage.Location = new System.Drawing.Point(137, 60);
+            this.aage.Name = "aage";
+            this.aage.Size = new System.Drawing.Size(527, 35);
+            this.aage.TabIndex = 25;
+            // 
+            // aname
+            // 
+            this.aname.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aname.Location = new System.Drawing.Point(137, 17);
+            this.aname.Name = "aname";
+            this.aname.Size = new System.Drawing.Size(527, 35);
+            this.aname.TabIndex = 24;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(29, 20);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(71, 26);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Name:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(29, 196);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(90, 26);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "Address:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(30, 64);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(50, 26);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Age:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(28, 152);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(102, 26);
+            this.label11.TabIndex = 20;
+            this.label11.Text = "Birthdate:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(27, 110);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(85, 26);
+            this.label12.TabIndex = 19;
+            this.label12.Text = "Gender:";
             // 
             // panel1
             // 
@@ -125,7 +251,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             this.AdminID.AutoSize = true;
             this.AdminID.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminID.Location = new System.Drawing.Point(122, 16);
+            this.AdminID.Location = new System.Drawing.Point(122, 17);
             this.AdminID.Name = "AdminID";
             this.AdminID.Size = new System.Drawing.Size(80, 23);
             this.AdminID.TabIndex = 34;
@@ -152,7 +278,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // aemail
             // 
             this.aemail.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aemail.Location = new System.Drawing.Point(389, 8);
+            this.aemail.Location = new System.Drawing.Point(389, 10);
             this.aemail.Name = "aemail";
             this.aemail.Size = new System.Drawing.Size(288, 35);
             this.aemail.TabIndex = 31;
@@ -161,7 +287,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(253, 16);
+            this.label4.Location = new System.Drawing.Point(253, 17);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(112, 23);
             this.label4.TabIndex = 30;
@@ -171,7 +297,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(8, 16);
+            this.label3.Location = new System.Drawing.Point(8, 17);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 23);
             this.label3.TabIndex = 17;
@@ -187,7 +313,6 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.ASave.TabIndex = 26;
             this.ASave.Text = "Save";
             this.ASave.UseVisualStyleBackColor = false;
-            this.ASave.Click += new System.EventHandler(this.ASave_Click);
             // 
             // edit
             // 
@@ -199,7 +324,6 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.edit.TabIndex = 25;
             this.edit.Text = "Edit";
             this.edit.UseVisualStyleBackColor = false;
-            this.edit.Click += new System.EventHandler(this.edit_Click);
             // 
             // label1
             // 
@@ -210,115 +334,6 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.label1.Size = new System.Drawing.Size(310, 33);
             this.label1.TabIndex = 24;
             this.label1.Text = "Manage Profile Information";
-            // 
-            // tpanel7
-            // 
-            this.tpanel7.BackColor = System.Drawing.Color.White;
-            this.tpanel7.Controls.Add(this.abirth);
-            this.tpanel7.Controls.Add(this.aaddress);
-            this.tpanel7.Controls.Add(this.agender);
-            this.tpanel7.Controls.Add(this.aage);
-            this.tpanel7.Controls.Add(this.aname);
-            this.tpanel7.Controls.Add(this.label7);
-            this.tpanel7.Controls.Add(this.label9);
-            this.tpanel7.Controls.Add(this.label10);
-            this.tpanel7.Controls.Add(this.label11);
-            this.tpanel7.Controls.Add(this.label12);
-            this.tpanel7.Location = new System.Drawing.Point(36, 157);
-            this.tpanel7.Name = "tpanel7";
-            this.tpanel7.Size = new System.Drawing.Size(693, 287);
-            this.tpanel7.TabIndex = 22;
-            // 
-            // abirth
-            // 
-            this.abirth.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.abirth.Location = new System.Drawing.Point(137, 173);
-            this.abirth.Name = "abirth";
-            this.abirth.Size = new System.Drawing.Size(527, 22);
-            this.abirth.TabIndex = 24;
-            this.abirth.Value = new System.DateTime(2023, 5, 11, 17, 57, 58, 0);
-            // 
-            // aaddress
-            // 
-            this.aaddress.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aaddress.Location = new System.Drawing.Point(137, 224);
-            this.aaddress.Name = "aaddress";
-            this.aaddress.Size = new System.Drawing.Size(527, 35);
-            this.aaddress.TabIndex = 28;
-            // 
-            // agender
-            // 
-            this.agender.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.agender.Location = new System.Drawing.Point(137, 116);
-            this.agender.Name = "agender";
-            this.agender.Size = new System.Drawing.Size(527, 35);
-            this.agender.TabIndex = 26;
-            // 
-            // aage
-            // 
-            this.aage.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aage.Location = new System.Drawing.Point(137, 69);
-            this.aage.Name = "aage";
-            this.aage.Size = new System.Drawing.Size(527, 35);
-            this.aage.TabIndex = 25;
-            // 
-            // aname
-            // 
-            this.aname.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aname.Location = new System.Drawing.Point(137, 21);
-            this.aname.Name = "aname";
-            this.aname.Size = new System.Drawing.Size(527, 35);
-            this.aname.TabIndex = 24;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(29, 21);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 26);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Name:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(29, 224);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(90, 26);
-            this.label9.TabIndex = 21;
-            this.label9.Text = "Address:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(29, 69);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(50, 26);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "Age:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(29, 168);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(102, 26);
-            this.label11.TabIndex = 20;
-            this.label11.Text = "Birthdate:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(29, 116);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(85, 26);
-            this.label12.TabIndex = 19;
-            this.label12.Text = "Gender:";
             // 
             // labels
             // 
@@ -411,7 +426,6 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.Asearch.TabIndex = 24;
             this.Asearch.Text = "Upload Picture";
             this.Asearch.UseVisualStyleBackColor = false;
-            this.Asearch.Click += new System.EventHandler(this.Asearch_Click);
             // 
             // adminpic
             // 
@@ -423,6 +437,15 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.adminpic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.adminpic.TabIndex = 16;
             this.adminpic.TabStop = false;
+            // 
+            // aeprofPanel
+            // 
+            this.aeprofPanel.BackColor = System.Drawing.Color.White;
+            this.aeprofPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.aeprofPanel.Location = new System.Drawing.Point(1265, 12);
+            this.aeprofPanel.Name = "aeprofPanel";
+            this.aeprofPanel.Size = new System.Drawing.Size(200, 618);
+            this.aeprofPanel.TabIndex = 21;
             // 
             // formADaeprof
             // 
@@ -439,10 +462,10 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.teprofPanel2.PerformLayout();
             this.tpanel6.ResumeLayout(false);
             this.tpanel6.PerformLayout();
+            this.apanel7.ResumeLayout(false);
+            this.apanel7.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.tpanel7.ResumeLayout(false);
-            this.tpanel7.PerformLayout();
             this.tpanel3.ResumeLayout(false);
             this.tpanel3.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -454,15 +477,14 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
 
         #endregion
 
-        private System.Windows.Forms.Panel aeprofPanel;
         private System.Windows.Forms.Panel teprofPanel2;
         private System.Windows.Forms.Panel tpanel6;
-        private System.Windows.Forms.Button ASave;
-        private System.Windows.Forms.Button edit;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel tpanel7;
+        private System.Windows.Forms.Panel apanel7;
+        private System.Windows.Forms.ComboBox agender;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox acnum;
+        private System.Windows.Forms.DateTimePicker abirth;
         private System.Windows.Forms.TextBox aaddress;
-        private System.Windows.Forms.TextBox agender;
         private System.Windows.Forms.TextBox aage;
         private System.Windows.Forms.TextBox aname;
         private System.Windows.Forms.Label label7;
@@ -470,6 +492,16 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label AdminID;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox aemail;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button ASave;
+        private System.Windows.Forms.Button edit;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labels;
         private System.Windows.Forms.Panel tpanel3;
         private System.Windows.Forms.Label label2;
@@ -480,13 +512,6 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button Asearch;
         private System.Windows.Forms.PictureBox adminpic;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label AdminID;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox aemail;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker abirth;
+        private System.Windows.Forms.Panel aeprofPanel;
     }
 }
