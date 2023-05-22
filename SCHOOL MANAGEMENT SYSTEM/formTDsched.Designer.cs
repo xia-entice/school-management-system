@@ -47,6 +47,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.Controls.Add(this.TDschedPanel);
             this.Name = "formTDsched";
             this.Size = new System.Drawing.Size(1477, 699);
+            this.Load += new System.EventHandler(this.formTDsched_Load);
             this.ResumeLayout(false);
 
         }

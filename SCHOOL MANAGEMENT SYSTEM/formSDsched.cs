@@ -19,7 +19,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
 
         private void formSDsched_Load(object sender, EventArgs e)
         {
-            this.ControlBox = false;
+
         }
     }
 }

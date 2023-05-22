@@ -24,5 +24,10 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         {
             throw new NotImplementedException();
         }
+
+        private void formTDsched_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

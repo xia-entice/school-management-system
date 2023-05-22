@@ -183,8 +183,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             if (TDclass == null)
             {
                 TDclass = new formTDclass();
-                TDclass.MdiParent = this;
-                TDclass.StartPosition =
+           
             }
         }
     }
