@@ -161,6 +161,15 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             if (TDsched == null)
             {
                 TDsched = new formTDsched();
+                TDsched.MdiParent = this;
+                TDsched.StartPosition = FormStartPosition.Manual;
+                TDsched.Location = new Point(0, 0);
+                TDsched.Size = new Size(1150, 570);
+                TDsched.Show();
+            }
+            else
+            {
+                TDsched.Activate();
             }
 
         }
@@ -174,6 +183,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             if (TDclass == null)
             {
                 TDclass = new formTDclass();
+                TDclass.MdiParent = this;
+                TDclass.StartPosition =
             }
         }
     }
