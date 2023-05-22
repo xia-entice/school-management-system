@@ -119,9 +119,9 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.roleCB);
             this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.Password_txt);
             this.panel2.Controls.Add(this.Username_txt);
@@ -149,7 +149,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(572, 204);
+            this.pictureBox3.Location = new System.Drawing.Point(574, 206);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(40, 26);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -237,6 +237,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

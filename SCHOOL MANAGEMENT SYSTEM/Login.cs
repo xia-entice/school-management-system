@@ -104,7 +104,6 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 con.Close();
             }
         }
-
         private void pictureBox3_MouseHover(object sender, EventArgs e)
         {
             toolTip1.SetToolTip(pictureBox3, "Hide Password");
@@ -141,6 +140,11 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             }
             con.Close();
             return adminAc;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Password_txt.UseSystemPasswordChar = true;
         }
     }
 }
