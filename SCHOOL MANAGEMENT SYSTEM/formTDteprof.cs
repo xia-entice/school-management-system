@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.IO;
+
 using System.Drawing.Imaging;
 
 namespace SCHOOL_MANAGEMENT_SYSTEM
@@ -23,7 +24,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         public formTDteprof()
         {
             InitializeComponent();
-            
+
         }
 
         private void Tsearch_Click(object sender, EventArgs e)
@@ -204,7 +205,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                             temail.Text = mdr.GetString("temail");
                             tpass.Text = mdr.GetString("teacherpassword");
                             tuname.Text = mdr.GetString("teachername");
-                            tdept.Text=mdr.GetString("tdept");
+                            tdept.Text = mdr.GetString("tdept");
 
                             // Load image into picture box
                             object imageData = mdr["timage"];
@@ -272,7 +273,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.ControlBox = false;
             GetID(loggedInUser);
             LoadData();
-            
+
         }
     }
 }

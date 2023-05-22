@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace SCHOOL_MANAGEMENT_SYSTEM
 {
     public partial class StudentDashboard : Form
@@ -62,7 +61,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             if (SDats == null)
             {
                 SDats = new formATS();
-                SDats.FormClosed += SDats_FormClosed; 
+                SDats.FormClosed += SDats_FormClosed;
                 SDats.MdiParent = this;
                 SDats.StartPosition = FormStartPosition.Manual;
                 SDats.Location = new Point(0, 0);
@@ -87,7 +86,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 SDseprof = new formSDseprof();
                 SDseprof.GetID(loggedInUser);
                 SDseprof.loggedInUser = loggedInUser;
-                SDseprof.FormClosed += SDseprof_FormClosed; 
+                SDseprof.FormClosed += SDseprof_FormClosed;
                 SDseprof.MdiParent = this;
                 SDseprof.StartPosition = FormStartPosition.Manual;
                 SDseprof.Location = new Point(0, 0);
@@ -129,7 +128,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             if (ssidebarExpand)
             {
                 ssidebar.Width -= 15;
-                if(ssidebar.Width <= 78)
+                if (ssidebar.Width <= 78)
                 {
                     ssidebarExpand = false;
                     ssidebarTransition.Stop();
@@ -141,7 +140,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             else
             {
                 ssidebar.Width += 15;
-                if(ssidebar.Width >= 230)
+                if (ssidebar.Width >= 230)
                 {
                     ssidebarExpand = true;
                     ssidebarTransition.Stop();
@@ -167,7 +166,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
 
         private void btnSDc_Click(object sender, EventArgs e)
         {
-            if(SDclass == null)
+            if (SDclass == null)
             {
                 SDclass = new formSDclass();
             }

@@ -128,7 +128,10 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
 
                     if (imageBytes != null)
                     {
+
                         // Dispose the previous adminImage if it exists
+
+
                         if (adminImage != null)
                         {
                             adminImage.Dispose();
@@ -148,6 +151,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 }
                 finally
                 {
+
                     LoadData();
                 }
             }
@@ -203,6 +207,11 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                                         }
                                     }
                                     adminpic.SizeMode = PictureBoxSizeMode.Zoom;
+
+                                    Image img = Image.FromStream(ms);
+                                    adminpic.Image = img;
+
+
                                 }
                             }
                             else
@@ -231,12 +240,15 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             }
             catch (Exception ex)
             {
+
                 MessageBox.Show("Error: " + ex.Message);
+
             }
         }
 
         public void GetID(string loggedInUser)
         {
+
             con.Open();
             MySqlCommand cmd = new MySqlCommand("SELECT AdminAc FROM adminacc WHERE uname=@loggedInUser", con);
             cmd.Parameters.AddWithValue("@loggedInUser", loggedInUser);
@@ -268,6 +280,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             if (opf.ShowDialog() == DialogResult.OK)
             {
                 adminpic.Image = Image.FromFile(opf.FileName);
+
             }
         }
     }
