@@ -110,14 +110,14 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                     amysqlCmd.Parameters.AddWithValue("_ademail", aemail.Text.Trim());
                     amysqlCmd.Parameters.AddWithValue("_adcnumber", 123);
 
-                   if (imageBytes != null)
-            {
-                if (adminImage != null)
-                {
-                    adminImage.Dispose();
-                }
-                adminImage = adminpic.Image; // Assign the new image to the adminImage variable
-            }
+                    if (imageBytes != null)
+                    {
+                        if (adminImage != null)
+                        {
+                            adminImage.Dispose();
+                        }
+                        adminImage = adminpic.Image; // Assign the new image to the adminImage variable
+                    }
 
                     // Add the image to the parameters
                     amysqlCmd.Parameters.AddWithValue("_aimage", imageBytes ?? (object)DBNull.Value);
@@ -132,7 +132,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 }
                 finally
                 {
-                  
+
                     LoadData();
                 }
             }
@@ -176,7 +176,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                                     adminpic.SizeMode = PictureBoxSizeMode.Zoom;
                                     Image img = Image.FromStream(ms);
                                     adminpic.Image = img;
-                              
+
                                 }
                             }
                             else
@@ -206,13 +206,13 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             }
             catch (Exception ex)
             {
-              
+
             }
         }
 
         public void GetID(string loggedInUser)
         {
- 
+
             con.Open();
             MySqlCommand cmd = new MySqlCommand("SELECT AdminAc FROM adminacc WHERE uname=@loggedInUser", con);
             cmd.Parameters.AddWithValue("@loggedInUser", loggedInUser);
@@ -245,7 +245,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             if (opf.ShowDialog() == DialogResult.OK)
             {
                 adminpic.Image = Image.FromFile(opf.FileName);
-               
+
             }
         }
     }
