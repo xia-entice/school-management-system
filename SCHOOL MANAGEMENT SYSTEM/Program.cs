@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace SCHOOL_MANAGEMENT_SYSTEM
 {
     static class Program

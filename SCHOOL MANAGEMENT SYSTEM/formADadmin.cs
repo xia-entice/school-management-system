@@ -55,7 +55,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                     }
                 }
 
-              
+
 
                 MySqlCommand amysqlCmd = new MySqlCommand("adminAddOrUp", amysqlCon);
                 amysqlCmd.CommandType = CommandType.StoredProcedure;
@@ -107,7 +107,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 AAview.Columns[8].HeaderText = "Admin Email";
                 AAview.Columns[9].HeaderText = "Admin Contact Number";
                 AAview.Columns[10].Visible = false;
-                
+
             }
 
         }

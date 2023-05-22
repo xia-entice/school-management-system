@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace SCHOOL_MANAGEMENT_SYSTEM
 {
     public partial class TeacherDashboard : Form
@@ -129,7 +128,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             if (tsidebarExpand)
             {
                 tsidebar.Width -= 15;
-                if(tsidebar.Width <= 78)
+                if (tsidebar.Width <= 78)
                 {
                     tsidebarExpand = false;
                     tsidebarTransition.Stop();
@@ -141,7 +140,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             else
             {
                 tsidebar.Width += 15;
-                if(tsidebar.Width >= 230)
+                if (tsidebar.Width >= 230)
                 {
                     tsidebarExpand = true;
                     tsidebarTransition.Stop();
@@ -172,7 +171,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         }
         private void btnTDc_Click(object sender, EventArgs e)
         {
-            if(TDclass == null)
+            if (TDclass == null)
             {
                 TDclass = new formTDclass();
             }
