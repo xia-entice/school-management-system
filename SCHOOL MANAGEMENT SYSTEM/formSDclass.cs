@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace SCHOOL_MANAGEMENT_SYSTEM
 {
-    public partial class formSDclass : UserControl
+    public partial class formSDclass : Form
     {
         public formSDclass()
         {
             InitializeComponent();
-        }
-
-        private void formSDclass_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

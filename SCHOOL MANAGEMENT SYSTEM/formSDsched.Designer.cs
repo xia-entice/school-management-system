@@ -3,12 +3,12 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
 {
     partial class formSDsched
     {
-        /// <summary> 
+        /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
+        /// <summary>
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -21,39 +21,41 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             base.Dispose(disposing);
         }
 
-        #region Component Designer generated code
+        #region Windows Form Designer generated code
 
-        /// <summary> 
-        /// Required method for Designer support - do not modify 
+        /// <summary>
+        /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            this.SDclassPanel = new System.Windows.Forms.Panel();
+            this.seprofPanel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // SDclassPanel
+            // seprofPanel
             // 
-            this.SDclassPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(178)))), ((int)(((byte)(85)))));
-            this.SDclassPanel.Location = new System.Drawing.Point(1265, 12);
-            this.SDclassPanel.Name = "SDclassPanel";
-            this.SDclassPanel.Size = new System.Drawing.Size(200, 629);
-            this.SDclassPanel.TabIndex = 17;
+            this.seprofPanel.BackColor = System.Drawing.Color.White;
+            this.seprofPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.seprofPanel.Location = new System.Drawing.Point(1265, 12);
+            this.seprofPanel.Name = "seprofPanel";
+            this.seprofPanel.Size = new System.Drawing.Size(200, 618);
+            this.seprofPanel.TabIndex = 56;
             // 
             // formSDsched
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.SDclassPanel);
+            this.ClientSize = new System.Drawing.Size(1477, 699);
+            this.Controls.Add(this.seprofPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formSDsched";
-            this.Size = new System.Drawing.Size(1477, 699);
-            this.Load += new System.EventHandler(this.formSDsched_Load);
+            this.Text = "formSDsched";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel SDclassPanel;
+        private System.Windows.Forms.Panel seprofPanel;
     }
 }

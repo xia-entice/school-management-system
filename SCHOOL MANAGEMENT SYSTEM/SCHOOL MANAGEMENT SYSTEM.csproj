@@ -281,13 +281,13 @@
       <DependentUpon>formATS.cs</DependentUpon>
     </Compile>
     <Compile Include="formSDclass.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="formSDclass.Designer.cs">
       <DependentUpon>formSDclass.cs</DependentUpon>
     </Compile>
     <Compile Include="formSDsched.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="formSDsched.Designer.cs">
       <DependentUpon>formSDsched.cs</DependentUpon>
@@ -299,13 +299,13 @@
       <DependentUpon>formSDseprof.cs</DependentUpon>
     </Compile>
     <Compile Include="formTDclass.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="formTDclass.Designer.cs">
       <DependentUpon>formTDclass.cs</DependentUpon>
     </Compile>
     <Compile Include="formTDsched.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="formTDsched.Designer.cs">
       <DependentUpon>formTDsched.cs</DependentUpon>
