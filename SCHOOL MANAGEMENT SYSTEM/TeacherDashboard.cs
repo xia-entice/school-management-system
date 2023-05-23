@@ -22,6 +22,20 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         {
             InitializeComponent();
             mdiProp();
+            if (TDann == null)
+            {
+                TDann = new formANN();
+                TDann.FormClosed += TDann_FormClosed;
+                TDann.MdiParent = this;
+                TDann.StartPosition = FormStartPosition.Manual;
+                TDann.Location = new Point(0, 0);
+                TDann.Size = new Size(1150, 570);
+                TDann.Show();
+            }
+            else
+            {
+                TDann.Activate();
+            }
         }
 
         // for mdi

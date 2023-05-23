@@ -113,6 +113,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.save.TabIndex = 26;
             this.save.Text = "Save";
             this.save.UseVisualStyleBackColor = false;
+            this.save.Click += new System.EventHandler(this.save_Click);
             // 
             // edit
             // 
@@ -124,6 +125,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.edit.TabIndex = 25;
             this.edit.Text = "Edit";
             this.edit.UseVisualStyleBackColor = false;
+            this.edit.Click += new System.EventHandler(this.edit_Click);
             // 
             // label1
             // 
@@ -155,16 +157,16 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // ssection
             // 
             this.ssection.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ssection.Location = new System.Drawing.Point(593, 51);
+            this.ssection.Location = new System.Drawing.Point(534, 51);
             this.ssection.Name = "ssection";
-            this.ssection.Size = new System.Drawing.Size(84, 35);
+            this.ssection.Size = new System.Drawing.Size(143, 35);
             this.ssection.TabIndex = 36;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(513, 59);
+            this.label15.Location = new System.Drawing.Point(465, 59);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(72, 23);
             this.label15.TabIndex = 35;
@@ -288,7 +290,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 "ing and Fabrication Technology"});
             this.Sdept.Location = new System.Drawing.Point(12, 53);
             this.Sdept.Name = "Sdept";
-            this.Sdept.Size = new System.Drawing.Size(494, 32);
+            this.Sdept.Size = new System.Drawing.Size(447, 32);
             this.Sdept.TabIndex = 33;
             this.Sdept.Text = "Choose your Department and Course:";
             // 
@@ -562,6 +564,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.Ssearch.TabIndex = 24;
             this.Ssearch.Text = "Upload Picture";
             this.Ssearch.UseVisualStyleBackColor = false;
+            this.Ssearch.Click += new System.EventHandler(this.Ssearch_Click);
             // 
             // simage
             // 

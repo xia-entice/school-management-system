@@ -21,6 +21,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         public string loggedInUser;
         private Image studentImage;
 
+        
+
         public formSDseprof()
         {
             InitializeComponent();
@@ -41,6 +43,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             {
                 simage.Image = Image.FromFile(opf.FileName);
             }
+            simage.SizeMode = PictureBoxSizeMode.Zoom;
         }
 
         private void edit_Click(object sender, EventArgs e)
@@ -56,6 +59,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             save.Enabled = true;
             Ssearch.Enabled = true;
             Sdept.Enabled = true;
+            scnum.Enabled = true;
+            ssection.Enabled = true;
         }
 
         private void save_Click(object sender, EventArgs e)
@@ -104,16 +109,12 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 MessageBox.Show("Please enter a valid age (numeric value).");
                 return;
             }
-            //if (!IsNumeric(acnumber.Text.Trim()))
-            // {
-            //   MessageBox.Show("Please enter a valid contact number (numeric value).");
-            //    return;
-            //}
-            //if (acnumber.Text.Trim().Length != 11)
-            // {
-            //   MessageBox.Show("Please enter a valid contact number with 11 digits.");
-            //   return;
-            // }
+            string numericContactNumber = new string(scnum.Text.Trim().Replace("-", "").Replace("(", "").Replace(")", "").Where(char.IsDigit).ToArray());
+            if (numericContactNumber.Length != 11)
+            {
+                MessageBox.Show("Please enter a valid contact number with 11 digits.");
+                return;
+            }
 
             byte[] imageBytes = null;
             if (simage.Image != null)
@@ -150,8 +151,9 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                     smysqlCmd.Parameters.AddWithValue("_sbirthdate", birthDate);
                     smysqlCmd.Parameters.AddWithValue("_saddress", saddress.Text.Trim());
                     smysqlCmd.Parameters.AddWithValue("_semail", semail.Text.Trim());
-                    smysqlCmd.Parameters.AddWithValue("_scnumber", 123);
+                    smysqlCmd.Parameters.AddWithValue("_scnumber", scnum.Text.Trim());
                     smysqlCmd.Parameters.AddWithValue("_sdept", Sdept.Text.Trim());
+                    smysqlCmd.Parameters.AddWithValue("_section", ssection.Text.Trim());
 
                     if (imageBytes != null)
                     {
@@ -175,7 +177,9 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 }
                 finally
                 {
+
                     LoadData();
+
                 }
             }
         }
@@ -212,6 +216,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                             spass.Text = mdr.GetString("studpass");
                             suname.Text = mdr.GetString("studuname");
                             Sdept.Text = mdr.GetString("sdept");
+                            scnum.Text = "0"+mdr.GetString("scnumber");
+                            ssection.Text = mdr.GetString("section");
 
                             // Load image into picture box
                             object imageData = mdr["simage"];
@@ -237,6 +243,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                                 simage.Image = null; // Set the picture box image to null if no image is present
                             }
 
+
                             sname.Enabled = false;
                             sage.Enabled = false;
                             sgender.Enabled = false;
@@ -248,7 +255,11 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                             save.Enabled = false;
                             Ssearch.Enabled = false;
                             Sdept.Enabled = false;
+                            scnum.Enabled = false;
+                            ssection.Enabled = false;
+   
                         }
+                  
                     }
                     else
                     {
@@ -258,7 +269,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                //MessageBox.Show("Error: " + ex.Message);
             }
         }
 
@@ -274,6 +285,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
 
         }
 
+        
 
     }
 }

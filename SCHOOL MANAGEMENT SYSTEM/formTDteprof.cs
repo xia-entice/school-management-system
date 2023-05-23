@@ -35,6 +35,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             {
                 timage.Image = Image.FromFile(opf.FileName);
             }
+            timage.SizeMode = PictureBoxSizeMode.Zoom;
         }
 
         private void tSave_Click(object sender, EventArgs e)
@@ -83,16 +84,13 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 MessageBox.Show("Please enter a valid age (numeric value).");
                 return;
             }
-            //if (!IsNumeric(acnumber.Text.Trim()))
-            // {
-            //   MessageBox.Show("Please enter a valid contact number (numeric value).");
-            //    return;
-            //}
-            //if (acnumber.Text.Trim().Length != 11)
-            // {
-            //   MessageBox.Show("Please enter a valid contact number with 11 digits.");
-            //   return;
-            // }
+         
+            string numericContactNumber = new string(tcnum.Text.Trim().Replace("-", "").Replace("(", "").Replace(")", "").Where(char.IsDigit).ToArray());
+            if (numericContactNumber.Length != 11)
+            {
+                MessageBox.Show("Please enter a valid contact number with 11 digits.");
+                return;
+            }
 
             byte[] imageBytes = null;
             if (timage.Image != null)
@@ -129,7 +127,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                     tmysqlCmd.Parameters.AddWithValue("_tbirthdate", birthDate);
                     tmysqlCmd.Parameters.AddWithValue("_taddress", taddress.Text.Trim());
                     tmysqlCmd.Parameters.AddWithValue("_temail", temail.Text.Trim());
-                    tmysqlCmd.Parameters.AddWithValue("_tcnumber", 09000000000);
+                    tmysqlCmd.Parameters.AddWithValue("_tcnumber", tcnum.Text.Trim());
                     tmysqlCmd.Parameters.AddWithValue("_tdept", tdept.Text.Trim());
 
                     if (imageBytes != null)
@@ -172,6 +170,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             tSave.Enabled = true;
             Tsearch.Enabled = true;
             tdept.Enabled = true;
+            tcnum.Enabled = true;
 
         }
         private bool IsNumeric(string value)
@@ -206,6 +205,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                             tpass.Text = mdr.GetString("teacherpassword");
                             tuname.Text = mdr.GetString("teachername");
                             tdept.Text = mdr.GetString("tdept");
+                            tcnum.Text = "0" + mdr.GetString("tcnumber");
 
                             // Load image into picture box
                             object imageData = mdr["timage"];
@@ -242,6 +242,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                             tSave.Enabled = false;
                             Tsearch.Enabled = false;
                             tdept.Enabled = false;
+                            tcnum.Enabled = false;
                         }
                     }
                     else
@@ -252,7 +253,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+               //MessageBox.Show("Error: " + ex.Message);
             }
         }
 

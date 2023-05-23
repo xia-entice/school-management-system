@@ -43,6 +43,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 DateTime birthdate = new DateTime();
                 byte[] image = null;
                 string dept = "";
+                string section = "";
 
                 MySqlCommand selectCmd = new MySqlCommand("SELECT studname, sage, sgender, scnumber, saddress, semail, sbirthdate, simage,sdept FROM studentacc WHERE StudentAc = @StudentAc", smysqlCon);
                 selectCmd.Parameters.AddWithValue("@StudentAc", StudentAc);
@@ -64,6 +65,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                                 image = (byte[])reader.GetValue(7);
                             }
                             dept = reader.IsDBNull(8) ? "" : reader.GetString(5);
+                            section = reader.IsDBNull(9) ? "" : reader.GetString(9);
                             reader.Close();
                         }
                     }
@@ -91,6 +93,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                     smysqlCmd.Parameters.AddWithValue("_simage", DBNull.Value);
                 }
                 smysqlCmd.Parameters.AddWithValue("_sdept", dept);
+                smysqlCmd.Parameters.AddWithValue("_section", section);
 
                 smysqlCmd.ExecuteNonQuery();
                 MessageBox.Show("Saved Successfully");
@@ -123,6 +126,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 ASview.Columns[9].HeaderText = "Student Contact Number";
                 ASview.Columns[10].Visible = false;
                 ASview.Columns[11].HeaderText = "Department and Course";
+                ASview.Columns[12].Visible = false;
             }
 
         }

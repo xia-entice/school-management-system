@@ -313,6 +313,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.ASave.TabIndex = 26;
             this.ASave.Text = "Save";
             this.ASave.UseVisualStyleBackColor = false;
+            this.ASave.Click += new System.EventHandler(this.ASave_Click);
             // 
             // edit
             // 
@@ -324,6 +325,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.edit.TabIndex = 25;
             this.edit.Text = "Edit";
             this.edit.UseVisualStyleBackColor = false;
+            this.edit.Click += new System.EventHandler(this.edit_Click);
             // 
             // label1
             // 
@@ -426,6 +428,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.Asearch.TabIndex = 24;
             this.Asearch.Text = "Upload Picture";
             this.Asearch.UseVisualStyleBackColor = false;
+            this.Asearch.Click += new System.EventHandler(this.Asearch_Click);
             // 
             // adminpic
             // 

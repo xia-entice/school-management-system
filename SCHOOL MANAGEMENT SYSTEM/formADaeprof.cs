@@ -78,16 +78,13 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 MessageBox.Show("Please enter a valid age (numeric value).");
                 return;
             }
-            //if (!IsNumeric(acnumber.Text.Trim()))
-           // {
-             //   MessageBox.Show("Please enter a valid contact number (numeric value).");
-            //    return;
-            //}
-            //if (acnumber.Text.Trim().Length != 11)
-           // {
-             //   MessageBox.Show("Please enter a valid contact number with 11 digits.");
-             //   return;
-           // }
+
+            string numericContactNumber = new string(acnum.Text.Trim().Replace("-", "").Replace("(", "").Replace(")", "").Where(char.IsDigit).ToArray());
+            if (numericContactNumber.Length != 11)
+            {
+                MessageBox.Show("Please enter a valid contact number with 11 digits.");
+                return;
+            }
 
             byte[] imageBytes = null;
             if (adminpic.Image != null)
@@ -124,14 +121,11 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                     amysqlCmd.Parameters.AddWithValue("_adbirthdate", birthDate);
                     amysqlCmd.Parameters.AddWithValue("_adaddress", aaddress.Text.Trim());
                     amysqlCmd.Parameters.AddWithValue("_ademail", aemail.Text.Trim());
-                   amysqlCmd.Parameters.AddWithValue("_adcnumber", "09000000000");
+                    amysqlCmd.Parameters.AddWithValue("_adcnumber", numericContactNumber);
 
                     if (imageBytes != null)
                     {
-
                         // Dispose the previous adminImage if it exists
-
-
                         if (adminImage != null)
                         {
                             adminImage.Dispose();
@@ -151,7 +145,6 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 }
                 finally
                 {
-
                     LoadData();
                 }
             }
@@ -161,7 +154,6 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         {
             return int.TryParse(value, out _);
         }
-
         private void LoadData()
         {
             try
@@ -188,7 +180,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                             aemail.Text = mdr.GetString("ademail");
                             apass.Text = mdr.GetString("pass");
                             auname.Text = mdr.GetString("uname");
-                          //  acnumber.Text = mdr.GetString("adcnumber");
+                            acnum.Text = "0"+ mdr.GetString("adcnumber").ToString();
 
                             // Load image into picture box
                             object imageData = mdr["aimage"];
@@ -227,7 +219,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                             aemail.Enabled = false;
                             apass.Enabled = false;
                             auname.Enabled = false;
-                           // acnumber.Enabled = false;
+                           acnum.Enabled = false;
                             ASave.Enabled = false;
                             Asearch.Enabled = false;
                         }
@@ -241,7 +233,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             catch (Exception ex)
             {
 
-                MessageBox.Show("Error: " + ex.Message);
+               // MessageBox.Show("Error: " + ex.Message);
 
             }
         }
@@ -268,7 +260,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             aemail.Enabled = true;
             apass.Enabled = true;
             auname.Enabled = true;
-            //acnumber.Enabled = true;
+            acnum.Enabled = true;
             ASave.Enabled = true;
             Asearch.Enabled = true;
         }
@@ -282,6 +274,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 adminpic.Image = Image.FromFile(opf.FileName);
 
             }
+            adminpic.SizeMode = PictureBoxSizeMode.Zoom;
         }
     }
 }
