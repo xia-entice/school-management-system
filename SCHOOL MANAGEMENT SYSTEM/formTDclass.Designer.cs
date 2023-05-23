@@ -85,6 +85,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.tclassDelete.TabIndex = 68;
             this.tclassDelete.Text = "Delete";
             this.tclassDelete.UseVisualStyleBackColor = false;
+            this.tclassDelete.Click += new System.EventHandler(this.tclassDelete_Click);
             // 
             // tclassSave
             // 
@@ -96,6 +97,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.tclassSave.TabIndex = 67;
             this.tclassSave.Text = "Save";
             this.tclassSave.UseVisualStyleBackColor = false;
+            this.tclassSave.Click += new System.EventHandler(this.tclassSave_Click);
             // 
             // tbcode
             // 
@@ -192,6 +194,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             // tclassview
             // 
+            this.tclassview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tclassview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tclassview.Location = new System.Drawing.Point(25, 12);
             this.tclassview.Name = "tclassview";
@@ -199,6 +202,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.tclassview.RowTemplate.Height = 24;
             this.tclassview.Size = new System.Drawing.Size(411, 618);
             this.tclassview.TabIndex = 56;
+            this.tclassview.DoubleClick += new System.EventHandler(this.tclassview_DoubleClick);
             // 
             // tdclassPanel
             // 

@@ -332,6 +332,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.tSave.TabIndex = 26;
             this.tSave.Text = "Save";
             this.tSave.UseVisualStyleBackColor = false;
+            this.tSave.Click += new System.EventHandler(this.tSave_Click);
             // 
             // tedit
             // 
@@ -343,6 +344,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.tedit.TabIndex = 25;
             this.tedit.Text = "Edit";
             this.tedit.UseVisualStyleBackColor = false;
+            this.tedit.Click += new System.EventHandler(this.tedit_Click);
             // 
             // label1
             // 
@@ -445,6 +447,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.Tsearch.TabIndex = 24;
             this.Tsearch.Text = "Upload Picture";
             this.Tsearch.UseVisualStyleBackColor = false;
+            this.Tsearch.Click += new System.EventHandler(this.Tsearch_Click);
             // 
             // timage
             // 

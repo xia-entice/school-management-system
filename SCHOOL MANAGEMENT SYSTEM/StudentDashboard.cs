@@ -17,11 +17,27 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         formSDsched SDsched;
         formSDclass SDclass;
         public string loggedInUser;
+        public string ssec;
 
         public StudentDashboard()
         {
             InitializeComponent();
             mdiProp();
+
+            if (SDann == null)
+            {
+                SDann = new formANN();
+                SDann.FormClosed += SDann_FormClosed;
+                SDann.MdiParent = this;
+                SDann.StartPosition = FormStartPosition.Manual;
+                SDann.Location = new Point(0, 0);
+                SDann.Size = new Size(1150, 570);
+                SDann.Show();
+            }
+            else
+            {
+                SDann.Activate();
+            }
         }
 
         // for mdi
@@ -184,16 +200,22 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             if (SDclass == null)
             {
                 SDclass = new formSDclass();
+                SDclass.GetSection(loggedInUser);
+                SDclass.loggedInUser = loggedInUser;
                 SDclass.FormClosed += SDclass_FormClosed; 
                 SDclass.MdiParent = this;
                 SDclass.StartPosition = FormStartPosition.Manual;
                 SDclass.Location = new Point(0, 0);
                 SDclass.Size = new Size(1150, 570);
                 SDclass.Show();
+              
             }
             else
             {
+                SDclass.GetSection(loggedInUser);
+                SDclass.loggedInUser = loggedInUser;
                 SDclass.Activate();
+                
             }
         }
 
