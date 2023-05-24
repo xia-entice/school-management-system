@@ -237,6 +237,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formTDclass";
             this.Text = "formTDclass";
+            this.Load += new System.EventHandler(this.formTDclass_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tclassview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

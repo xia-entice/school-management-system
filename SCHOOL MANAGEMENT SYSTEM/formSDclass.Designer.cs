@@ -71,6 +71,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.sbcode.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sbcode.Location = new System.Drawing.Point(922, 75);
             this.sbcode.Name = "sbcode";
+            this.sbcode.ReadOnly = true;
             this.sbcode.Size = new System.Drawing.Size(303, 35);
             this.sbcode.TabIndex = 77;
             // 
@@ -89,6 +90,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.sbunit.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sbunit.Location = new System.Drawing.Point(576, 77);
             this.sbunit.Name = "sbunit";
+            this.sbunit.ReadOnly = true;
             this.sbunit.Size = new System.Drawing.Size(227, 35);
             this.sbunit.TabIndex = 75;
             // 
@@ -109,6 +111,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.scdesc.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.scdesc.Location = new System.Drawing.Point(476, 218);
             this.scdesc.Name = "scdesc";
+            this.scdesc.ReadOnly = true;
             this.scdesc.Size = new System.Drawing.Size(749, 412);
             this.scdesc.TabIndex = 73;
             this.scdesc.Text = "";
@@ -128,6 +131,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.sbsched.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sbsched.Location = new System.Drawing.Point(922, 122);
             this.sbsched.Name = "sbsched";
+            this.sbsched.ReadOnly = true;
             this.sbsched.Size = new System.Drawing.Size(303, 35);
             this.sbsched.TabIndex = 71;
             // 
@@ -146,6 +150,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.sbsub.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sbsub.Location = new System.Drawing.Point(576, 31);
             this.sbsub.Name = "sbsub";
+            this.sbsub.ReadOnly = true;
             this.sbsub.Size = new System.Drawing.Size(649, 35);
             this.sbsub.TabIndex = 69;
             // 
@@ -164,10 +169,12 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.sclassview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.sclassview.Location = new System.Drawing.Point(25, 12);
             this.sclassview.Name = "sclassview";
+            this.sclassview.ReadOnly = true;
             this.sclassview.RowHeadersWidth = 51;
             this.sclassview.RowTemplate.Height = 24;
             this.sclassview.Size = new System.Drawing.Size(411, 618);
             this.sclassview.TabIndex = 67;
+            this.sclassview.DoubleClick += new System.EventHandler(this.sclassview_DoubleClick);
             // 
             // sdclassPanel
             // 
