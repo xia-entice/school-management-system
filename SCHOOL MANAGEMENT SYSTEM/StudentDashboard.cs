@@ -200,7 +200,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             if (SDclass == null)
             {
                 SDclass = new formSDclass();
-                SDclass.GetSection(loggedInUser);
+                SDclass.GetID(loggedInUser);
                 SDclass.loggedInUser = loggedInUser;
                 SDclass.FormClosed += SDclass_FormClosed; 
                 SDclass.MdiParent = this;
@@ -212,7 +212,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             }
             else
             {
-                SDclass.GetSection(loggedInUser);
+                SDclass.GetID(loggedInUser);
                 SDclass.loggedInUser = loggedInUser;
                 SDclass.Activate();
                 

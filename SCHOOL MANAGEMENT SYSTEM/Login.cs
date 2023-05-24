@@ -65,6 +65,9 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                     formTDteprof form2 = new formTDteprof();
                     form2.loggedInUser = Username_txt.Text;
                     form2.GetID(loggedInUser);
+                    formTDclass form = new formTDclass();
+                    form.loggedInUser = Username_txt.Text;
+                    form.GetID(loggedInUser);
                     TeacherDashboard Obj = new TeacherDashboard();
                     Obj.loggedInUser = Username_txt.Text;
                     Obj.Show();
@@ -90,6 +93,9 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                     formSDseprof form2 = new formSDseprof();
                     form2.loggedInUser = Username_txt.Text;
                     form2.GetID(loggedInUser);
+                    formSDclass form1 = new formSDclass();
+                    form1.loggedInUser = Username_txt.Text;
+                    form1.GetID(loggedInUser);
                     StudentDashboard Obj = new StudentDashboard();
                     Obj.loggedInUser = Username_txt.Text;
                     Obj.Show();

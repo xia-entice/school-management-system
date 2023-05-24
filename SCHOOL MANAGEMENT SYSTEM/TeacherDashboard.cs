@@ -199,6 +199,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             if (TDclass == null)
             {
                 TDclass = new formTDclass();
+                TDclass.GetID(loggedInUser);
+                TDclass.loggedInUser = loggedInUser;
                 TDclass.FormClosed += TDclass_FormClosed;
                 TDclass.MdiParent = this;
                 TDclass.StartPosition = FormStartPosition.Manual;
@@ -208,6 +210,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             }
             else
             {
+                TDclass.GetID(loggedInUser);
+                TDclass.loggedInUser = loggedInUser;
                 TDclass.Activate();
             }
         }
