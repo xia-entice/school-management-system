@@ -13,17 +13,26 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
 {
     public partial class formTDclass : Form
     {
+        MySqlConnection con = new MySqlConnection(@"Server=localhost;Database=studmanagment;Uid=root;Pwd = karmakun_2002");
         string CconnectionString = @"Server=localhost;Database=studmanagment;Uid=root;Pwd = karmakun_2002";
-         int  idclass =0;
+        int idclass = 0;
+        public string loggedInUser;
+        int AccID;
+
         public formTDclass()
         {
             InitializeComponent();
+            GetID(loggedInUser);
             CGridFill();
             CClear();
+            sortbyID();
         }
 
         private void tclassSave_Click(object sender, EventArgs e)
         {
+
+
+
             using (MySqlConnection cmysqlCon = new MySqlConnection(CconnectionString))
             {
                 cmysqlCon.Open();
@@ -36,6 +45,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 cmysqlCmd.Parameters.AddWithValue("_schedule", tbsched.Text.Trim());
                 cmysqlCmd.Parameters.AddWithValue("_section", tbclass.Text.Trim());
                 cmysqlCmd.Parameters.AddWithValue("_description", tcdesc.Text.Trim());
+                cmysqlCmd.Parameters.AddWithValue("_AccID", AccID);
                 cmysqlCmd.ExecuteNonQuery();
                 cmysqlCon.Close();
                 MessageBox.Show("Saved Successfully");
@@ -61,17 +71,14 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 tclassview.Columns[0].Visible = false;
                 tclassview.Columns[5].Visible = false;
                 tclassview.Columns[6].Visible = false;
-                
-             
-
-
+                tclassview.Columns[7].Visible = false;
             }
-
+            sortbyID();
         }
 
         void CClear()
         {
-            tbsub.Text = tbunit.Text = tbcode.Text =tbclass.Text =tcdesc.Text = "";
+            tbsub.Text = tbunit.Text = tbcode.Text = tbclass.Text = tcdesc.Text = tbsched.Text = "";
             idclass = 0;
         }
 
@@ -79,7 +86,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         {
             if (tclassview.CurrentRow.Index != -1)
             {
-               tbsub.Text = tclassview.CurrentRow.Cells[1].Value.ToString();
+                tbsub.Text = tclassview.CurrentRow.Cells[1].Value.ToString();
                 tbunit.Text = tclassview.CurrentRow.Cells[6].Value.ToString();
                 tbcode.Text = tclassview.CurrentRow.Cells[2].Value.ToString();
                 tbsched.Text = tclassview.CurrentRow.Cells[4].Value.ToString();
@@ -89,6 +96,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 tclassSave.Text = "Update";
                 tclassDelete.Enabled = true;
             }
+            sortbyID();
         }
 
         private void tclassDelete_Click(object sender, EventArgs e)
@@ -104,6 +112,54 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 CGridFill();
                 CClear();
             }
+            sortbyID();
+        }
+
+        public void GetID(string loggedInUser)
+        {
+
+            con.Open();
+            MySqlCommand cmd = new MySqlCommand("SELECT TeacherAc FROM teacheracc WHERE teachername=@loggedInUser", con);
+            cmd.Parameters.AddWithValue("@loggedInUser", loggedInUser);
+            int i = Convert.ToInt32(cmd.ExecuteScalar());
+            con.Close();
+            AccID = i;
+
+
+        }
+
+        public void sortbyID()
+        {
+            using (MySqlConnection amysqlCon = new MySqlConnection(CconnectionString))
+            {
+                amysqlCon.Open();
+                MySqlDataAdapter asqlDa = new MySqlDataAdapter("SearchByID", amysqlCon);
+                asqlDa.SelectCommand.CommandType = CommandType.StoredProcedure;
+                asqlDa.SelectCommand.Parameters.AddWithValue("_AccID", AccID);
+                DataTable adtbl = new DataTable();
+                asqlDa.Fill(adtbl);
+                tclassview.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                tclassview.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                tclassview.DataSource = adtbl;
+                tclassview.Columns[0].Visible = false;
+                tclassview.Columns[5].Visible = false;
+                tclassview.Columns[6].Visible = false;
+                tclassview.Columns[7].Visible = false;
+
+
+
+
+            }
+
+        }
+
+
+        private void formTDclass_Load(object sender, EventArgs e)
+        {
+            GetID(loggedInUser);
+            CGridFill();
+            CClear();
+            sortbyID();
         }
     }
 }
