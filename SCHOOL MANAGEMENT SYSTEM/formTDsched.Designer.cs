@@ -49,10 +49,10 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tSched = new System.Windows.Forms.DataGridView();
+            this.tSchedview = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tSched)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tSchedview)).BeginInit();
             this.SuspendLayout();
             // 
             // tsPanel
@@ -83,6 +83,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.tsSave.TabIndex = 61;
             this.tsSave.Text = "Save";
             this.tsSave.UseVisualStyleBackColor = true;
+            this.tsSave.Click += new System.EventHandler(this.tsSave_Click);
             // 
             // tsSelect
             // 
@@ -267,15 +268,19 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.label1.TabIndex = 44;
             this.label1.Text = "EDIT SCHEDULE";
             // 
-            // tSched
+            // tSchedview
             // 
-            this.tSched.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tSched.Location = new System.Drawing.Point(355, 101);
-            this.tSched.Name = "tSched";
-            this.tSched.RowHeadersWidth = 51;
-            this.tSched.RowTemplate.Height = 24;
-            this.tSched.Size = new System.Drawing.Size(859, 483);
-            this.tSched.TabIndex = 58;
+            this.tSchedview.AllowUserToAddRows = false;
+            this.tSchedview.AllowUserToDeleteRows = false;
+            this.tSchedview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tSchedview.Location = new System.Drawing.Point(355, 101);
+            this.tSchedview.Name = "tSchedview";
+            this.tSchedview.ReadOnly = true;
+            this.tSchedview.RowHeadersWidth = 51;
+            this.tSchedview.RowTemplate.Height = 24;
+            this.tSchedview.Size = new System.Drawing.Size(859, 483);
+            this.tSchedview.TabIndex = 58;
+            this.tSchedview.DoubleClick += new System.EventHandler(this.tSchedview_DoubleClick);
             // 
             // formTDsched
             // 
@@ -287,16 +292,17 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.Controls.Add(this.tsSelect);
             this.Controls.Add(this.tsDays);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.tSched);
+            this.Controls.Add(this.tSchedview);
             this.Controls.Add(this.tsPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formTDsched";
             this.Text = "formTDsched";
+            this.Load += new System.EventHandler(this.formTDsched_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tSched)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tSchedview)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -323,6 +329,6 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView tSched;
+        private System.Windows.Forms.DataGridView tSchedview;
     }
 }
