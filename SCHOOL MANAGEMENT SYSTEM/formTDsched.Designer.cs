@@ -49,22 +49,10 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tsMonday = new System.Windows.Forms.DataGridView();
-            this.tsTuesday = new System.Windows.Forms.DataGridView();
-            this.tsWednesday = new System.Windows.Forms.DataGridView();
-            this.tsThursday = new System.Windows.Forms.DataGridView();
-            this.tsFriday = new System.Windows.Forms.DataGridView();
-            this.tsSaturday = new System.Windows.Forms.DataGridView();
-            this.tsSunday = new System.Windows.Forms.DataGridView();
+            this.tSchedview = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tsMonday)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tsTuesday)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tsWednesday)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tsThursday)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tsFriday)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tsSaturday)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tsSunday)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tSchedview)).BeginInit();
             this.SuspendLayout();
             // 
             // tsPanel
@@ -95,6 +83,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.tsSave.TabIndex = 61;
             this.tsSave.Text = "Save";
             this.tsSave.UseVisualStyleBackColor = true;
+            this.tsSave.Click += new System.EventHandler(this.tsSave_Click);
             // 
             // tsSelect
             // 
@@ -111,6 +100,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.tsDays.Font = new System.Drawing.Font("Open Sans", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsDays.FormattingEnabled = true;
             this.tsDays.Items.AddRange(new object[] {
+            "All",
             "Monday",
             "Tuesday",
             "Wednesday",
@@ -278,108 +268,41 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.label1.TabIndex = 44;
             this.label1.Text = "EDIT SCHEDULE";
             // 
-            // tsMonday
+            // tSchedview
             // 
-            this.tsMonday.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tsMonday.Location = new System.Drawing.Point(355, 101);
-            this.tsMonday.Name = "tsMonday";
-            this.tsMonday.RowHeadersWidth = 51;
-            this.tsMonday.RowTemplate.Height = 24;
-            this.tsMonday.Size = new System.Drawing.Size(859, 483);
-            this.tsMonday.TabIndex = 58;
-            // 
-            // tsTuesday
-            // 
-            this.tsTuesday.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tsTuesday.Location = new System.Drawing.Point(355, 102);
-            this.tsTuesday.Name = "tsTuesday";
-            this.tsTuesday.RowHeadersWidth = 51;
-            this.tsTuesday.RowTemplate.Height = 24;
-            this.tsTuesday.Size = new System.Drawing.Size(859, 483);
-            this.tsTuesday.TabIndex = 63;
-            // 
-            // tsWednesday
-            // 
-            this.tsWednesday.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tsWednesday.Location = new System.Drawing.Point(355, 101);
-            this.tsWednesday.Name = "tsWednesday";
-            this.tsWednesday.RowHeadersWidth = 51;
-            this.tsWednesday.RowTemplate.Height = 24;
-            this.tsWednesday.Size = new System.Drawing.Size(859, 483);
-            this.tsWednesday.TabIndex = 64;
-            // 
-            // tsThursday
-            // 
-            this.tsThursday.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tsThursday.Location = new System.Drawing.Point(355, 102);
-            this.tsThursday.Name = "tsThursday";
-            this.tsThursday.RowHeadersWidth = 51;
-            this.tsThursday.RowTemplate.Height = 24;
-            this.tsThursday.Size = new System.Drawing.Size(859, 483);
-            this.tsThursday.TabIndex = 65;
-            // 
-            // tsFriday
-            // 
-            this.tsFriday.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tsFriday.Location = new System.Drawing.Point(355, 102);
-            this.tsFriday.Name = "tsFriday";
-            this.tsFriday.RowHeadersWidth = 51;
-            this.tsFriday.RowTemplate.Height = 24;
-            this.tsFriday.Size = new System.Drawing.Size(859, 483);
-            this.tsFriday.TabIndex = 66;
-            // 
-            // tsSaturday
-            // 
-            this.tsSaturday.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tsSaturday.Location = new System.Drawing.Point(355, 101);
-            this.tsSaturday.Name = "tsSaturday";
-            this.tsSaturday.RowHeadersWidth = 51;
-            this.tsSaturday.RowTemplate.Height = 24;
-            this.tsSaturday.Size = new System.Drawing.Size(859, 483);
-            this.tsSaturday.TabIndex = 67;
-            // 
-            // tsSunday
-            // 
-            this.tsSunday.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tsSunday.Location = new System.Drawing.Point(355, 102);
-            this.tsSunday.Name = "tsSunday";
-            this.tsSunday.RowHeadersWidth = 51;
-            this.tsSunday.RowTemplate.Height = 24;
-            this.tsSunday.Size = new System.Drawing.Size(859, 483);
-            this.tsSunday.TabIndex = 68;
+            this.tSchedview.AllowUserToAddRows = false;
+            this.tSchedview.AllowUserToDeleteRows = false;
+            this.tSchedview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tSchedview.Location = new System.Drawing.Point(355, 101);
+            this.tSchedview.Name = "tSchedview";
+            this.tSchedview.ReadOnly = true;
+            this.tSchedview.RowHeadersWidth = 51;
+            this.tSchedview.RowTemplate.Height = 24;
+            this.tSchedview.Size = new System.Drawing.Size(859, 483);
+            this.tSchedview.TabIndex = 58;
+            this.tSchedview.DoubleClick += new System.EventHandler(this.tSchedview_DoubleClick);
             // 
             // formTDsched
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1477, 699);
-            this.Controls.Add(this.tsSunday);
-            this.Controls.Add(this.tsSaturday);
-            this.Controls.Add(this.tsFriday);
-            this.Controls.Add(this.tsThursday);
-            this.Controls.Add(this.tsWednesday);
-            this.Controls.Add(this.tsTuesday);
             this.Controls.Add(this.tsDelete);
             this.Controls.Add(this.tsSave);
             this.Controls.Add(this.tsSelect);
             this.Controls.Add(this.tsDays);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.tsMonday);
+            this.Controls.Add(this.tSchedview);
             this.Controls.Add(this.tsPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formTDsched";
             this.Text = "formTDsched";
+            this.Load += new System.EventHandler(this.formTDsched_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tsMonday)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tsTuesday)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tsWednesday)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tsThursday)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tsFriday)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tsSaturday)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tsSunday)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tSchedview)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -406,12 +329,6 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView tsMonday;
-        private System.Windows.Forms.DataGridView tsTuesday;
-        private System.Windows.Forms.DataGridView tsWednesday;
-        private System.Windows.Forms.DataGridView tsThursday;
-        private System.Windows.Forms.DataGridView tsFriday;
-        private System.Windows.Forms.DataGridView tsSaturday;
-        private System.Windows.Forms.DataGridView tsSunday;
+        private System.Windows.Forms.DataGridView tSchedview;
     }
 }
