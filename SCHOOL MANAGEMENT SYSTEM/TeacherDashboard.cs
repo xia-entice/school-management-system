@@ -175,6 +175,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             if (TDsched == null)
             {
                 TDsched = new formTDsched();
+                TDsched.GetID(loggedInUser);
+                TDsched.loggedInUser = loggedInUser;
                 TDsched.FormClosed += TDsched_FormClosed;
                 TDsched.MdiParent = this;
                 TDsched.StartPosition = FormStartPosition.Manual;
@@ -184,6 +186,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             }
             else
             {
+                TDsched.GetID(loggedInUser);
+                TDsched.loggedInUser = loggedInUser;
                 TDsched.Activate();
             }
 
