@@ -166,6 +166,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             // sclassview
             // 
+            this.sclassview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.sclassview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.sclassview.Location = new System.Drawing.Point(25, 12);
             this.sclassview.Name = "sclassview";
