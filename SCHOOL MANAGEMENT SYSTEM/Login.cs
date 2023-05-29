@@ -68,6 +68,9 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                     formTDclass form = new formTDclass();
                     form.loggedInUser = Username_txt.Text;
                     form.GetID(loggedInUser);
+                    formTDsched form1 = new formTDsched();
+                    form1.loggedInUser = Username_txt.Text;
+                    form1.GetID(loggedInUser);
                     TeacherDashboard Obj = new TeacherDashboard();
                     Obj.loggedInUser = Username_txt.Text;
                     Obj.Show();

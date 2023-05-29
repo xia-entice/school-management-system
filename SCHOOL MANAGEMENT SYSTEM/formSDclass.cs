@@ -94,9 +94,14 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 sclassview.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 sclassview.DataSource = adtbl;
                 sclassview.Columns[0].Visible = false;
+                sclassview.Columns[3].Visible = false;
+                sclassview.Columns[4].Visible = false;
                 sclassview.Columns[5].Visible = false;
                 sclassview.Columns[6].Visible = false;
                 sclassview.Columns[7].Visible = false;
+                sclassview.Columns[8].Visible = false;
+                sclassview.Columns[9].Visible = false;
+                sclassview.Columns[10].Visible = false;
 
 
 

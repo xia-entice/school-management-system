@@ -200,8 +200,6 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                                     }
                                     adminpic.SizeMode = PictureBoxSizeMode.Zoom;
 
-                                    Image img = Image.FromStream(ms);
-                                    adminpic.Image = img;
 
 
                                 }

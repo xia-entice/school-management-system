@@ -18,6 +18,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         int idclass = 0;
         public string loggedInUser;
         int AccID;
+
         public formTDsched()
 
         {
@@ -33,26 +34,28 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             using (MySqlConnection cmysqlCon = new MySqlConnection(CconnectionString))
             {
                 cmysqlCon.Open();
-                int idclass = 0;
-                int AccID = 0;
                 string subject = "";
+                int unit = 0;
+                string code = "";
+                string schedule = "";
                 string section = "";
-                int rnumber = 0;
-                string timestart = "";
-                string timeend = "";
+                string description = "";
+               
 
-                MySqlCommand selectCmd = new MySqlCommand("SELECT AccID, subject, section, rnumber, timestart, timeend FROM class WHERE idclass = @idclass", cmysqlCon);
+                MySqlCommand selectCmd = new MySqlCommand("SELECT subject,units,code,schedule, section,description FROM class WHERE idclass = @idclass", cmysqlCon); 
                 selectCmd.Parameters.AddWithValue("@idclass", idclass);
                 using (MySqlDataReader reader = selectCmd.ExecuteReader())
                 {
                     if (reader.Read())
                     {
-                        idclass = reader.IsDBNull(0) ? 0 : reader.GetInt32(0);
-                        AccID = reader.IsDBNull(1) ? 0 : reader.GetInt32(1);
-                        subject = reader.IsDBNull(2) ? "" : reader.GetString(2);
-                        rnumber = reader.IsDBNull(3) ? 0 : reader.GetInt32(3);
-                        timestart = reader.IsDBNull(4) ? "" : reader.GetString(4);
-                        timeend = reader.IsDBNull(5) ? "" : reader.GetString(5);
+                       
+                        subject = reader.IsDBNull(0) ? "" : reader.GetString(0);
+                        unit = reader.IsDBNull(1) ? 0 : reader.GetInt32(1);
+                        code = reader.IsDBNull(2) ? "" : reader.GetString(2);
+                        schedule = reader.IsDBNull(3) ? "" : reader.GetString(3);
+                        section = reader.IsDBNull(4) ? "" : reader.GetString(4);
+                        description = reader.IsDBNull(5) ? "" : reader.GetString(5);
+
                         reader.Close();
                     }
                 }
@@ -60,8 +63,12 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 MySqlCommand cmysqlCmd = new MySqlCommand("classAddorEdit", cmysqlCon);
                 cmysqlCmd.CommandType = CommandType.StoredProcedure;
                 cmysqlCmd.Parameters.AddWithValue("_idclass", idclass);
-                cmysqlCmd.Parameters.AddWithValue("_subject", tsSub.Text.Trim());
-                cmysqlCmd.Parameters.AddWithValue("_section", tsClass.Text.Trim());
+                cmysqlCmd.Parameters.AddWithValue("_subject", subject);
+                cmysqlCmd.Parameters.AddWithValue("_unit", unit);
+                cmysqlCmd.Parameters.AddWithValue("_code", code);
+                cmysqlCmd.Parameters.AddWithValue("_schedule", schedule);
+                cmysqlCmd.Parameters.AddWithValue("_section", section);
+                cmysqlCmd.Parameters.AddWithValue("_description", description);
                 cmysqlCmd.Parameters.AddWithValue("_rnumber", tsRoom.Text.Trim());
                 cmysqlCmd.Parameters.AddWithValue("_timestart", tsStart.Text.Trim());
                 cmysqlCmd.Parameters.AddWithValue("_timeend", tsEnd.Text.Trim());
@@ -87,19 +94,20 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 tSchedview.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 tSchedview.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 tSchedview.DataSource = adtbl;
-                tSchedview.Columns[0].Visible = false;
+                tSchedview.Columns[0].Visible = true;
                 tSchedview.Columns[5].Visible = false;
                 tSchedview.Columns[6].Visible = false;
                 tSchedview.Columns[7].Visible = false;
             }
             sortbyID();
+
         }
 
         private void formTDsched_Load(object sender, EventArgs e)
         {
             CGridFill();
             CClear();
-            sortbyID();
+            
         }
         void CClear()
         {
@@ -111,17 +119,69 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         {
             if (tSchedview.CurrentRow.Index != -1)
             {
-                tsSub.Text = tSchedview.CurrentRow.Cells[1].Value.ToString();
-                tsClass.Text = tSchedview.CurrentRow.Cells[6].Value.ToString();
-                tsRoom.Text = tSchedview.CurrentRow.Cells[2].Value.ToString();
-                tsStart.Text = tSchedview.CurrentRow.Cells[4].Value.ToString();
-                tsEnd.Text = tSchedview.CurrentRow.Cells[3].Value.ToString();
-                AccID = Convert.ToInt32(tSchedview.CurrentRow.Cells[5].Value.ToString());
                 idclass = Convert.ToInt32(tSchedview.CurrentRow.Cells[0].Value.ToString());
+                MessageBox.Show(idclass.ToString());
+                tsSub.Text = tSchedview.CurrentRow.Cells[1].Value.ToString();
+                tsClass.Text = tSchedview.CurrentRow.Cells[3].Value.ToString();
+               tsRoom.Text = tSchedview.CurrentRow.Cells[8].Value.ToString();
+                DateTime startDateTime;
+                if (DateTime.TryParse(tSchedview.CurrentRow.Cells[4].Value.ToString(), out startDateTime))
+                {
+                    tsStart.Text = startDateTime.ToString("HH:mm:ss");
+                }
+                else
+                {
+                    // Handle the case when the startDateTime conversion fails or the cell value is null
+                }
+
+                DateTime endDateTime;
+                if (DateTime.TryParse(tSchedview.CurrentRow.Cells[3].Value.ToString(), out endDateTime))
+                {
+                    tsEnd.Text = endDateTime.ToString("HH:mm:ss");
+                }
+                else
+                {
+                    // Handle the case when the endDateTime conversion fails or the cell value is null
+                }
                 tsSave.Text = "Update";
                 tsDelete.Enabled = true;
             }
-            sortbyID();
+          
+        }
+
+        public void sortbyID()
+        {
+            using (MySqlConnection amysqlCon = new MySqlConnection(CconnectionString))
+            {
+                amysqlCon.Open();
+                MySqlDataAdapter asqlDa = new MySqlDataAdapter("SearchByID", amysqlCon);
+                asqlDa.SelectCommand.CommandType = CommandType.StoredProcedure;
+                asqlDa.SelectCommand.Parameters.AddWithValue("_AccID", AccID);
+                DataTable adtbl = new DataTable();
+                asqlDa.Fill(adtbl);
+                tSchedview.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                tSchedview.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                tSchedview.DataSource = adtbl;
+                tSchedview.Columns[0].Visible = false;
+                tSchedview.Columns[5].Visible = false;
+                tSchedview.Columns[6].Visible = false;
+                tSchedview.Columns[7].Visible = false;
+
+            }
+
+        }
+
+        public void GetID(string loggedInUser)
+        {
+
+            con.Open();
+            MySqlCommand cmd = new MySqlCommand("SELECT TeacherAc FROM teacheracc WHERE teachername=@loggedInUser", con);
+            cmd.Parameters.AddWithValue("@loggedInUser", loggedInUser);
+            int i = Convert.ToInt32(cmd.ExecuteScalar());
+            con.Close();
+            AccID = i;
+
+
         }
     }
 }

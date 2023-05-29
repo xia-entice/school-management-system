@@ -36,6 +36,26 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             using (MySqlConnection cmysqlCon = new MySqlConnection(CconnectionString))
             {
                 cmysqlCon.Open();
+                int rnum = 0;
+                string  tstart= "";
+                string tend = "";
+
+                MySqlCommand selectCmd = new MySqlCommand("SELECT rnumber, timestart, timeend FROM class WHERE idclass = @idclass", cmysqlCon);
+                selectCmd.Parameters.AddWithValue("@idclass", idclass);
+                using (MySqlDataReader reader = selectCmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        rnum = reader.IsDBNull(0) ? 0 : reader.GetInt32(0);
+                        tstart = reader.IsDBNull(1) ? "" : reader.GetString(1);
+                        tend = reader.IsDBNull(2) ? "" : reader.GetString(2);
+
+                        reader.Close();
+                    }
+                }
+
+
+
                 MySqlCommand cmysqlCmd = new MySqlCommand("classAddOrEdit", cmysqlCon);
                 cmysqlCmd.CommandType = CommandType.StoredProcedure;
                 cmysqlCmd.Parameters.AddWithValue("_idclass", idclass);
@@ -46,6 +66,9 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 cmysqlCmd.Parameters.AddWithValue("_section", tbclass.Text.Trim());
                 cmysqlCmd.Parameters.AddWithValue("_description", tcdesc.Text.Trim());
                 cmysqlCmd.Parameters.AddWithValue("_AccID", AccID);
+                cmysqlCmd.Parameters.AddWithValue("_rnumber", rnum);
+                cmysqlCmd.Parameters.AddWithValue("_timestart", tstart);
+                cmysqlCmd.Parameters.AddWithValue("_timeend", tend);
                 cmysqlCmd.ExecuteNonQuery();
                 cmysqlCon.Close();
                 MessageBox.Show("Saved Successfully");
@@ -72,6 +95,9 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 tclassview.Columns[5].Visible = false;
                 tclassview.Columns[6].Visible = false;
                 tclassview.Columns[7].Visible = false;
+                tclassview.Columns[8].Visible = false;
+                tclassview.Columns[9].Visible = false;
+                tclassview.Columns[10].Visible = false;
             }
             sortbyID();
         }
