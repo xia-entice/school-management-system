@@ -163,8 +163,10 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
 
         private void formTDsched_Load(object sender, EventArgs e)
         {
+            GetID(loggedInUser);
             CGridFill();
             CClear();
+            sortbyID();
         }
 
         void CClear()
@@ -231,6 +233,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
 
         private void tsSelect_Click(object sender, EventArgs e)
         {
+            CGridFill();
             sortbyID();
             using (MySqlConnection amysqlCon = new MySqlConnection(CconnectionString))
             {

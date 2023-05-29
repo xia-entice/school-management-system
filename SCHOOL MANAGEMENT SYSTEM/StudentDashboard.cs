@@ -177,6 +177,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             if (SDsched == null)
             {
                 SDsched = new formSDsched();
+                SDsched.GetID(loggedInUser);
+                SDsched.loggedInUser = loggedInUser;
                 SDsched.FormClosed += SDsched_FormClosed; 
                 SDsched.MdiParent = this;
                 SDsched.StartPosition = FormStartPosition.Manual;
@@ -186,6 +188,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             }
             else
             {
+                SDsched.GetID(loggedInUser);
+                SDsched.loggedInUser = loggedInUser;
                 SDsched.Activate();
             }
         }

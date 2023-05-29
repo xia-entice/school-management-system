@@ -47,6 +47,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             // sSched
             // 
+            this.sSched.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.sSched.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.sSched.Location = new System.Drawing.Point(120, 85);
             this.sSched.Name = "sSched";
@@ -64,6 +65,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.ssSelect.TabIndex = 77;
             this.ssSelect.Text = "Select";
             this.ssSelect.UseVisualStyleBackColor = true;
+            this.ssSelect.Click += new System.EventHandler(this.ssSelect_Click);
             // 
             // ssDays
             // 
@@ -96,6 +98,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formSDsched";
             this.Text = "formSDsched";
+            this.Load += new System.EventHandler(this.formSDsched_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sSched)).EndInit();
             this.ResumeLayout(false);
 
