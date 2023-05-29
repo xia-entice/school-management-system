@@ -87,7 +87,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             // Aats
             // 
-            this.Aats.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(178)))), ((int)(((byte)(85)))));
+            this.Aats.BackColor = System.Drawing.Color.White;
             this.Aats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Aats.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aats.Location = new System.Drawing.Point(-48, -15);
@@ -119,7 +119,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             // AAnnouncement
             // 
-            this.AAnnouncement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(178)))), ((int)(((byte)(85)))));
+            this.AAnnouncement.BackColor = System.Drawing.Color.White;
             this.AAnnouncement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AAnnouncement.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AAnnouncement.Location = new System.Drawing.Point(-22, -16);
