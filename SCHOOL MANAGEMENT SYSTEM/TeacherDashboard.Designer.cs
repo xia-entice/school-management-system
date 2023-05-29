@@ -84,7 +84,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             // Tats
             // 
-            this.Tats.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(178)))), ((int)(((byte)(85)))));
+            this.Tats.BackColor = System.Drawing.Color.White;
             this.Tats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Tats.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tats.Location = new System.Drawing.Point(-48, -15);
@@ -116,7 +116,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             // TAnnouncement
             // 
-            this.TAnnouncement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(178)))), ((int)(((byte)(85)))));
+            this.TAnnouncement.BackColor = System.Drawing.Color.White;
             this.TAnnouncement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TAnnouncement.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TAnnouncement.Location = new System.Drawing.Point(-22, -16);

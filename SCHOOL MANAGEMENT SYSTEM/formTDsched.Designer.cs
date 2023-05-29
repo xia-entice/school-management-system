@@ -42,14 +42,14 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.tsSub = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.tsEnd = new System.Windows.Forms.DateTimePicker();
-            this.tsStart = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tSchedview = new System.Windows.Forms.DataGridView();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tSchedview)).BeginInit();
@@ -146,7 +146,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // tsAdd
             // 
             this.tsAdd.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsAdd.Location = new System.Drawing.Point(152, 537);
+            this.tsAdd.Location = new System.Drawing.Point(152, 547);
             this.tsAdd.Name = "tsAdd";
             this.tsAdd.Size = new System.Drawing.Size(109, 34);
             this.tsAdd.TabIndex = 44;
@@ -191,38 +191,20 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.tsEnd);
-            this.panel2.Controls.Add(this.tsStart);
+            this.panel2.Controls.Add(this.comboBox2);
+            this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Location = new System.Drawing.Point(25, 374);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(236, 134);
+            this.panel2.Size = new System.Drawing.Size(236, 156);
             this.panel2.TabIndex = 41;
-            // 
-            // tsEnd
-            // 
-            this.tsEnd.CalendarFont = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsEnd.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.tsEnd.Location = new System.Drawing.Point(17, 99);
-            this.tsEnd.Name = "tsEnd";
-            this.tsEnd.Size = new System.Drawing.Size(188, 22);
-            this.tsEnd.TabIndex = 49;
-            // 
-            // tsStart
-            // 
-            this.tsStart.CalendarFont = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsStart.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.tsStart.Location = new System.Drawing.Point(17, 38);
-            this.tsStart.Name = "tsStart";
-            this.tsStart.Size = new System.Drawing.Size(188, 22);
-            this.tsStart.TabIndex = 44;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 69);
+            this.label5.Location = new System.Drawing.Point(12, 78);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(103, 27);
             this.label5.TabIndex = 48;
@@ -282,6 +264,46 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.tSchedview.TabIndex = 58;
             this.tSchedview.DoubleClick += new System.EventHandler(this.tSchedview_DoubleClick);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "7:00 AM",
+            "8:00 AM",
+            "9:00 AM",
+            "10:00 AM",
+            "11:00 AM",
+            "12:00 PM",
+            "1:00 PM",
+            "2:00 PM ",
+            "3:00 PM",
+            "4:00 PM"});
+            this.comboBox1.Location = new System.Drawing.Point(17, 41);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(195, 32);
+            this.comboBox1.TabIndex = 63;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "8:00 AM",
+            "9:00 AM",
+            "10:00 AM",
+            "11:00 AM",
+            "12:00 PM",
+            "1:00 PM",
+            "2:00 PM",
+            "3:00 PM",
+            "4:00 PM",
+            "5:00 PM"});
+            this.comboBox2.Location = new System.Drawing.Point(17, 108);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(195, 32);
+            this.comboBox2.TabIndex = 64;
+            // 
             // formTDsched
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -322,13 +344,13 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         private System.Windows.Forms.TextBox tsSub;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DateTimePicker tsEnd;
-        private System.Windows.Forms.DateTimePicker tsStart;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView tSchedview;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
