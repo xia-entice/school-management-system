@@ -99,6 +99,9 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                     formSDclass form1 = new formSDclass();
                     form1.loggedInUser = Username_txt.Text;
                     form1.GetID(loggedInUser);
+                    formSDsched form3 = new formSDsched();
+                    form3.loggedInUser = Username_txt.Text;
+                    form3.GetID(loggedInUser);
                     StudentDashboard Obj = new StudentDashboard();
                     Obj.loggedInUser = Username_txt.Text;
                     Obj.Show();
