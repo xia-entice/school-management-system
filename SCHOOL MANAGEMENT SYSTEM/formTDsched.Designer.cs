@@ -94,6 +94,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.tsSelect.TabIndex = 60;
             this.tsSelect.Text = "Select";
             this.tsSelect.UseVisualStyleBackColor = true;
+            this.tsSelect.Click += new System.EventHandler(this.tsSelect_Click);
             // 
             // tsDays
             // 
