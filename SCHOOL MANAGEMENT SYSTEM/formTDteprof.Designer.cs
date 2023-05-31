@@ -135,20 +135,24 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(238, 128);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(39, 24);
+            this.pictureBox2.Size = new System.Drawing.Size(42, 26);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 31;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(238, 125);
+            this.pictureBox1.Location = new System.Drawing.Point(241, 128);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(39, 24);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
             // 
             // tpass
             // 
@@ -196,6 +200,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.Tsearch.TabIndex = 24;
             this.Tsearch.Text = "Upload Picture";
             this.Tsearch.UseVisualStyleBackColor = false;
+            this.Tsearch.Click += new System.EventHandler(this.Tsearch_Click);
             // 
             // timage
             // 
@@ -452,6 +457,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.tSave.TabIndex = 26;
             this.tSave.Text = "Save";
             this.tSave.UseVisualStyleBackColor = false;
+            this.tSave.Click += new System.EventHandler(this.tSave_Click);
             // 
             // tedit
             // 
@@ -463,6 +469,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.tedit.TabIndex = 25;
             this.tedit.Text = "Edit";
             this.tedit.UseVisualStyleBackColor = false;
+            this.tedit.Click += new System.EventHandler(this.tedit_Click);
             // 
             // label1
             // 

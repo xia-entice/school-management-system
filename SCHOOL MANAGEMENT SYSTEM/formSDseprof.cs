@@ -21,11 +21,12 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         public string loggedInUser;
         private Image studentImage;
 
-        
+
 
         public formSDseprof()
         {
             InitializeComponent();
+            spass.UseSystemPasswordChar = true;
         }
 
         private void formSDseprof_Load(object sender, EventArgs e)
@@ -35,7 +36,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             LoadData();
         }
 
-        private void pictureBox3_MouseHover(object sender, EventArgs e)
+        private void pictureBox1_MouseHover(object sender, EventArgs e)
         {
             toolTip1.SetToolTip(pictureBox1, "Hide Password");
         }
@@ -52,7 +53,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             pictureBox1.Show();
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
             spass.UseSystemPasswordChar = true;
             pictureBox2.Show();
@@ -62,7 +63,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         private void Ssearch_Click(object sender, EventArgs e)
         {
             OpenFileDialog opf = new OpenFileDialog();
-            opf.Filter = "Choose Image(*.jpg; *.png; *.gif)|*.jpg; *.png; *.gif";
+            opf.Filter = "Choose Image(.jpg; *.png; *.gif)|.jpg; *.png; *.gif";
             if (opf.ShowDialog() == DialogResult.OK)
             {
                 simage.Image = Image.FromFile(opf.FileName);
@@ -240,7 +241,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                             spass.Text = mdr.GetString("studpass");
                             suname.Text = mdr.GetString("studuname");
                             Sdept.Text = mdr.GetString("sdept");
-                            scnum.Text = "0"+mdr.GetString("scnumber");
+                            scnum.Text = "0" + mdr.GetString("scnumber");
                             ssection.Text = mdr.GetString("section");
 
                             // Load image into picture box
@@ -259,7 +260,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                                             simage.Image = Image.FromStream(pngMs);
                                         }
                                     }
-                                   simage.SizeMode = PictureBoxSizeMode.Zoom;
+                                    simage.SizeMode = PictureBoxSizeMode.Zoom;
                                 }
                             }
                             else
@@ -281,9 +282,9 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                             Sdept.Enabled = false;
                             scnum.Enabled = false;
                             ssection.Enabled = false;
-   
+
                         }
-                  
+
                     }
                     else
                     {
@@ -309,7 +310,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
 
         }
 
-        
+
 
     }
 }

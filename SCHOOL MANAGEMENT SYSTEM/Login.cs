@@ -20,6 +20,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         public Form1()
         {
             InitializeComponent();
+            roleCB.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -41,6 +42,12 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                     formADaeprof form2 = new formADaeprof();
                     form2.loggedInUser = Username_txt.Text;
                     form2.GetID(loggedInUser);
+
+                    formADann form = new formADann();
+                    form.loggedInUser = Username_txt.Text;
+                    form.GetID(loggedInUser);
+                  
+
                     AdminDashboard Obj = new AdminDashboard();
                     Obj.loggedInUser = Username_txt.Text;
                     Obj.Show();

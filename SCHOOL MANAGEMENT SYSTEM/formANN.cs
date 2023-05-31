@@ -55,8 +55,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                     lbl.Left = left;
                     lbl.Width = Annpanel1.Width - 20;
                     lbl.ForeColor = Color.Black;
-                    lbl.BackColor = Color.White;
-                    lbl.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, ((Byte)(0)));
+                    lbl.BackColor = Color.FromArgb(255, 214, 51);
+                    lbl.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
                     lbl.Text = announcement;
                     lbl.Margin = new Padding(0, 10, 0, 0); // Add margin to separate the labels
                     lbl.AutoSize = true; // Enable auto-sizing to adjust label height
