@@ -8,31 +8,43 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+
 namespace SCHOOL_MANAGEMENT_SYSTEM
 {
     public partial class formADann : Form
     {
-
+        MySqlConnection con = new MySqlConnection(@"Server=localhost;Database=studmanagment;Uid=root;Pwd=karmakun_2002");
         string AnconnectionString = @"Server=localhost;Database=studmanagment;Uid=root;Pwd=karmakun_2002";
         int AnID = 0;
+        public string loggedInUser;
+        string user;
 
         public formADann()
         {
             InitializeComponent();
+            loggedInUser = ""; // Assign a value to loggedInUser
+            GetID(loggedInUser);
+            NameandTime();
             LoadAnnouncements();
             AnClear();
-
-
         }
 
         private void formADann_Load(object sender, EventArgs e)
         {
             this.ControlBox = false;
+            GetID(loggedInUser);
+            NameandTime();
             LoadAnnouncements();
             AnClear();
         }
 
         List<string> announcementsList = new List<string>();
+
+        private void NameandTime()
+        {
+            DateTime currenttime = DateTime.Now;
+            Postrtb.Text = "From: " + user + "\n" + currenttime + "\n\n";
+        }
 
         private void annPost_Click(object sender, EventArgs e)
         {
@@ -55,7 +67,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
 
         void AnClear()
         {
-            Postrtb.Text = "";
+            NameandTime();
             SelectedAnnouncementId = 0;
             annPost.Text = "Post";
         }
@@ -92,8 +104,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                     lbl.Left = left;
                     lbl.Width = Annpanel1.Width - 20;
                     lbl.ForeColor = Color.Black;
-                    lbl.BackColor = Color.White;
-                    lbl.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, ((Byte)(0)));
+                    lbl.BackColor = Color.FromArgb(255, 214, 51);
+                    lbl.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
                     lbl.Text = announcement;
                     lbl.Margin = new Padding(0, 10, 0, 0); // Add margin to separate the labels
                     lbl.AutoSize = true; // Enable auto-sizing to adjust label height
@@ -112,16 +124,17 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 Annpanel1.AutoScrollMinSize = new Size(0, top);
             }
         }
+
         private int SelectedAnnouncementId { get; set; }
 
         private void Label_Click(object sender, EventArgs e)
         {
             foreach (Label label in Annpanel1.Controls.OfType<Label>())
             {
-                label.BackColor = Color.White; // Set the background color of all labels to LightGray
+                label.BackColor = Color.FromArgb(255, 214, 51);
             }
             Label clickedLabel = (Label)sender;
-            clickedLabel.BackColor = Color.LightGray; // Set the background color of the clicked label to WhiteSmoke
+            clickedLabel.BackColor = Color.FromArgb(245, 196, 0); // Set the background color of the clicked label to WhiteSmoke
 
             // Get the ID of the selected announcement and store it in the SelectedAnnouncementId property
             int selectedIndex = Annpanel1.Controls.IndexOf(clickedLabel);
@@ -177,5 +190,14 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             }
         }
 
+        public void GetID(string loggedInUser)
+        {
+            con.Open();
+            MySqlCommand cmd = new MySqlCommand("SELECT name FROM adminacc WHERE uname=@loggedInUser", con);
+            cmd.Parameters.AddWithValue("@loggedInUser", loggedInUser);
+            string result = cmd.ExecuteScalar()?.ToString();
+            con.Close();
+            user = result;
+        }
     }
 }

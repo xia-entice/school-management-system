@@ -29,8 +29,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tsPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -49,10 +49,10 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tsDelete = new System.Windows.Forms.Button();
-            this.tsSave = new System.Windows.Forms.Button();
-            this.tsSelect = new System.Windows.Forms.Button();
             this.tsDays = new System.Windows.Forms.ComboBox();
+            this.tsSave = new System.Windows.Forms.Button();
             this.tSchedview = new System.Windows.Forms.DataGridView();
+            this.tsSelect = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -267,28 +267,6 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.tsDelete.Text = "Delete";
             this.tsDelete.UseVisualStyleBackColor = false;
             // 
-            // tsSave
-            // 
-            this.tsSave.BackColor = System.Drawing.Color.White;
-            this.tsSave.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsSave.Location = new System.Drawing.Point(803, 578);
-            this.tsSave.Name = "tsSave";
-            this.tsSave.Size = new System.Drawing.Size(109, 34);
-            this.tsSave.TabIndex = 71;
-            this.tsSave.Text = "Save";
-            this.tsSave.UseVisualStyleBackColor = false;
-            // 
-            // tsSelect
-            // 
-            this.tsSelect.BackColor = System.Drawing.Color.White;
-            this.tsSelect.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsSelect.Location = new System.Drawing.Point(778, 26);
-            this.tsSelect.Name = "tsSelect";
-            this.tsSelect.Size = new System.Drawing.Size(134, 41);
-            this.tsSelect.TabIndex = 70;
-            this.tsSelect.Text = "Select";
-            this.tsSelect.UseVisualStyleBackColor = false;
-            // 
             // tsDays
             // 
             this.tsDays.Font = new System.Drawing.Font("Open Sans", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -308,28 +286,38 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.tsDays.TabIndex = 69;
             this.tsDays.Text = "Choose a certain day:";
             // 
+            // tsSave
+            // 
+            this.tsSave.BackColor = System.Drawing.Color.White;
+            this.tsSave.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsSave.Location = new System.Drawing.Point(803, 578);
+            this.tsSave.Name = "tsSave";
+            this.tsSave.Size = new System.Drawing.Size(109, 34);
+            this.tsSave.TabIndex = 71;
+            this.tsSave.Text = "Save";
+            this.tsSave.UseVisualStyleBackColor = false;
+            this.tsSave.Click += new System.EventHandler(this.tsSave_Click);
+            // 
             // tSchedview
             // 
-            this.tSchedview.AllowUserToAddRows = false;
-            this.tSchedview.AllowUserToDeleteRows = false;
             this.tSchedview.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tSchedview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tSchedview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.tSchedview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tSchedview.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tSchedview.DefaultCellStyle = dataGridViewCellStyle6;
             this.tSchedview.GridColor = System.Drawing.SystemColors.Control;
             this.tSchedview.Location = new System.Drawing.Point(17, 89);
             this.tSchedview.Name = "tSchedview";
@@ -338,6 +326,19 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.tSchedview.RowTemplate.Height = 24;
             this.tSchedview.Size = new System.Drawing.Size(895, 472);
             this.tSchedview.TabIndex = 68;
+            this.tSchedview.DoubleClick += new System.EventHandler(this.tSchedview_DoubleClick);
+            // 
+            // tsSelect
+            // 
+            this.tsSelect.BackColor = System.Drawing.Color.White;
+            this.tsSelect.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsSelect.Location = new System.Drawing.Point(778, 26);
+            this.tsSelect.Name = "tsSelect";
+            this.tsSelect.Size = new System.Drawing.Size(134, 41);
+            this.tsSelect.TabIndex = 70;
+            this.tsSelect.Text = "Select";
+            this.tsSelect.UseVisualStyleBackColor = false;
+            this.tsSelect.Click += new System.EventHandler(this.tsSelect_Click);
             // 
             // formTDsched
             // 

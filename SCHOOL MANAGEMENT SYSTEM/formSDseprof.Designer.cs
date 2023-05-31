@@ -35,12 +35,12 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.tpanel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.spass = new System.Windows.Forms.TextBox();
             this.suname = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Ssearch = new System.Windows.Forms.Button();
             this.simage = new System.Windows.Forms.PictureBox();
             this.tpanel6 = new System.Windows.Forms.Panel();
@@ -76,8 +76,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.seprofPanel2.SuspendLayout();
             this.tpanel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simage)).BeginInit();
             this.tpanel6.SuspendLayout();
             this.apanel7.SuspendLayout();
@@ -131,26 +131,17 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.panel2.Size = new System.Drawing.Size(305, 176);
             this.panel2.TabIndex = 23;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(238, 128);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(39, 24);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 31;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(238, 125);
+            this.pictureBox1.Location = new System.Drawing.Point(238, 128);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(39, 24);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
             // 
             // spass
             // 
@@ -188,6 +179,18 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.label8.TabIndex = 18;
             this.label8.Text = "Password:";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(238, 128);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(39, 24);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 31;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
+            // 
             // Ssearch
             // 
             this.Ssearch.BackColor = System.Drawing.Color.White;
@@ -198,6 +201,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.Ssearch.TabIndex = 24;
             this.Ssearch.Text = "Upload Picture";
             this.Ssearch.UseVisualStyleBackColor = false;
+            this.Ssearch.Click += new System.EventHandler(this.Ssearch_Click);
             // 
             // simage
             // 
@@ -569,6 +573,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.save.TabIndex = 26;
             this.save.Text = "Save";
             this.save.UseVisualStyleBackColor = false;
+            this.save.Click += new System.EventHandler(this.save_Click);
             // 
             // edit
             // 
@@ -580,6 +585,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.edit.TabIndex = 25;
             this.edit.Text = "Edit";
             this.edit.UseVisualStyleBackColor = false;
+            this.edit.Click += new System.EventHandler(this.edit_Click);
             // 
             // label1
             // 
@@ -627,8 +633,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.tpanel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simage)).EndInit();
             this.tpanel6.ResumeLayout(false);
             this.tpanel6.PerformLayout();
