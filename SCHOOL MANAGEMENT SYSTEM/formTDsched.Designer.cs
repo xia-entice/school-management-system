@@ -29,12 +29,12 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tsPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
             this.tsAdd = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.tsRoom = new System.Windows.Forms.TextBox();
             this.tsClass = new System.Windows.Forms.TextBox();
             this.tsSub = new System.Windows.Forms.TextBox();
@@ -48,11 +48,11 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.tsDelete = new System.Windows.Forms.Button();
-            this.tsDays = new System.Windows.Forms.ComboBox();
-            this.tsSave = new System.Windows.Forms.Button();
-            this.tSchedview = new System.Windows.Forms.DataGridView();
             this.tsSelect = new System.Windows.Forms.Button();
+            this.tsDelete = new System.Windows.Forms.Button();
+            this.tsSave = new System.Windows.Forms.Button();
+            this.tsDays = new System.Windows.Forms.ComboBox();
+            this.tSchedview = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -70,8 +70,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(51)))));
-            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.tsAdd);
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.tsRoom);
             this.panel1.Controls.Add(this.tsClass);
             this.panel1.Controls.Add(this.tsSub);
@@ -85,31 +85,34 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.panel1.Size = new System.Drawing.Size(291, 629);
             this.panel1.TabIndex = 57;
             // 
+            // tsAdd
+            // 
+            this.tsAdd.BackColor = System.Drawing.Color.White;
+            this.tsAdd.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.tsAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tsAdd.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsAdd.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.tsAdd.Location = new System.Drawing.Point(153, 556);
+            this.tsAdd.Name = "tsAdd";
+            this.tsAdd.Size = new System.Drawing.Size(120, 36);
+            this.tsAdd.TabIndex = 73;
+            this.tsAdd.Text = "Add";
+            this.tsAdd.UseVisualStyleBackColor = false;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(20, 339);
+            this.label6.Location = new System.Drawing.Point(20, 340);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(153, 27);
             this.label6.TabIndex = 50;
             this.label6.Text = "Class Duration:";
             // 
-            // tsAdd
-            // 
-            this.tsAdd.BackColor = System.Drawing.Color.White;
-            this.tsAdd.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsAdd.Location = new System.Drawing.Point(152, 552);
-            this.tsAdd.Name = "tsAdd";
-            this.tsAdd.Size = new System.Drawing.Size(109, 34);
-            this.tsAdd.TabIndex = 44;
-            this.tsAdd.Text = "Add";
-            this.tsAdd.UseVisualStyleBackColor = false;
-            // 
             // tsRoom
             // 
             this.tsRoom.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsRoom.Location = new System.Drawing.Point(25, 278);
+            this.tsRoom.Location = new System.Drawing.Point(25, 283);
             this.tsRoom.Name = "tsRoom";
             this.tsRoom.Size = new System.Drawing.Size(236, 35);
             this.tsRoom.TabIndex = 52;
@@ -117,7 +120,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // tsClass
             // 
             this.tsClass.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsClass.Location = new System.Drawing.Point(25, 199);
+            this.tsClass.Location = new System.Drawing.Point(25, 204);
             this.tsClass.Name = "tsClass";
             this.tsClass.Size = new System.Drawing.Size(236, 35);
             this.tsClass.TabIndex = 51;
@@ -125,7 +128,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // tsSub
             // 
             this.tsSub.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsSub.Location = new System.Drawing.Point(25, 122);
+            this.tsSub.Location = new System.Drawing.Point(25, 127);
             this.tsSub.Name = "tsSub";
             this.tsSub.Size = new System.Drawing.Size(236, 35);
             this.tsSub.TabIndex = 44;
@@ -134,7 +137,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(20, 248);
+            this.label7.Location = new System.Drawing.Point(20, 253);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(154, 27);
             this.label7.TabIndex = 50;
@@ -148,9 +151,9 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.panel2.Controls.Add(this.tsStart);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Location = new System.Drawing.Point(25, 379);
+            this.panel2.Location = new System.Drawing.Point(25, 381);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(236, 156);
+            this.panel2.Size = new System.Drawing.Size(236, 158);
             this.panel2.TabIndex = 41;
             // 
             // tsEnd
@@ -227,7 +230,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(20, 89);
+            this.label2.Location = new System.Drawing.Point(20, 94);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(146, 27);
             this.label2.TabIndex = 45;
@@ -237,7 +240,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Open Sans", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(49, 27);
+            this.label1.Location = new System.Drawing.Point(49, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(189, 33);
             this.label1.TabIndex = 44;
@@ -246,26 +249,56 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel3.Controls.Add(this.tsDelete);
-            this.panel3.Controls.Add(this.tsDays);
-            this.panel3.Controls.Add(this.tsSave);
-            this.panel3.Controls.Add(this.tSchedview);
             this.panel3.Controls.Add(this.tsSelect);
+            this.panel3.Controls.Add(this.tsDelete);
+            this.panel3.Controls.Add(this.tsSave);
+            this.panel3.Controls.Add(this.tsDays);
+            this.panel3.Controls.Add(this.tSchedview);
             this.panel3.Location = new System.Drawing.Point(320, 12);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(929, 629);
             this.panel3.TabIndex = 57;
             // 
+            // tsSelect
+            // 
+            this.tsSelect.BackColor = System.Drawing.Color.White;
+            this.tsSelect.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.tsSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tsSelect.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsSelect.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.tsSelect.Location = new System.Drawing.Point(789, 25);
+            this.tsSelect.Name = "tsSelect";
+            this.tsSelect.Size = new System.Drawing.Size(123, 40);
+            this.tsSelect.TabIndex = 73;
+            this.tsSelect.Text = "Select";
+            this.tsSelect.UseVisualStyleBackColor = false;
+            // 
             // tsDelete
             // 
             this.tsDelete.BackColor = System.Drawing.Color.White;
+            this.tsDelete.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.tsDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tsDelete.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsDelete.Location = new System.Drawing.Point(671, 578);
+            this.tsDelete.Location = new System.Drawing.Point(789, 573);
             this.tsDelete.Name = "tsDelete";
-            this.tsDelete.Size = new System.Drawing.Size(109, 34);
+            this.tsDelete.Size = new System.Drawing.Size(123, 40);
             this.tsDelete.TabIndex = 72;
             this.tsDelete.Text = "Delete";
             this.tsDelete.UseVisualStyleBackColor = false;
+            // 
+            // tsSave
+            // 
+            this.tsSave.BackColor = System.Drawing.Color.White;
+            this.tsSave.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.tsSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tsSave.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsSave.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.tsSave.Location = new System.Drawing.Point(644, 573);
+            this.tsSave.Name = "tsSave";
+            this.tsSave.Size = new System.Drawing.Size(123, 40);
+            this.tsSave.TabIndex = 71;
+            this.tsSave.Text = "Save";
+            this.tsSave.UseVisualStyleBackColor = false;
             // 
             // tsDays
             // 
@@ -286,38 +319,26 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.tsDays.TabIndex = 69;
             this.tsDays.Text = "Choose a certain day:";
             // 
-            // tsSave
-            // 
-            this.tsSave.BackColor = System.Drawing.Color.White;
-            this.tsSave.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsSave.Location = new System.Drawing.Point(803, 578);
-            this.tsSave.Name = "tsSave";
-            this.tsSave.Size = new System.Drawing.Size(109, 34);
-            this.tsSave.TabIndex = 71;
-            this.tsSave.Text = "Save";
-            this.tsSave.UseVisualStyleBackColor = false;
-            this.tsSave.Click += new System.EventHandler(this.tsSave_Click);
-            // 
             // tSchedview
             // 
             this.tSchedview.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tSchedview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tSchedview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.tSchedview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tSchedview.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tSchedview.DefaultCellStyle = dataGridViewCellStyle2;
             this.tSchedview.GridColor = System.Drawing.SystemColors.Control;
             this.tSchedview.Location = new System.Drawing.Point(17, 89);
             this.tSchedview.Name = "tSchedview";
@@ -327,18 +348,6 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.tSchedview.Size = new System.Drawing.Size(895, 472);
             this.tSchedview.TabIndex = 68;
             this.tSchedview.DoubleClick += new System.EventHandler(this.tSchedview_DoubleClick);
-            // 
-            // tsSelect
-            // 
-            this.tsSelect.BackColor = System.Drawing.Color.White;
-            this.tsSelect.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsSelect.Location = new System.Drawing.Point(778, 26);
-            this.tsSelect.Name = "tsSelect";
-            this.tsSelect.Size = new System.Drawing.Size(134, 41);
-            this.tsSelect.TabIndex = 70;
-            this.tsSelect.Text = "Select";
-            this.tsSelect.UseVisualStyleBackColor = false;
-            this.tsSelect.Click += new System.EventHandler(this.tsSelect_Click);
             // 
             // formTDsched
             // 
@@ -368,7 +377,6 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         private System.Windows.Forms.Panel tsPanel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button tsAdd;
         private System.Windows.Forms.TextBox tsRoom;
         private System.Windows.Forms.TextBox tsClass;
         private System.Windows.Forms.TextBox tsSub;
@@ -382,10 +390,11 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         private System.Windows.Forms.ComboBox tsEnd;
         private System.Windows.Forms.ComboBox tsStart;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button tsDelete;
         private System.Windows.Forms.ComboBox tsDays;
-        private System.Windows.Forms.Button tsSave;
         private System.Windows.Forms.DataGridView tSchedview;
+        private System.Windows.Forms.Button tsAdd;
         private System.Windows.Forms.Button tsSelect;
+        private System.Windows.Forms.Button tsDelete;
+        private System.Windows.Forms.Button tsSave;
     }
 }

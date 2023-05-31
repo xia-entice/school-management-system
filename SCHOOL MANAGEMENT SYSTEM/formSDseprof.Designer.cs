@@ -35,12 +35,12 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.tpanel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.spass = new System.Windows.Forms.TextBox();
             this.suname = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Ssearch = new System.Windows.Forms.Button();
             this.simage = new System.Windows.Forms.PictureBox();
             this.tpanel6 = new System.Windows.Forms.Panel();
@@ -76,8 +76,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.seprofPanel2.SuspendLayout();
             this.tpanel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simage)).BeginInit();
             this.tpanel6.SuspendLayout();
             this.apanel7.SuspendLayout();
@@ -86,7 +86,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             // seprofPanel2
             // 
-            this.seprofPanel2.BackColor = System.Drawing.Color.White;
+            this.seprofPanel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.seprofPanel2.Controls.Add(this.tpanel3);
             this.seprofPanel2.Controls.Add(this.tpanel6);
             this.seprofPanel2.Controls.Add(this.labels);
@@ -130,6 +130,18 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(305, 176);
             this.panel2.TabIndex = 23;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(238, 128);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(39, 24);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 31;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
             // 
             // pictureBox1
             // 
@@ -178,18 +190,6 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.label8.Size = new System.Drawing.Size(103, 26);
             this.label8.TabIndex = 18;
             this.label8.Text = "Password:";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(238, 128);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(39, 24);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 31;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
             // 
             // Ssearch
             // 
@@ -380,9 +380,9 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // ssection
             // 
             this.ssection.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ssection.Location = new System.Drawing.Point(543, 54);
+            this.ssection.Location = new System.Drawing.Point(550, 54);
             this.ssection.Name = "ssection";
-            this.ssection.Size = new System.Drawing.Size(210, 35);
+            this.ssection.Size = new System.Drawing.Size(203, 35);
             this.ssection.TabIndex = 37;
             // 
             // label15
@@ -633,8 +633,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.tpanel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simage)).EndInit();
             this.tpanel6.ResumeLayout(false);
             this.tpanel6.PerformLayout();

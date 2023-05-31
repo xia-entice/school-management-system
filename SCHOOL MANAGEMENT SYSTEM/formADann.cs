@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Runtime.InteropServices;
 
 namespace SCHOOL_MANAGEMENT_SYSTEM
 {
@@ -36,7 +37,14 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             NameandTime();
             LoadAnnouncements();
             AnClear();
+            annPost.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, annPost.Width, annPost.Height, 20, 20));
+            annDelete.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, annDelete.Width, annDelete.Height, 20, 20));
         }
+
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int v);
+
 
         List<string> announcementsList = new List<string>();
 

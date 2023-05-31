@@ -34,8 +34,15 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Annpanel1 = new System.Windows.Forms.Panel();
             this.ann1 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            this.ATSpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -53,6 +60,9 @@
             // ATSpanel
             // 
             this.ATSpanel.BackColor = System.Drawing.Color.White;
+            this.ATSpanel.Controls.Add(this.panel2);
+            this.ATSpanel.Controls.Add(this.richTextBox2);
+            this.ATSpanel.Controls.Add(this.richTextBox1);
             this.ATSpanel.Location = new System.Drawing.Point(1265, 0);
             this.ATSpanel.Name = "ATSpanel";
             this.ATSpanel.Size = new System.Drawing.Size(200, 645);
@@ -87,6 +97,50 @@
             this.ann1.TabIndex = 20;
             this.ann1.Text = "ANNOUNCEMENT BOARD";
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.Color.White;
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Font = new System.Drawing.Font("Open Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.Location = new System.Drawing.Point(3, 33);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.richTextBox1.Size = new System.Drawing.Size(194, 188);
+            this.richTextBox1.TabIndex = 0;
+            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(92)))));
+            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox2.Font = new System.Drawing.Font("Open Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox2.Location = new System.Drawing.Point(3, 208);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.ReadOnly = true;
+            this.richTextBox2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.richTextBox2.Size = new System.Drawing.Size(194, 140);
+            this.richTextBox2.TabIndex = 1;
+            this.richTextBox2.Text = "For technical support or bug reporting, you can contact our developers at:\n\nEmail" +
+    ": sdproj.system@ctu.edu.ph\nPhone: 09129847561\n";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Location = new System.Drawing.Point(3, 348);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(194, 294);
+            this.panel2.TabIndex = 2;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(-449, -129);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(647, 420);
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
             // formANN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -100,7 +154,10 @@
             this.Load += new System.EventHandler(this.formANN_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.ATSpanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -111,5 +168,9 @@
         private System.Windows.Forms.Panel Annpanel1;
         private System.Windows.Forms.Label ann1;
         private System.Windows.Forms.Panel ATSpanel;
+        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

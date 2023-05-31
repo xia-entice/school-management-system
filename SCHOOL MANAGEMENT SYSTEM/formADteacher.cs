@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Data;
 using System.Drawing;
+using System.Runtime.InteropServices;
 
 namespace SCHOOL_MANAGEMENT_SYSTEM
 {
@@ -20,7 +21,14 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         private void formADteacher_Load(object sender, EventArgs e)
         {
             this.ControlBox = false;
+            ATsave.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, ATsave.Width, ATsave.Height, 20, 20));
+            ATdelete.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, ATdelete.Width, ATdelete.Height, 20, 20));
+            ATsearch.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, ATsearch.Width, ATsearch.Height, 15, 15));
         }
+
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int v);
 
         private void ATsave_Click(object sender, EventArgs e)
         {

@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Runtime.InteropServices;
 
 namespace SCHOOL_MANAGEMENT_SYSTEM
 {
@@ -28,6 +29,10 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             CClear();
             sortbyID();
         }
+
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int v);
 
         private void tsSave_Click(object sender, EventArgs e)
         {
@@ -178,6 +183,10 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             CGridFill();
             CClear();
             sortbyID();
+            tsSave.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, tsSave.Width, tsSave.Height, 20, 20));
+            tsDelete.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, tsDelete.Width, tsDelete.Height, 20, 20));
+            tsAdd.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, tsAdd.Width, tsAdd.Height, 20, 20));
+            tsSelect.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, tsSelect.Width, tsSelect.Height, 15, 15));
         }
 
         void CClear()
