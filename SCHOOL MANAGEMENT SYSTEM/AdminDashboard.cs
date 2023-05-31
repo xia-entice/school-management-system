@@ -20,20 +20,19 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         {
             InitializeComponent();
             mdiProp();
-
-            if (ADann == null)
+            if (ADadmin == null)
             {
-                ADann = new formADann();
-                ADann.FormClosed += ADann_FormClosed;
-                ADann.MdiParent = this;
-                ADann.StartPosition = FormStartPosition.Manual;
-                ADann.Location = new Point(0, 0);
-                ADann.Size = new Size(1150, 570);
-                ADann.Show();
+                ADadmin = new formADadmin();
+                ADadmin.FormClosed += ADadmin_FormClosed;
+                ADadmin.MdiParent = this;
+                ADadmin.StartPosition = FormStartPosition.Manual;
+                ADadmin.Location = new Point(0, 0);
+                ADadmin.Size = new Size(1150, 570);
+                ADadmin.Show();
             }
             else
             {
-                ADann.Activate();
+                ADadmin.Activate();
             }
 
         }
@@ -158,6 +157,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             if (ADann == null)
             {
                 ADann = new formADann();
+                ADann.GetID(loggedInUser);
+                ADann.loggedInUser = loggedInUser;
                 ADann.FormClosed += ADann_FormClosed;
                 ADann.MdiParent = this;
                 ADann.StartPosition = FormStartPosition.Manual;
@@ -167,6 +168,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             }
             else
             {
+                ADann.GetID(loggedInUser);
+                ADann.loggedInUser = loggedInUser;
                 ADann.Activate();
             }
         }

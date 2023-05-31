@@ -24,9 +24,10 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         public formTDteprof()
         {
             InitializeComponent();
+            tpass.UseSystemPasswordChar = true;
 
         }
-        private void pictureBox3_MouseHover(object sender, EventArgs e)
+        private void pictureBox1_MouseHover(object sender, EventArgs e)
         {
             toolTip1.SetToolTip(pictureBox1, "Hide Password");
         }
@@ -43,7 +44,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             pictureBox1.Show();
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
             tpass.UseSystemPasswordChar = true;
             pictureBox2.Show();

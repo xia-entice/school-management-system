@@ -38,6 +38,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.roleCB = new System.Windows.Forms.ComboBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -45,8 +47,6 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.Password_txt = new System.Windows.Forms.TextBox();
             this.Username_txt = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -136,6 +136,28 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.panel2.Size = new System.Drawing.Size(613, 330);
             this.panel2.TabIndex = 5;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Open Sans", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(50, 137);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(122, 33);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Password";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Open Sans", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(50, 36);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(129, 33);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Username";
+            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.White;
@@ -161,6 +183,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.roleCB.Name = "roleCB";
             this.roleCB.Size = new System.Drawing.Size(149, 40);
             this.roleCB.TabIndex = 6;
+            this.roleCB.TabStop = false;
             this.roleCB.Text = "Role";
             // 
             // pictureBox3
@@ -212,28 +235,6 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.Username_txt.Name = "Username_txt";
             this.Username_txt.Size = new System.Drawing.Size(496, 39);
             this.Username_txt.TabIndex = 6;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Open Sans", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(50, 36);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(129, 33);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Username";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Open Sans", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(50, 137);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(122, 33);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Password";
             // 
             // Form1
             // 
