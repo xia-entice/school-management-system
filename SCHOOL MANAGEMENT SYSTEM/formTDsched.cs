@@ -152,11 +152,22 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 asqlDa.Fill(adtbl);
                 tSchedview.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 tSchedview.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                // Assuming you have a DataGridView named dataGridView1
+
+                // Create a new DataGridViewCellStyle object
+                DataGridViewCellStyle headerStyle = new DataGridViewCellStyle();
+
+                // Set the desired font properties for the header
+                headerStyle.Font = new Font("Open Sans", 11, FontStyle.Regular);
+
+                // Apply the header style to the DataGridView
+                tSchedview.ColumnHeadersDefaultCellStyle = headerStyle;
                 tSchedview.DataSource = adtbl;
                 tSchedview.Columns[0].Visible = true;
                 tSchedview.Columns[5].Visible = false;
                 tSchedview.Columns[6].Visible = false;
                 tSchedview.Columns[7].Visible = false;
+
             }
             sortbyID();
         }

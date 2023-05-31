@@ -76,8 +76,9 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             cmd.Parameters.AddWithValue("@loggedInUser", loggedInUser);
             string result = cmd.ExecuteScalar()?.ToString();
             con.Close();
-           sbsection.Text = result.ToString();
 
+            sbsection.Text = result.ToString();
+      
         }
 
         public void sortbySection()

@@ -29,11 +29,9 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tsPanel = new System.Windows.Forms.Panel();
-            this.tsDelete = new System.Windows.Forms.Button();
-            this.tsSave = new System.Windows.Forms.Button();
-            this.tsSelect = new System.Windows.Forms.Button();
-            this.tsDays = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.tsAdd = new System.Windows.Forms.Button();
@@ -49,76 +47,29 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.tsDelete = new System.Windows.Forms.Button();
+            this.tsSave = new System.Windows.Forms.Button();
+            this.tsSelect = new System.Windows.Forms.Button();
+            this.tsDays = new System.Windows.Forms.ComboBox();
             this.tSchedview = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tSchedview)).BeginInit();
             this.SuspendLayout();
             // 
             // tsPanel
             // 
-            this.tsPanel.BackColor = System.Drawing.Color.White;
-            this.tsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(51)))));
             this.tsPanel.Location = new System.Drawing.Point(1265, 12);
             this.tsPanel.Name = "tsPanel";
-            this.tsPanel.Size = new System.Drawing.Size(200, 618);
+            this.tsPanel.Size = new System.Drawing.Size(200, 629);
             this.tsPanel.TabIndex = 56;
-            // 
-            // tsDelete
-            // 
-            this.tsDelete.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsDelete.Location = new System.Drawing.Point(979, 598);
-            this.tsDelete.Name = "tsDelete";
-            this.tsDelete.Size = new System.Drawing.Size(109, 34);
-            this.tsDelete.TabIndex = 62;
-            this.tsDelete.Text = "Delete";
-            this.tsDelete.UseVisualStyleBackColor = true;
-            // 
-            // tsSave
-            // 
-            this.tsSave.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsSave.Location = new System.Drawing.Point(1105, 598);
-            this.tsSave.Name = "tsSave";
-            this.tsSave.Size = new System.Drawing.Size(109, 34);
-            this.tsSave.TabIndex = 61;
-            this.tsSave.Text = "Save";
-            this.tsSave.UseVisualStyleBackColor = true;
-            this.tsSave.Click += new System.EventHandler(this.tsSave_Click);
-            // 
-            // tsSelect
-            // 
-            this.tsSelect.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsSelect.Location = new System.Drawing.Point(1080, 37);
-            this.tsSelect.Name = "tsSelect";
-            this.tsSelect.Size = new System.Drawing.Size(134, 41);
-            this.tsSelect.TabIndex = 60;
-            this.tsSelect.Text = "Select";
-            this.tsSelect.UseVisualStyleBackColor = true;
-            this.tsSelect.Click += new System.EventHandler(this.tsSelect_Click);
-            // 
-            // tsDays
-            // 
-            this.tsDays.Font = new System.Drawing.Font("Open Sans", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsDays.FormattingEnabled = true;
-            this.tsDays.Items.AddRange(new object[] {
-            "All",
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday"});
-            this.tsDays.Location = new System.Drawing.Point(355, 37);
-            this.tsDays.Name = "tsDays";
-            this.tsDays.Size = new System.Drawing.Size(708, 40);
-            this.tsDays.TabIndex = 59;
-            this.tsDays.Text = "Choose a certain day:";
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(51)))));
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.tsAdd);
             this.panel1.Controls.Add(this.tsRoom);
@@ -129,16 +80,16 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(24, 12);
+            this.panel1.Location = new System.Drawing.Point(13, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(291, 618);
+            this.panel1.Size = new System.Drawing.Size(291, 629);
             this.panel1.TabIndex = 57;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(20, 334);
+            this.label6.Location = new System.Drawing.Point(20, 339);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(153, 27);
             this.label6.TabIndex = 50;
@@ -146,13 +97,14 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             // tsAdd
             // 
+            this.tsAdd.BackColor = System.Drawing.Color.White;
             this.tsAdd.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsAdd.Location = new System.Drawing.Point(152, 547);
+            this.tsAdd.Location = new System.Drawing.Point(152, 552);
             this.tsAdd.Name = "tsAdd";
             this.tsAdd.Size = new System.Drawing.Size(109, 34);
             this.tsAdd.TabIndex = 44;
             this.tsAdd.Text = "Add";
-            this.tsAdd.UseVisualStyleBackColor = true;
+            this.tsAdd.UseVisualStyleBackColor = false;
             // 
             // tsRoom
             // 
@@ -196,7 +148,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.panel2.Controls.Add(this.tsStart);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Location = new System.Drawing.Point(25, 374);
+            this.panel2.Location = new System.Drawing.Point(25, 379);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(236, 156);
             this.panel2.TabIndex = 41;
@@ -206,16 +158,16 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.tsEnd.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsEnd.FormattingEnabled = true;
             this.tsEnd.Items.AddRange(new object[] {
-            "8:00 AM",
-            "9:00 AM",
-            "10:00 AM",
-            "11:00 AM",
-            "12:00 PM",
-            "1:00 PM",
-            "2:00 PM",
-            "3:00 PM",
-            "4:00 PM",
-            "5:00 PM"});
+            "08:00 am",
+            "09:00 am",
+            "10:00 am",
+            "11:00 am",
+            "12:00 pm",
+            "01:00 pm",
+            "02:00 pm ",
+            "03:00 pm",
+            "04:00 pm",
+            "05:00 pm"});
             this.tsEnd.Location = new System.Drawing.Point(17, 108);
             this.tsEnd.Name = "tsEnd";
             this.tsEnd.Size = new System.Drawing.Size(195, 32);
@@ -226,16 +178,16 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.tsStart.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsStart.FormattingEnabled = true;
             this.tsStart.Items.AddRange(new object[] {
-            "7:00 AM",
-            "8:00 AM",
-            "9:00 AM",
-            "10:00 AM",
-            "11:00 AM",
-            "12:00 PM",
-            "1:00 PM",
-            "2:00 PM ",
-            "3:00 PM",
-            "4:00 PM"});
+            "07:00 am",
+            "08:00 am",
+            "09:00 am",
+            "10:00 am",
+            "11:00 am",
+            "12:00 pm",
+            "01:00 pm",
+            "02:00 pm ",
+            "03:00 pm",
+            "04:00 pm"});
             this.tsStart.Location = new System.Drawing.Point(17, 41);
             this.tsStart.Name = "tsStart";
             this.tsStart.Size = new System.Drawing.Size(195, 32);
@@ -291,31 +243,110 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.label1.TabIndex = 44;
             this.label1.Text = "EDIT SCHEDULE";
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel3.Controls.Add(this.tsDelete);
+            this.panel3.Controls.Add(this.tsDays);
+            this.panel3.Controls.Add(this.tsSave);
+            this.panel3.Controls.Add(this.tSchedview);
+            this.panel3.Controls.Add(this.tsSelect);
+            this.panel3.Location = new System.Drawing.Point(320, 12);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(929, 629);
+            this.panel3.TabIndex = 57;
+            // 
+            // tsDelete
+            // 
+            this.tsDelete.BackColor = System.Drawing.Color.White;
+            this.tsDelete.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsDelete.Location = new System.Drawing.Point(671, 578);
+            this.tsDelete.Name = "tsDelete";
+            this.tsDelete.Size = new System.Drawing.Size(109, 34);
+            this.tsDelete.TabIndex = 72;
+            this.tsDelete.Text = "Delete";
+            this.tsDelete.UseVisualStyleBackColor = false;
+            // 
+            // tsSave
+            // 
+            this.tsSave.BackColor = System.Drawing.Color.White;
+            this.tsSave.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsSave.Location = new System.Drawing.Point(803, 578);
+            this.tsSave.Name = "tsSave";
+            this.tsSave.Size = new System.Drawing.Size(109, 34);
+            this.tsSave.TabIndex = 71;
+            this.tsSave.Text = "Save";
+            this.tsSave.UseVisualStyleBackColor = false;
+            // 
+            // tsSelect
+            // 
+            this.tsSelect.BackColor = System.Drawing.Color.White;
+            this.tsSelect.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsSelect.Location = new System.Drawing.Point(778, 26);
+            this.tsSelect.Name = "tsSelect";
+            this.tsSelect.Size = new System.Drawing.Size(134, 41);
+            this.tsSelect.TabIndex = 70;
+            this.tsSelect.Text = "Select";
+            this.tsSelect.UseVisualStyleBackColor = false;
+            // 
+            // tsDays
+            // 
+            this.tsDays.Font = new System.Drawing.Font("Open Sans", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsDays.FormattingEnabled = true;
+            this.tsDays.Items.AddRange(new object[] {
+            "All",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"});
+            this.tsDays.Location = new System.Drawing.Point(17, 26);
+            this.tsDays.Name = "tsDays";
+            this.tsDays.Size = new System.Drawing.Size(750, 40);
+            this.tsDays.TabIndex = 69;
+            this.tsDays.Text = "Choose a certain day:";
+            // 
             // tSchedview
             // 
             this.tSchedview.AllowUserToAddRows = false;
             this.tSchedview.AllowUserToDeleteRows = false;
+            this.tSchedview.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tSchedview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.tSchedview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tSchedview.Location = new System.Drawing.Point(355, 101);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tSchedview.DefaultCellStyle = dataGridViewCellStyle2;
+            this.tSchedview.GridColor = System.Drawing.SystemColors.Control;
+            this.tSchedview.Location = new System.Drawing.Point(17, 89);
             this.tSchedview.Name = "tSchedview";
             this.tSchedview.ReadOnly = true;
             this.tSchedview.RowHeadersWidth = 51;
             this.tSchedview.RowTemplate.Height = 24;
-            this.tSchedview.Size = new System.Drawing.Size(859, 483);
-            this.tSchedview.TabIndex = 58;
-            this.tSchedview.DoubleClick += new System.EventHandler(this.tSchedview_DoubleClick);
+            this.tSchedview.Size = new System.Drawing.Size(895, 472);
+            this.tSchedview.TabIndex = 68;
             // 
             // formTDsched
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1477, 699);
-            this.Controls.Add(this.tsDelete);
-            this.Controls.Add(this.tsSave);
-            this.Controls.Add(this.tsSelect);
-            this.Controls.Add(this.tsDays);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.tSchedview);
             this.Controls.Add(this.tsPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formTDsched";
@@ -325,6 +356,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tSchedview)).EndInit();
             this.ResumeLayout(false);
 
@@ -333,10 +365,6 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         #endregion
 
         private System.Windows.Forms.Panel tsPanel;
-        private System.Windows.Forms.Button tsDelete;
-        private System.Windows.Forms.Button tsSave;
-        private System.Windows.Forms.Button tsSelect;
-        private System.Windows.Forms.ComboBox tsDays;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button tsAdd;
@@ -350,8 +378,13 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView tSchedview;
         private System.Windows.Forms.ComboBox tsEnd;
         private System.Windows.Forms.ComboBox tsStart;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button tsDelete;
+        private System.Windows.Forms.ComboBox tsDays;
+        private System.Windows.Forms.Button tsSave;
+        private System.Windows.Forms.DataGridView tSchedview;
+        private System.Windows.Forms.Button tsSelect;
     }
 }
