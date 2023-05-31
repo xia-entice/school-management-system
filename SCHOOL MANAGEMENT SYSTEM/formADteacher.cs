@@ -2,6 +2,8 @@
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Data;
+using System.Drawing;
+
 namespace SCHOOL_MANAGEMENT_SYSTEM
 {
     public partial class formADteacher : Form
@@ -98,7 +100,17 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 ATview.DataSource = tdtbl;
                 ATview.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 ATview.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                ATview.Columns[0].HeaderText = "Teacher Id";
+                // Assuming you have a DataGridView named dataGridView1
+
+                // Create a new DataGridViewCellStyle object
+                DataGridViewCellStyle headerStyle = new DataGridViewCellStyle();
+
+                // Set the desired font properties for the header
+                headerStyle.Font = new Font("Open Sans", 11, FontStyle.Regular);
+
+                // Apply the header style to the DataGridView
+                ATview.ColumnHeadersDefaultCellStyle = headerStyle;
+                ATview.Columns[0].HeaderText = "Teacher ID";
                 ATview.Columns[1].Visible = false;
                 ATview.Columns[2].Visible = false;
                 ATview.Columns[3].HeaderText = "Admin Name";

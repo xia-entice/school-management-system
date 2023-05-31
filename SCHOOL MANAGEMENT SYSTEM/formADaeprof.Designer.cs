@@ -29,6 +29,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formADaeprof));
             this.teprofPanel2 = new System.Windows.Forms.Panel();
             this.tpanel6 = new System.Windows.Forms.Panel();
@@ -59,6 +60,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.tpanel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.apass = new System.Windows.Forms.TextBox();
             this.auname = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -66,38 +69,41 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.Asearch = new System.Windows.Forms.Button();
             this.adminpic = new System.Windows.Forms.PictureBox();
             this.aeprofPanel = new System.Windows.Forms.Panel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.teprofPanel2.SuspendLayout();
             this.tpanel6.SuspendLayout();
             this.apanel7.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tpanel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminpic)).BeginInit();
             this.SuspendLayout();
             // 
             // teprofPanel2
             // 
-            this.teprofPanel2.BackColor = System.Drawing.Color.White;
+            this.teprofPanel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.teprofPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.teprofPanel2.Controls.Add(this.tpanel6);
             this.teprofPanel2.Controls.Add(this.labels);
             this.teprofPanel2.Controls.Add(this.tpanel3);
-            this.teprofPanel2.Location = new System.Drawing.Point(28, 12);
+            this.teprofPanel2.Location = new System.Drawing.Point(20, 19);
             this.teprofPanel2.Name = "teprofPanel2";
-            this.teprofPanel2.Size = new System.Drawing.Size(1199, 618);
+            this.teprofPanel2.Size = new System.Drawing.Size(1225, 618);
             this.teprofPanel2.TabIndex = 22;
             // 
             // tpanel6
             // 
-            this.tpanel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.tpanel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tpanel6.BackColor = System.Drawing.Color.Gainsboro;
             this.tpanel6.Controls.Add(this.apanel7);
             this.tpanel6.Controls.Add(this.panel1);
             this.tpanel6.Controls.Add(this.ASave);
             this.tpanel6.Controls.Add(this.edit);
             this.tpanel6.Controls.Add(this.label1);
-            this.tpanel6.Location = new System.Drawing.Point(377, 68);
+            this.tpanel6.Location = new System.Drawing.Point(391, 73);
             this.tpanel6.Name = "tpanel6";
-            this.tpanel6.Size = new System.Drawing.Size(776, 521);
+            this.tpanel6.Size = new System.Drawing.Size(814, 521);
             this.tpanel6.TabIndex = 18;
             // 
             // apanel7
@@ -115,9 +121,9 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.apanel7.Controls.Add(this.label10);
             this.apanel7.Controls.Add(this.label11);
             this.apanel7.Controls.Add(this.label12);
-            this.apanel7.Location = new System.Drawing.Point(36, 150);
+            this.apanel7.Location = new System.Drawing.Point(21, 164);
             this.apanel7.Name = "apanel7";
-            this.apanel7.Size = new System.Drawing.Size(693, 290);
+            this.apanel7.Size = new System.Drawing.Size(768, 282);
             this.apanel7.TabIndex = 35;
             // 
             // agender
@@ -127,67 +133,67 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.agender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.agender.Location = new System.Drawing.Point(137, 105);
+            this.agender.Location = new System.Drawing.Point(441, 70);
             this.agender.Name = "agender";
-            this.agender.Size = new System.Drawing.Size(527, 32);
+            this.agender.Size = new System.Drawing.Size(304, 32);
             this.agender.TabIndex = 32;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(28, 240);
+            this.label14.Location = new System.Drawing.Point(20, 204);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(166, 26);
+            this.label14.Size = new System.Drawing.Size(92, 52);
             this.label14.TabIndex = 31;
-            this.label14.Text = "Contact Number:";
+            this.label14.Text = "Contact \r\nNumber:";
             // 
             // acnum
             // 
             this.acnum.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.acnum.Location = new System.Drawing.Point(201, 236);
+            this.acnum.Location = new System.Drawing.Point(129, 217);
             this.acnum.Name = "acnum";
-            this.acnum.Size = new System.Drawing.Size(463, 35);
+            this.acnum.Size = new System.Drawing.Size(616, 35);
             this.acnum.TabIndex = 30;
             // 
             // abirth
             // 
             this.abirth.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.abirth.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.abirth.Location = new System.Drawing.Point(137, 149);
+            this.abirth.Location = new System.Drawing.Point(129, 118);
             this.abirth.Name = "abirth";
-            this.abirth.Size = new System.Drawing.Size(527, 32);
+            this.abirth.Size = new System.Drawing.Size(616, 32);
             this.abirth.TabIndex = 29;
             // 
             // aaddress
             // 
             this.aaddress.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aaddress.Location = new System.Drawing.Point(137, 192);
+            this.aaddress.Location = new System.Drawing.Point(129, 166);
             this.aaddress.Name = "aaddress";
-            this.aaddress.Size = new System.Drawing.Size(527, 35);
+            this.aaddress.Size = new System.Drawing.Size(616, 35);
             this.aaddress.TabIndex = 28;
             // 
             // aage
             // 
             this.aage.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aage.Location = new System.Drawing.Point(137, 60);
+            this.aage.Location = new System.Drawing.Point(129, 67);
             this.aage.Name = "aage";
-            this.aage.Size = new System.Drawing.Size(527, 35);
+            this.aage.Size = new System.Drawing.Size(201, 35);
             this.aage.TabIndex = 25;
             // 
             // aname
             // 
             this.aname.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aname.Location = new System.Drawing.Point(137, 17);
+            this.aname.Location = new System.Drawing.Point(129, 18);
             this.aname.Name = "aname";
-            this.aname.Size = new System.Drawing.Size(527, 35);
+            this.aname.Size = new System.Drawing.Size(616, 35);
             this.aname.TabIndex = 24;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(29, 20);
+            this.label7.Location = new System.Drawing.Point(20, 23);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(71, 26);
             this.label7.TabIndex = 17;
@@ -197,7 +203,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(29, 196);
+            this.label9.Location = new System.Drawing.Point(20, 171);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(90, 26);
             this.label9.TabIndex = 21;
@@ -207,7 +213,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(30, 64);
+            this.label10.Location = new System.Drawing.Point(20, 72);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(50, 26);
             this.label10.TabIndex = 18;
@@ -217,7 +223,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(28, 152);
+            this.label11.Location = new System.Drawing.Point(20, 124);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(102, 26);
             this.label11.TabIndex = 20;
@@ -227,7 +233,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(27, 110);
+            this.label12.Location = new System.Drawing.Point(350, 69);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(85, 26);
             this.label12.TabIndex = 19;
@@ -242,16 +248,16 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.panel1.Controls.Add(this.aemail);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(36, 79);
+            this.panel1.Location = new System.Drawing.Point(21, 84);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(693, 55);
+            this.panel1.Size = new System.Drawing.Size(768, 63);
             this.panel1.TabIndex = 32;
             // 
             // AdminID
             // 
             this.AdminID.AutoSize = true;
             this.AdminID.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminID.Location = new System.Drawing.Point(122, 17);
+            this.AdminID.Location = new System.Drawing.Point(122, 21);
             this.AdminID.Name = "AdminID";
             this.AdminID.Size = new System.Drawing.Size(80, 23);
             this.AdminID.TabIndex = 34;
@@ -270,7 +276,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(116, 13);
+            this.label5.Location = new System.Drawing.Point(116, 17);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(0, 23);
             this.label5.TabIndex = 32;
@@ -278,16 +284,16 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // aemail
             // 
             this.aemail.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aemail.Location = new System.Drawing.Point(389, 10);
+            this.aemail.Location = new System.Drawing.Point(392, 14);
             this.aemail.Name = "aemail";
-            this.aemail.Size = new System.Drawing.Size(288, 35);
+            this.aemail.Size = new System.Drawing.Size(361, 35);
             this.aemail.TabIndex = 31;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(253, 17);
+            this.label4.Location = new System.Drawing.Point(253, 21);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(112, 23);
             this.label4.TabIndex = 30;
@@ -297,7 +303,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(8, 17);
+            this.label3.Location = new System.Drawing.Point(8, 21);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 23);
             this.label3.TabIndex = 17;
@@ -307,7 +313,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             this.ASave.BackColor = System.Drawing.Color.White;
             this.ASave.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ASave.Location = new System.Drawing.Point(629, 466);
+            this.ASave.Location = new System.Drawing.Point(689, 464);
             this.ASave.Name = "ASave";
             this.ASave.Size = new System.Drawing.Size(100, 36);
             this.ASave.TabIndex = 26;
@@ -319,7 +325,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             this.edit.BackColor = System.Drawing.Color.White;
             this.edit.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edit.Location = new System.Drawing.Point(513, 466);
+            this.edit.Location = new System.Drawing.Point(571, 464);
             this.edit.Name = "edit";
             this.edit.Size = new System.Drawing.Size(100, 36);
             this.edit.TabIndex = 25;
@@ -331,7 +337,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Open Sans", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 23);
+            this.label1.Location = new System.Drawing.Point(15, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(310, 33);
             this.label1.TabIndex = 24;
@@ -341,7 +347,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             this.labels.AutoSize = true;
             this.labels.Font = new System.Drawing.Font("Open Sans Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labels.Location = new System.Drawing.Point(38, 15);
+            this.labels.Location = new System.Drawing.Point(15, 17);
             this.labels.Name = "labels";
             this.labels.Size = new System.Drawing.Size(206, 38);
             this.labels.TabIndex = 23;
@@ -349,13 +355,12 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             // tpanel3
             // 
-            this.tpanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(178)))), ((int)(((byte)(85)))));
-            this.tpanel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tpanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(51)))));
             this.tpanel3.Controls.Add(this.label2);
             this.tpanel3.Controls.Add(this.panel2);
             this.tpanel3.Controls.Add(this.Asearch);
             this.tpanel3.Controls.Add(this.adminpic);
-            this.tpanel3.Location = new System.Drawing.Point(22, 68);
+            this.tpanel3.Location = new System.Drawing.Point(19, 73);
             this.tpanel3.Name = "tpanel3";
             this.tpanel3.Size = new System.Drawing.Size(355, 521);
             this.tpanel3.TabIndex = 16;
@@ -364,7 +369,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(17, 252);
+            this.label2.Location = new System.Drawing.Point(17, 263);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(171, 26);
             this.label2.TabIndex = 31;
@@ -373,14 +378,36 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.apass);
             this.panel2.Controls.Add(this.auname);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label8);
-            this.panel2.Location = new System.Drawing.Point(22, 286);
+            this.panel2.Location = new System.Drawing.Point(22, 298);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(305, 176);
             this.panel2.TabIndex = 23;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(238, 128);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(39, 24);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 31;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(238, 125);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(39, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
             // 
             // apass
             // 
@@ -422,7 +449,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             this.Asearch.BackColor = System.Drawing.Color.White;
             this.Asearch.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Asearch.Location = new System.Drawing.Point(76, 191);
+            this.Asearch.Location = new System.Drawing.Point(76, 196);
             this.Asearch.Name = "Asearch";
             this.Asearch.Size = new System.Drawing.Size(195, 36);
             this.Asearch.TabIndex = 24;
@@ -434,7 +461,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             this.adminpic.BackColor = System.Drawing.Color.White;
             this.adminpic.Image = ((System.Drawing.Image)(resources.GetObject("adminpic.Image")));
-            this.adminpic.Location = new System.Drawing.Point(76, 15);
+            this.adminpic.Location = new System.Drawing.Point(76, 17);
             this.adminpic.Name = "adminpic";
             this.adminpic.Size = new System.Drawing.Size(195, 171);
             this.adminpic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -443,17 +470,17 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             // aeprofPanel
             // 
-            this.aeprofPanel.BackColor = System.Drawing.Color.White;
-            this.aeprofPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.aeprofPanel.Location = new System.Drawing.Point(1265, 12);
+            this.aeprofPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(51)))));
+            this.aeprofPanel.Location = new System.Drawing.Point(1265, 1);
             this.aeprofPanel.Name = "aeprofPanel";
-            this.aeprofPanel.Size = new System.Drawing.Size(200, 618);
+            this.aeprofPanel.Size = new System.Drawing.Size(200, 696);
             this.aeprofPanel.TabIndex = 21;
             // 
             // formADaeprof
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1477, 699);
             this.Controls.Add(this.teprofPanel2);
             this.Controls.Add(this.aeprofPanel);
@@ -473,6 +500,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.tpanel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminpic)).EndInit();
             this.ResumeLayout(false);
 
@@ -516,5 +545,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         private System.Windows.Forms.Button Asearch;
         private System.Windows.Forms.PictureBox adminpic;
         private System.Windows.Forms.Panel aeprofPanel;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

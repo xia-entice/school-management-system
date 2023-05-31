@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Runtime.InteropServices;
+using System.Drawing.Drawing2D;
 
 namespace SCHOOL_MANAGEMENT_SYSTEM
 {
@@ -139,6 +141,36 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             pictureBox2.Show();
             pictureBox3.Hide();
         }
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            // Define the RGB values for the start and end colors
+            int startRed = 245;   // Example: start color red component
+            int startGreen = 196;   // Example: start color green component
+            int startBlue = 0;    // Example: start color blue component
+
+            int endRed = 255;       // Example: end color red component
+            int endGreen = 222;     // Example: end color green component
+            int endBlue = 92;    // Example: end color blue component
+
+            // Create a new LinearGradientBrush with the desired gradient colors and coordinates
+            LinearGradientBrush gradientBrush = new LinearGradientBrush(
+                this.ClientRectangle,
+                Color.FromArgb(startRed, startGreen, startBlue), // Start color
+                Color.FromArgb(endRed, endGreen, endBlue),       // End color
+                LinearGradientMode.ForwardDiagonal);                 // Gradient direction
+
+            // Fill the form with the gradient brush
+            e.Graphics.FillRectangle(gradientBrush, this.ClientRectangle);
+
+            // Call the base class implementation to ensure the standard painting is done
+            base.OnPaint(e);
+        }
+
+
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int v);
+
 
         private int GetLoggedInAdminAc()
         {
@@ -157,6 +189,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         private void Form1_Load(object sender, EventArgs e)
         {
             Password_txt.UseSystemPasswordChar = true;
+            button1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, button1.Width, Username_txt.Height, 20, 20));
         }
     }
 }

@@ -2,6 +2,8 @@
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Data;
+using System.Drawing;
+
 namespace SCHOOL_MANAGEMENT_SYSTEM
 {
     public partial class formADadmin : Form
@@ -84,6 +86,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
 
             }
         }
+
+
         void AGridFill()
         {
             using (MySqlConnection amysqlCon = new MySqlConnection(AconnectionString))
@@ -96,6 +100,17 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 AAview.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 AAview.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 AAview.DataSource = adtbl;
+                // Assuming you have a DataGridView named dataGridView1
+
+                // Create a new DataGridViewCellStyle object
+                DataGridViewCellStyle headerStyle = new DataGridViewCellStyle();
+
+                // Set the desired font properties for the header
+                headerStyle.Font = new Font("Open Sans", 11, FontStyle.Regular);
+
+                // Apply the header style to the DataGridView
+                AAview.ColumnHeadersDefaultCellStyle = headerStyle;
+
                 AAview.Columns[0].HeaderText = "Admin ID";
                 AAview.Columns[1].Visible = false;
                 AAview.Columns[2].Visible = false;

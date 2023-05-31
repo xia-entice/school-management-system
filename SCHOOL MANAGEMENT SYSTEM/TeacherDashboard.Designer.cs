@@ -77,7 +77,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // panel3
             // 
             this.panel3.Controls.Add(this.Tats);
-            this.panel3.Location = new System.Drawing.Point(880, 27);
+            this.panel3.Location = new System.Drawing.Point(882, 27);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(107, 45);
             this.panel3.TabIndex = 4;
@@ -86,7 +86,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             this.Tats.BackColor = System.Drawing.Color.White;
             this.Tats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Tats.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tats.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tats.Location = new System.Drawing.Point(-48, -15);
             this.Tats.Name = "Tats";
             this.Tats.Size = new System.Drawing.Size(202, 77);
@@ -109,7 +109,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // panel2
             // 
             this.panel2.Controls.Add(this.TAnnouncement);
-            this.panel2.Location = new System.Drawing.Point(685, 26);
+            this.panel2.Location = new System.Drawing.Point(697, 26);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(158, 46);
             this.panel2.TabIndex = 3;
@@ -118,8 +118,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             this.TAnnouncement.BackColor = System.Drawing.Color.White;
             this.TAnnouncement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TAnnouncement.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TAnnouncement.Location = new System.Drawing.Point(-22, -16);
+            this.TAnnouncement.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TAnnouncement.Location = new System.Drawing.Point(-23, -14);
             this.TAnnouncement.Name = "TAnnouncement";
             this.TAnnouncement.Size = new System.Drawing.Size(202, 77);
             this.TAnnouncement.TabIndex = 3;
@@ -171,7 +171,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             // tsidebar
             // 
-            this.tsidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(178)))), ((int)(((byte)(85)))));
+            this.tsidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(51)))));
             this.tsidebar.Controls.Add(this.pnts);
             this.tsidebar.Controls.Add(this.pntc);
             this.tsidebar.Dock = System.Windows.Forms.DockStyle.Left;
@@ -187,12 +187,12 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.pnts.Controls.Add(this.btnTDs);
             this.pnts.Location = new System.Drawing.Point(3, 23);
             this.pnts.Name = "pnts";
-            this.pnts.Size = new System.Drawing.Size(260, 63);
+            this.pnts.Size = new System.Drawing.Size(227, 63);
             this.pnts.TabIndex = 2;
             // 
             // btnTDs
             // 
-            this.btnTDs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(178)))), ((int)(((byte)(85)))));
+            this.btnTDs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(51)))));
             this.btnTDs.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTDs.Image = ((System.Drawing.Image)(resources.GetObject("btnTDs.Image")));
             this.btnTDs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -211,12 +211,12 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.pntc.Controls.Add(this.btnTDc);
             this.pntc.Location = new System.Drawing.Point(3, 92);
             this.pntc.Name = "pntc";
-            this.pntc.Size = new System.Drawing.Size(260, 63);
+            this.pntc.Size = new System.Drawing.Size(227, 63);
             this.pntc.TabIndex = 4;
             // 
             // btnTDc
             // 
-            this.btnTDc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(178)))), ((int)(((byte)(85)))));
+            this.btnTDc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(51)))));
             this.btnTDc.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTDc.Image = ((System.Drawing.Image)(resources.GetObject("btnTDc.Image")));
             this.btnTDc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
