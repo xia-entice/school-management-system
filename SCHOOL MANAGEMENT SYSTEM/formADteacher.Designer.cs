@@ -30,6 +30,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formADteacher));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Tpanel2 = new System.Windows.Forms.Panel();
             this.pictureBox1t = new System.Windows.Forms.PictureBox();
             this.ATsearch = new System.Windows.Forms.Button();
@@ -54,7 +55,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             // Tpanel2
             // 
-            this.Tpanel2.BackColor = System.Drawing.Color.White;
+            this.Tpanel2.BackColor = System.Drawing.Color.Gainsboro;
             this.Tpanel2.Controls.Add(this.pictureBox1t);
             this.Tpanel2.Controls.Add(this.ATsearch);
             this.Tpanel2.Controls.Add(this.ATview);
@@ -67,7 +68,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // pictureBox1t
             // 
             this.pictureBox1t.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1t.Image")));
-            this.pictureBox1t.Location = new System.Drawing.Point(707, 38);
+            this.pictureBox1t.Location = new System.Drawing.Point(708, 38);
             this.pictureBox1t.Name = "pictureBox1t";
             this.pictureBox1t.Size = new System.Drawing.Size(32, 33);
             this.pictureBox1t.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -89,8 +90,16 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // ATview
             // 
             this.ATview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.ATview.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(178)))), ((int)(((byte)(85)))));
+            this.ATview.BackgroundColor = System.Drawing.Color.White;
             this.ATview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ATview.DefaultCellStyle = dataGridViewCellStyle1;
             this.ATview.Location = new System.Drawing.Point(26, 90);
             this.ATview.Name = "ATview";
             this.ATview.RowHeadersWidth = 51;
@@ -109,7 +118,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             // Tpanel1
             // 
-            this.Tpanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(178)))), ((int)(((byte)(85)))));
+            this.Tpanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(51)))));
             this.Tpanel1.Controls.Add(this.labelt);
             this.Tpanel1.Controls.Add(this.pictureBoxt);
             this.Tpanel1.Controls.Add(this.ATdelete);
@@ -205,7 +214,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             // Tpanel3
             // 
-            this.Tpanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(178)))), ((int)(((byte)(85)))));
+            this.Tpanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(51)))));
             this.Tpanel3.Location = new System.Drawing.Point(1265, 20);
             this.Tpanel3.Name = "Tpanel3";
             this.Tpanel3.Size = new System.Drawing.Size(200, 610);
@@ -215,7 +224,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1477, 699);
             this.Controls.Add(this.Tpanel3);
             this.Controls.Add(this.Tpanel1);

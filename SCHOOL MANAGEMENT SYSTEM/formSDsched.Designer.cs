@@ -29,6 +29,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.seprofPanel = new System.Windows.Forms.Panel();
             this.sSched = new System.Windows.Forms.DataGridView();
             this.ssSelect = new System.Windows.Forms.Button();
@@ -38,16 +39,24 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             // seprofPanel
             // 
-            this.seprofPanel.BackColor = System.Drawing.Color.White;
-            this.seprofPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.seprofPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(51)))));
             this.seprofPanel.Location = new System.Drawing.Point(1265, 12);
             this.seprofPanel.Name = "seprofPanel";
-            this.seprofPanel.Size = new System.Drawing.Size(200, 618);
+            this.seprofPanel.Size = new System.Drawing.Size(200, 629);
             this.seprofPanel.TabIndex = 56;
             // 
             // sSched
             // 
             this.sSched.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.sSched.BackgroundColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.sSched.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.sSched.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.sSched.Location = new System.Drawing.Point(120, 85);
             this.sSched.Name = "sSched";
@@ -90,6 +99,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1477, 699);
             this.Controls.Add(this.ssSelect);
             this.Controls.Add(this.ssDays);

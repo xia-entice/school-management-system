@@ -80,7 +80,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // panel3
             // 
             this.panel3.Controls.Add(this.Aats);
-            this.panel3.Location = new System.Drawing.Point(880, 27);
+            this.panel3.Location = new System.Drawing.Point(882, 27);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(107, 45);
             this.panel3.TabIndex = 4;
@@ -89,7 +89,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             this.Aats.BackColor = System.Drawing.Color.White;
             this.Aats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Aats.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aats.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aats.Location = new System.Drawing.Point(-48, -15);
             this.Aats.Name = "Aats";
             this.Aats.Size = new System.Drawing.Size(202, 77);
@@ -112,7 +112,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // panel2
             // 
             this.panel2.Controls.Add(this.AAnnouncement);
-            this.panel2.Location = new System.Drawing.Point(685, 26);
+            this.panel2.Location = new System.Drawing.Point(697, 26);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(158, 46);
             this.panel2.TabIndex = 3;
@@ -121,8 +121,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             this.AAnnouncement.BackColor = System.Drawing.Color.White;
             this.AAnnouncement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AAnnouncement.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AAnnouncement.Location = new System.Drawing.Point(-22, -16);
+            this.AAnnouncement.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AAnnouncement.Location = new System.Drawing.Point(-23, -14);
             this.AAnnouncement.Name = "AAnnouncement";
             this.AAnnouncement.Size = new System.Drawing.Size(202, 77);
             this.AAnnouncement.TabIndex = 3;
@@ -174,7 +174,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             // sidebar
             // 
-            this.sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(178)))), ((int)(((byte)(85)))));
+            this.sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(51)))));
             this.sidebar.Controls.Add(this.pnAAcc);
             this.sidebar.Controls.Add(this.pnTAcc);
             this.sidebar.Controls.Add(this.pnSAcc);
@@ -196,7 +196,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             // btnADa
             // 
-            this.btnADa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(178)))), ((int)(((byte)(85)))));
+            this.btnADa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(51)))));
             this.btnADa.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnADa.Image = ((System.Drawing.Image)(resources.GetObject("btnADa.Image")));
             this.btnADa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -220,7 +220,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             // btnADt
             // 
-            this.btnADt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(178)))), ((int)(((byte)(85)))));
+            this.btnADt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(51)))));
             this.btnADt.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnADt.Image = ((System.Drawing.Image)(resources.GetObject("btnADt.Image")));
             this.btnADt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -244,7 +244,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             // btnADs
             // 
-            this.btnADs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(178)))), ((int)(((byte)(85)))));
+            this.btnADs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(51)))));
             this.btnADs.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnADs.Image = ((System.Drawing.Image)(resources.GetObject("btnADs.Image")));
             this.btnADs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;

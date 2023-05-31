@@ -26,6 +26,29 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             InitializeComponent();
 
         }
+        private void pictureBox3_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(pictureBox1, "Hide Password");
+        }
+
+        private void pictureBox2_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(pictureBox2, "Show Password");
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            tpass.UseSystemPasswordChar = false;
+            pictureBox2.Hide();
+            pictureBox1.Show();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            tpass.UseSystemPasswordChar = true;
+            pictureBox2.Show();
+            pictureBox1.Hide();
+        }
 
         private void Tsearch_Click(object sender, EventArgs e)
         {

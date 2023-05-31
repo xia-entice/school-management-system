@@ -30,6 +30,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formADadmin));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Apanel3 = new System.Windows.Forms.Panel();
             this.Apanel2 = new System.Windows.Forms.Panel();
             this.pictureBox1a = new System.Windows.Forms.PictureBox();
@@ -54,7 +55,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             // Apanel3
             // 
-            this.Apanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(178)))), ((int)(((byte)(85)))));
+            this.Apanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(51)))));
             this.Apanel3.Location = new System.Drawing.Point(1265, 20);
             this.Apanel3.Name = "Apanel3";
             this.Apanel3.Size = new System.Drawing.Size(200, 610);
@@ -62,7 +63,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             // Apanel2
             // 
-            this.Apanel2.BackColor = System.Drawing.Color.White;
+            this.Apanel2.BackColor = System.Drawing.Color.Gainsboro;
             this.Apanel2.Controls.Add(this.pictureBox1a);
             this.Apanel2.Controls.Add(this.AAsearch);
             this.Apanel2.Controls.Add(this.AAview);
@@ -75,7 +76,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // pictureBox1a
             // 
             this.pictureBox1a.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1a.Image")));
-            this.pictureBox1a.Location = new System.Drawing.Point(707, 38);
+            this.pictureBox1a.Location = new System.Drawing.Point(708, 38);
             this.pictureBox1a.Name = "pictureBox1a";
             this.pictureBox1a.Size = new System.Drawing.Size(32, 33);
             this.pictureBox1a.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -97,8 +98,16 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // AAview
             // 
             this.AAview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.AAview.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(178)))), ((int)(((byte)(85)))));
+            this.AAview.BackgroundColor = System.Drawing.Color.White;
             this.AAview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.AAview.DefaultCellStyle = dataGridViewCellStyle1;
             this.AAview.Location = new System.Drawing.Point(26, 90);
             this.AAview.Name = "AAview";
             this.AAview.RowHeadersWidth = 51;
@@ -117,7 +126,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             // Apanel1
             // 
-            this.Apanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(178)))), ((int)(((byte)(85)))));
+            this.Apanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(51)))));
             this.Apanel1.Controls.Add(this.labela);
             this.Apanel1.Controls.Add(this.pictureBoxa);
             this.Apanel1.Controls.Add(this.AAdelete);
@@ -215,7 +224,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1477, 699);
             this.Controls.Add(this.Apanel1);
             this.Controls.Add(this.Apanel2);

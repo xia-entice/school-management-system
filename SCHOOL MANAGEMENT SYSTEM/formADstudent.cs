@@ -114,7 +114,17 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
                 ASview.DataSource = sdtbl;
                 ASview.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 ASview.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                ASview.Columns[0].HeaderText = "Student Id";
+                // Assuming you have a DataGridView named dataGridView1
+
+                // Create a new DataGridViewCellStyle object
+                DataGridViewCellStyle headerStyle = new DataGridViewCellStyle();
+
+                // Set the desired font properties for the header
+                headerStyle.Font = new Font("Open Sans", 11, FontStyle.Regular);
+
+                // Apply the header style to the DataGridView
+                ASview.ColumnHeadersDefaultCellStyle = headerStyle;
+                ASview.Columns[0].HeaderText = "Student ID";
                 ASview.Columns[1].Visible = false;
                 ASview.Columns[2].Visible = false;
                 ASview.Columns[3].HeaderText = "Student Name";
