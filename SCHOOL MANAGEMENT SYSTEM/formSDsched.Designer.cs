@@ -29,7 +29,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.seprofPanel = new System.Windows.Forms.Panel();
             this.sSched = new System.Windows.Forms.DataGridView();
             this.ssSelect = new System.Windows.Forms.Button();
@@ -49,26 +49,26 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             this.sSched.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.sSched.BackgroundColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.sSched.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.sSched.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.sSched.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.sSched.Location = new System.Drawing.Point(120, 85);
+            this.sSched.Location = new System.Drawing.Point(38, 87);
             this.sSched.Name = "sSched";
             this.sSched.RowHeadersWidth = 51;
             this.sSched.RowTemplate.Height = 24;
-            this.sSched.Size = new System.Drawing.Size(1000, 545);
+            this.sSched.Size = new System.Drawing.Size(1190, 536);
             this.sSched.TabIndex = 69;
             // 
             // ssSelect
             // 
             this.ssSelect.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ssSelect.Location = new System.Drawing.Point(986, 23);
+            this.ssSelect.Location = new System.Drawing.Point(1094, 25);
             this.ssSelect.Name = "ssSelect";
             this.ssSelect.Size = new System.Drawing.Size(134, 41);
             this.ssSelect.TabIndex = 77;
@@ -89,9 +89,9 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             "Friday",
             "Saturday",
             "Sunday"});
-            this.ssDays.Location = new System.Drawing.Point(120, 24);
+            this.ssDays.Location = new System.Drawing.Point(38, 26);
             this.ssDays.Name = "ssDays";
-            this.ssDays.Size = new System.Drawing.Size(847, 40);
+            this.ssDays.Size = new System.Drawing.Size(1031, 40);
             this.ssDays.TabIndex = 76;
             this.ssDays.Text = "Choose a certain day:";
             // 

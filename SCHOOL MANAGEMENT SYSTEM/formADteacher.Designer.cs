@@ -37,20 +37,22 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.ATview = new System.Windows.Forms.DataGridView();
             this.tsearch = new System.Windows.Forms.TextBox();
             this.Tpanel1 = new System.Windows.Forms.Panel();
-            this.labelt = new System.Windows.Forms.Label();
-            this.pictureBoxt = new System.Windows.Forms.PictureBox();
             this.ATdelete = new System.Windows.Forms.Button();
             this.ATsave = new System.Windows.Forms.Button();
+            this.labelt = new System.Windows.Forms.Label();
+            this.pictureBoxt = new System.Windows.Forms.PictureBox();
             this.ATpw = new System.Windows.Forms.Label();
             this.ATun = new System.Windows.Forms.Label();
             this.tpass = new System.Windows.Forms.TextBox();
             this.tuname = new System.Windows.Forms.TextBox();
             this.Tpanel3 = new System.Windows.Forms.Panel();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.Tpanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1t)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ATview)).BeginInit();
             this.Tpanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxt)).BeginInit();
+            this.Tpanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // Tpanel2
@@ -78,10 +80,12 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // ATsearch
             // 
             this.ATsearch.BackColor = System.Drawing.Color.White;
+            this.ATsearch.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.ATsearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ATsearch.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ATsearch.Location = new System.Drawing.Point(757, 35);
             this.ATsearch.Name = "ATsearch";
-            this.ATsearch.Size = new System.Drawing.Size(102, 36);
+            this.ATsearch.Size = new System.Drawing.Size(102, 40);
             this.ATsearch.TabIndex = 8;
             this.ATsearch.Text = "Search";
             this.ATsearch.UseVisualStyleBackColor = false;
@@ -119,10 +123,10 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // Tpanel1
             // 
             this.Tpanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(51)))));
-            this.Tpanel1.Controls.Add(this.labelt);
-            this.Tpanel1.Controls.Add(this.pictureBoxt);
             this.Tpanel1.Controls.Add(this.ATdelete);
             this.Tpanel1.Controls.Add(this.ATsave);
+            this.Tpanel1.Controls.Add(this.labelt);
+            this.Tpanel1.Controls.Add(this.pictureBoxt);
             this.Tpanel1.Controls.Add(this.ATpw);
             this.Tpanel1.Controls.Add(this.ATun);
             this.Tpanel1.Controls.Add(this.tpass);
@@ -131,6 +135,33 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.Tpanel1.Name = "Tpanel1";
             this.Tpanel1.Size = new System.Drawing.Size(327, 610);
             this.Tpanel1.TabIndex = 10;
+            // 
+            // ATdelete
+            // 
+            this.ATdelete.BackColor = System.Drawing.Color.White;
+            this.ATdelete.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.ATdelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ATdelete.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ATdelete.Location = new System.Drawing.Point(181, 473);
+            this.ATdelete.Name = "ATdelete";
+            this.ATdelete.Size = new System.Drawing.Size(123, 40);
+            this.ATdelete.TabIndex = 13;
+            this.ATdelete.Text = "Delete";
+            this.ATdelete.UseVisualStyleBackColor = false;
+            // 
+            // ATsave
+            // 
+            this.ATsave.BackColor = System.Drawing.Color.White;
+            this.ATsave.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.ATsave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ATsave.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ATsave.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ATsave.Location = new System.Drawing.Point(18, 473);
+            this.ATsave.Name = "ATsave";
+            this.ATsave.Size = new System.Drawing.Size(123, 40);
+            this.ATsave.TabIndex = 12;
+            this.ATsave.Text = "Save";
+            this.ATsave.UseVisualStyleBackColor = false;
             // 
             // labelt
             // 
@@ -152,39 +183,15 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.pictureBoxt.TabIndex = 10;
             this.pictureBoxt.TabStop = false;
             // 
-            // ATdelete
-            // 
-            this.ATdelete.BackColor = System.Drawing.Color.White;
-            this.ATdelete.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ATdelete.Location = new System.Drawing.Point(181, 473);
-            this.ATdelete.Name = "ATdelete";
-            this.ATdelete.Size = new System.Drawing.Size(123, 36);
-            this.ATdelete.TabIndex = 7;
-            this.ATdelete.Text = "Delete";
-            this.ATdelete.UseVisualStyleBackColor = false;
-            this.ATdelete.Click += new System.EventHandler(this.ATdelete_Click);
-            // 
-            // ATsave
-            // 
-            this.ATsave.BackColor = System.Drawing.Color.White;
-            this.ATsave.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ATsave.Location = new System.Drawing.Point(19, 473);
-            this.ATsave.Name = "ATsave";
-            this.ATsave.Size = new System.Drawing.Size(123, 36);
-            this.ATsave.TabIndex = 6;
-            this.ATsave.Text = "Save";
-            this.ATsave.UseVisualStyleBackColor = false;
-            this.ATsave.Click += new System.EventHandler(this.ATsave_Click);
-            // 
             // ATpw
             // 
             this.ATpw.AutoSize = true;
             this.ATpw.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ATpw.Location = new System.Drawing.Point(14, 383);
             this.ATpw.Name = "ATpw";
-            this.ATpw.Size = new System.Drawing.Size(103, 26);
+            this.ATpw.Size = new System.Drawing.Size(98, 26);
             this.ATpw.TabIndex = 2;
-            this.ATpw.Text = "Password:";
+            this.ATpw.Text = "Password";
             // 
             // ATun
             // 
@@ -192,9 +199,9 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.ATun.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ATun.Location = new System.Drawing.Point(14, 306);
             this.ATun.Name = "ATun";
-            this.ATun.Size = new System.Drawing.Size(111, 26);
+            this.ATun.Size = new System.Drawing.Size(106, 26);
             this.ATun.TabIndex = 1;
-            this.ATun.Text = "Username:";
+            this.ATun.Text = "Username";
             // 
             // tpass
             // 
@@ -215,10 +222,24 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // Tpanel3
             // 
             this.Tpanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(51)))));
+            this.Tpanel3.Controls.Add(this.richTextBox1);
             this.Tpanel3.Location = new System.Drawing.Point(1265, 20);
             this.Tpanel3.Name = "Tpanel3";
             this.Tpanel3.Size = new System.Drawing.Size(200, 610);
             this.Tpanel3.TabIndex = 12;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.Color.White;
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Font = new System.Drawing.Font("Open Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.Location = new System.Drawing.Point(3, 419);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.richTextBox1.Size = new System.Drawing.Size(194, 188);
+            this.richTextBox1.TabIndex = 13;
+            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
             // formADteacher
             // 
@@ -240,6 +261,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.Tpanel1.ResumeLayout(false);
             this.Tpanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxt)).EndInit();
+            this.Tpanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -253,13 +275,14 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         private System.Windows.Forms.TextBox tsearch;
         private System.Windows.Forms.Panel Tpanel1;
         private System.Windows.Forms.PictureBox pictureBoxt;
-        private System.Windows.Forms.Button ATdelete;
-        private System.Windows.Forms.Button ATsave;
         private System.Windows.Forms.Label ATpw;
         private System.Windows.Forms.Label ATun;
         private System.Windows.Forms.TextBox tpass;
         private System.Windows.Forms.TextBox tuname;
         private System.Windows.Forms.Label labelt;
         private System.Windows.Forms.Panel Tpanel3;
+        private System.Windows.Forms.Button ATdelete;
+        private System.Windows.Forms.Button ATsave;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }

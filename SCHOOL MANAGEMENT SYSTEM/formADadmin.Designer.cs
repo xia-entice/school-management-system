@@ -33,8 +33,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Apanel3 = new System.Windows.Forms.Panel();
             this.Apanel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1a = new System.Windows.Forms.PictureBox();
             this.AAsearch = new System.Windows.Forms.Button();
+            this.pictureBox1a = new System.Windows.Forms.PictureBox();
             this.AAview = new System.Windows.Forms.DataGridView();
             this.Asearch = new System.Windows.Forms.TextBox();
             this.Apanel1 = new System.Windows.Forms.Panel();
@@ -64,14 +64,27 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // Apanel2
             // 
             this.Apanel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.Apanel2.Controls.Add(this.pictureBox1a);
             this.Apanel2.Controls.Add(this.AAsearch);
+            this.Apanel2.Controls.Add(this.pictureBox1a);
             this.Apanel2.Controls.Add(this.AAview);
             this.Apanel2.Controls.Add(this.Asearch);
             this.Apanel2.Location = new System.Drawing.Point(360, 20);
             this.Apanel2.Name = "Apanel2";
             this.Apanel2.Size = new System.Drawing.Size(883, 610);
             this.Apanel2.TabIndex = 14;
+            // 
+            // AAsearch
+            // 
+            this.AAsearch.BackColor = System.Drawing.Color.White;
+            this.AAsearch.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.AAsearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AAsearch.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AAsearch.Location = new System.Drawing.Point(757, 35);
+            this.AAsearch.Name = "AAsearch";
+            this.AAsearch.Size = new System.Drawing.Size(102, 40);
+            this.AAsearch.TabIndex = 10;
+            this.AAsearch.Text = "Search";
+            this.AAsearch.UseVisualStyleBackColor = false;
             // 
             // pictureBox1a
             // 
@@ -82,18 +95,6 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.pictureBox1a.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1a.TabIndex = 9;
             this.pictureBox1a.TabStop = false;
-            // 
-            // AAsearch
-            // 
-            this.AAsearch.BackColor = System.Drawing.Color.White;
-            this.AAsearch.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AAsearch.Location = new System.Drawing.Point(757, 35);
-            this.AAsearch.Name = "AAsearch";
-            this.AAsearch.Size = new System.Drawing.Size(102, 36);
-            this.AAsearch.TabIndex = 8;
-            this.AAsearch.Text = "Search";
-            this.AAsearch.UseVisualStyleBackColor = false;
-            this.AAsearch.Click += new System.EventHandler(this.AAsearch_Click);
             // 
             // AAview
             // 
@@ -163,10 +164,12 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // AAdelete
             // 
             this.AAdelete.BackColor = System.Drawing.Color.White;
+            this.AAdelete.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.AAdelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AAdelete.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AAdelete.Location = new System.Drawing.Point(181, 473);
             this.AAdelete.Name = "AAdelete";
-            this.AAdelete.Size = new System.Drawing.Size(123, 36);
+            this.AAdelete.Size = new System.Drawing.Size(123, 40);
             this.AAdelete.TabIndex = 7;
             this.AAdelete.Text = "Delete";
             this.AAdelete.UseVisualStyleBackColor = false;
@@ -175,10 +178,13 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // AAsave
             // 
             this.AAsave.BackColor = System.Drawing.Color.White;
+            this.AAsave.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.AAsave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AAsave.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AAsave.ForeColor = System.Drawing.SystemColors.ControlText;
             this.AAsave.Location = new System.Drawing.Point(19, 473);
             this.AAsave.Name = "AAsave";
-            this.AAsave.Size = new System.Drawing.Size(123, 36);
+            this.AAsave.Size = new System.Drawing.Size(123, 40);
             this.AAsave.TabIndex = 6;
             this.AAsave.Text = "Save";
             this.AAsave.UseVisualStyleBackColor = false;
@@ -190,9 +196,9 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.AApw.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AApw.Location = new System.Drawing.Point(14, 383);
             this.AApw.Name = "AApw";
-            this.AApw.Size = new System.Drawing.Size(103, 26);
+            this.AApw.Size = new System.Drawing.Size(98, 26);
             this.AApw.TabIndex = 2;
-            this.AApw.Text = "Password:";
+            this.AApw.Text = "Password";
             // 
             // AAun
             // 
@@ -200,9 +206,9 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.AAun.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AAun.Location = new System.Drawing.Point(14, 306);
             this.AAun.Name = "AAun";
-            this.AAun.Size = new System.Drawing.Size(111, 26);
+            this.AAun.Size = new System.Drawing.Size(106, 26);
             this.AAun.TabIndex = 1;
-            this.AAun.Text = "Username:";
+            this.AAun.Text = "Username";
             // 
             // apass
             // 
@@ -249,7 +255,6 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         private System.Windows.Forms.Panel Apanel3;
         private System.Windows.Forms.Panel Apanel2;
         private System.Windows.Forms.PictureBox pictureBox1a;
-        private System.Windows.Forms.Button AAsearch;
         private System.Windows.Forms.DataGridView AAview;
         private System.Windows.Forms.TextBox Asearch;
         private System.Windows.Forms.Panel Apanel1;
@@ -261,5 +266,6 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         private System.Windows.Forms.Label AAun;
         private System.Windows.Forms.TextBox apass;
         private System.Windows.Forms.TextBox auname;
+        private System.Windows.Forms.Button AAsearch;
     }
 }

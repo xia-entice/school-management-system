@@ -38,9 +38,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.tbunit = new System.Windows.Forms.TextBox();
             this.tsched = new System.Windows.Forms.Label();
             this.tsub = new System.Windows.Forms.Label();
-            this.tclassDelete = new System.Windows.Forms.Button();
             this.tbsub = new System.Windows.Forms.TextBox();
-            this.tclassSave = new System.Windows.Forms.Button();
             this.tclass = new System.Windows.Forms.Label();
             this.tbcode = new System.Windows.Forms.TextBox();
             this.tbclass = new System.Windows.Forms.TextBox();
@@ -48,6 +46,8 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.label2 = new System.Windows.Forms.Label();
             this.tcdesc = new System.Windows.Forms.RichTextBox();
             this.tunit = new System.Windows.Forms.Label();
+            this.tclassDelete = new System.Windows.Forms.Button();
+            this.tclassSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tclassview)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -94,13 +94,13 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(51)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.tclassDelete);
+            this.panel1.Controls.Add(this.tclassSave);
             this.panel1.Controls.Add(this.tbsched);
             this.panel1.Controls.Add(this.tbunit);
             this.panel1.Controls.Add(this.tsched);
             this.panel1.Controls.Add(this.tsub);
-            this.panel1.Controls.Add(this.tclassDelete);
             this.panel1.Controls.Add(this.tbsub);
-            this.panel1.Controls.Add(this.tclassSave);
             this.panel1.Controls.Add(this.tclass);
             this.panel1.Controls.Add(this.tbcode);
             this.panel1.Controls.Add(this.tbclass);
@@ -158,18 +158,6 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.tsub.TabIndex = 85;
             this.tsub.Text = "Subject:";
             // 
-            // tclassDelete
-            // 
-            this.tclassDelete.BackColor = System.Drawing.Color.White;
-            this.tclassDelete.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tclassDelete.Location = new System.Drawing.Point(673, 572);
-            this.tclassDelete.Name = "tclassDelete";
-            this.tclassDelete.Size = new System.Drawing.Size(102, 36);
-            this.tclassDelete.TabIndex = 96;
-            this.tclassDelete.Text = "Delete";
-            this.tclassDelete.UseVisualStyleBackColor = false;
-            this.tclassDelete.Click += new System.EventHandler(this.tclassDelete_Click);
-            // 
             // tbsub
             // 
             this.tbsub.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -177,18 +165,6 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.tbsub.Name = "tbsub";
             this.tbsub.Size = new System.Drawing.Size(649, 35);
             this.tbsub.TabIndex = 86;
-            // 
-            // tclassSave
-            // 
-            this.tclassSave.BackColor = System.Drawing.Color.White;
-            this.tclassSave.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tclassSave.Location = new System.Drawing.Point(554, 572);
-            this.tclassSave.Name = "tclassSave";
-            this.tclassSave.Size = new System.Drawing.Size(102, 36);
-            this.tclassSave.TabIndex = 95;
-            this.tclassSave.Text = "Save";
-            this.tclassSave.UseVisualStyleBackColor = false;
-            this.tclassSave.Click += new System.EventHandler(this.tclassSave_Click);
             // 
             // tclass
             // 
@@ -257,6 +233,33 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             this.tunit.TabIndex = 91;
             this.tunit.Text = "Units:";
             // 
+            // tclassDelete
+            // 
+            this.tclassDelete.BackColor = System.Drawing.Color.White;
+            this.tclassDelete.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.tclassDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tclassDelete.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tclassDelete.Location = new System.Drawing.Point(652, 570);
+            this.tclassDelete.Name = "tclassDelete";
+            this.tclassDelete.Size = new System.Drawing.Size(123, 40);
+            this.tclassDelete.TabIndex = 100;
+            this.tclassDelete.Text = "Delete";
+            this.tclassDelete.UseVisualStyleBackColor = false;
+            // 
+            // tclassSave
+            // 
+            this.tclassSave.BackColor = System.Drawing.Color.White;
+            this.tclassSave.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.tclassSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tclassSave.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tclassSave.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.tclassSave.Location = new System.Drawing.Point(516, 570);
+            this.tclassSave.Name = "tclassSave";
+            this.tclassSave.Size = new System.Drawing.Size(123, 40);
+            this.tclassSave.TabIndex = 99;
+            this.tclassSave.Text = "Save";
+            this.tclassSave.UseVisualStyleBackColor = false;
+            // 
             // formTDclass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -285,9 +288,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         private System.Windows.Forms.TextBox tbunit;
         private System.Windows.Forms.Label tsched;
         private System.Windows.Forms.Label tsub;
-        private System.Windows.Forms.Button tclassDelete;
         private System.Windows.Forms.TextBox tbsub;
-        private System.Windows.Forms.Button tclassSave;
         private System.Windows.Forms.Label tclass;
         private System.Windows.Forms.TextBox tbcode;
         private System.Windows.Forms.TextBox tbclass;
@@ -295,5 +296,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RichTextBox tcdesc;
         private System.Windows.Forms.Label tunit;
+        private System.Windows.Forms.Button tclassDelete;
+        private System.Windows.Forms.Button tclassSave;
     }
 }
